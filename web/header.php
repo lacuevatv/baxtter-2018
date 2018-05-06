@@ -56,20 +56,21 @@ global $pageActual;
         openPopUp($pageActual);
     ?>
     <header class="main-header">
-
+        <nav>
+            <?php getTemplate( 'nav' ); ?>
+        </nav>
         <!-- TEMP IMAGE -->
         <img src="<?php echo UPLOADSURL; ?>/temp/ref-header.jpg" style="width:100%;display: block; margin: 0 auto;">
 
-        <h2>
-            Unicos
-        </h2>
+        <div class="container">
+            <h2>
+                Únicos
+            </h2>
+        </div><!-- //. container -->  
 
-        <form>
-        <legend>
-            Completá el form y nos ponemos en contacto.
-        </legend>
-        </form>
-        
+        <div class="container">
+            <?php getTemplate( 'formularios', 'reunion' ); ?>
+        </div><!-- //. container -->     
     </header> <!-- //.main-header -->
 
     

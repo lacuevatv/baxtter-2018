@@ -18,55 +18,18 @@ if( isAjax() ) {
 	$function = isset($_POST['function']) ? $_POST['function'] : '';
 
 	switch ( $function ) {
-		case 'contact-home':
+		case 'formulario':
 
 			// Valores enviados desde el formulario
-			if ( !isset($_POST['email']) || !isset($_POST['msj']) ) {
-			    die ('Es necesario completar todos los datos del formulario');
-			}
+			var_dump($_POST);
 
-			$page = isset($_POST['page']) ? $_POST['page'] : 'inicio';
-			$nombre = isset($_POST['name']) ? $_POST['name'] : '';
-			$telephone = isset($_POST['telephone']) ? $_POST['telephone'] : '';
-			$email = isset($_POST['email']) ? $_POST['email'] : '';
-			$msj = isset($_POST['msj']) ? $_POST['msj'] : '';
-
-			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telephone . '<br> Email: '. $email . '<br> Mensaje: ' . $msj .'<br>';
-
-			$asunto = 'Contacto desde la página - ' . $page;
-			// Email donde se enviaran los datos cargados en el formulario de contacto
-			$emailDestino = EMAILFORMULARIO;
-
-			
-			enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
+			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
+			//enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
 
 		break;
 
 
-		case 'contact-tour-menos':
-			// Valores enviados desde el formulario
-			if ( !isset($_POST['email']) || !isset($_POST['telephone']) ) {
-			    die ('Es necesario completar todos los datos del formulario');
-			}
-
-			$page = isset($_POST['page']) ? $_POST['page'] : 'inicio';
-			$escuela = isset($_POST['school']) ? $_POST['school'] : 'inicio';
-			$tripYear = isset($_POST['trip-year']) ? $_POST['trip-year'] : 'inicio';
-			$cantAlumnos = isset($_POST['number-students']) ? $_POST['number-students'] : 'inicio';
-			$nombre = isset($_POST['name']) ? $_POST['name'] : '';
-			$cargo = isset($_POST['charge']) ? $_POST['charge'] : 'inicio';
-			$telephone = isset($_POST['telephone']) ? $_POST['telephone'] : '';
-			$email = isset($_POST['email']) ? $_POST['email'] : '';
-
-			$mensaje = 'Colegio: '. $escuela . '<br> Año de viaje: '. $tripYear . '<br> Cant. de Alumnos: '. $cantAlumnos . '<br> Nombre: '. $nombre . '<br> Cargo: ' . $cargo .'<br>Teléfono: ' . $telephone . '<br>Email: '.$email. ' <br>';
-
-			$asunto = 'Contacto desde la página - ' . $page;
-			// Email donde se enviaran los datos cargados en el formulario de contacto
-			$emailDestino = EMAILFORMULARIO;
-
-			
-			enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
-		break;
+		
 	}
 
 	

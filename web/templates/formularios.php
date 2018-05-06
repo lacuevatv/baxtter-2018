@@ -1,45 +1,128 @@
-<!-- FORMULARIO -->	
-<form method="POST" id="contact-form-tour-menos" name="contact-form-tourmenos" class="formulario">
-	<input type="hidden" name="page" value="<?php global $pageActual; echo $pageActual; ?>">
+<?php 
 
-	<div class="form-group">
-		<label for="school">Nombre del colegio</label>
-		<input type="text" id="school" name="school" placeholder="Nombre del colegio">
-	</div>
+switch ($data) {
+	case 'reunion': ?>
+		<!-- reunion-form -->
+		<form method="POST" name="default-form" id="default-form">
+			<div class="loader"></div>
+			<div class="inner-wrapper-form">
 
-	<div class="form-group">
-		<label for="trip-year">Año de viaje</label>
-		<input type="number" id="trip-year" name="trip-year" placeholder="Año de viaje">
-	</div>
+				<div class="form-group">
+					<input type="text" name="name-school">
+					<label for="name-school">Nombre del colegio</label>
+					<span class="msj-error-input">
+						ste campo nos ayuda a comunicarnos
+					</span>
+				</div>
 
-	<div class="form-group">
-		<label for="number-students">Cantidad de Alumnos</label>
-		<input type="number" id="number-students" name="number-students" placeholder="Cantidad de Alumnos">
-	</div>
+				<div class="form-group">
+					<input type="number" name="alumnos">
+					<label for="alumnos">Cantidad de alumnos</label>
+					<span class="msj-error-input">
+						Debería escribir sólo números, no utilice separadores
+					</span>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="charge">
+					<label for="charge">Sos Alumno / padre / madre / otro</label>
+					<span class="icon-input"></span>
+					<span class="msj-error-input">
+						Este campo nos ayuda a comunicarnos
+					</span>
+				</div>
+
+				<div class="form-group">
+					<input type="email" name="email" required>
+					<label for="email">Email</label>
+					<span class="msj-error-input">
+						Formato de email inválido
+					</span>
+				</div>
+
+			</div><!-- //.inner-wrapper-form -->
+
+			<div class="inner-wrapper-form">
+
+				<div class="form-group">
+					<input type="number" name="year-trip">
+					<label for="year-trip">Año de viaje</label>
+					<span class="msj-error-input">
+						Debería escribir sólo números, no utilice separadores
+					</span>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="name" class="text-uppercase">
+					<label for="name" class="text-uppercase">Tu nombre y apellido</label>
+					<span class="icon-input"></span>
+					<span class="msj-error-input">
+						Este campo nos resulta de mucha utilidad
+					</span>
+				</div>
+
+				<div class="form-group">
+					<input type="number" name="tel">
+					<label for="tel">Teléfono Movil</label>
+					<span class="icon-input"></span>
+					<span class="msj-error-input">
+						El teléfono es necesario para comunicarnos (no use separadores)
+					</span>
+				</div>
+
+				<div class="btn-submit-wrapper">
+					<input type="submit" value="Enviar" class="btn-submit">
+				</div>
+
+			</div><!-- //.inner-wrapper-form -->
+
+		</form><!-- //reunion-form -->
+	<?php break;
 	
-	<div class="form-group">
-		<label for="name">Tu nombre y apellido</label>
-		<input type="text" id="name" name="name" placeholder="Tu nombre y apellido">
-	</div>
+	case 'default': ?>
+		<!-- default-form -->
+		<form method="POST" name="default-form" id="default-form">
+			<div class="loader"></div>
+			<div class="inner-wrapper-form">
 
-	<div class="form-group">
-		<label for="charge">Sos alumno/padre/madre/otro</label>
-		<input type="text" id="charge" name="charge" placeholder="Sos alumno/padre/madre/otro">
-	</div>
+				<div class="form-group">
+					<input type="text" name="name" class="text-uppercase">
+					<label for="name" class="text-uppercase">Tu nombre y apellido</label>
+					<span class="msj-error-input">
+						Este campo nos ayuda a comunicarnos
+					</span>
+				</div>
 
-	<div class="form-group">
-		<label for="telephone">Teléfono movil</label>
-		<input type="number" id="telephone" name="telephone" placeholder="Teléfono movil" required>	
-	</div>
+				<div class="form-group">
+					<input type="number" name="year-trip">
+					<label for="year-trip" class="">Año de viaje</label>
+					<span class="msj-error-input">
+						Debería escribir sólo números, no utilice separadores
+					</span>
+				</div>
 
-	<div class="form-group">
-		<label for="email">Email</label>
-		<input type="email" id="email" name="email" required placeholder="E-mail">
-	</div>
+				<div class="form-group">
+					<input type="number" name="tel">
+					<label for="tel">Teléfono Movil</label>
+					<span class="msj-error-input">
+						El teléfono es necesario para comunicarnos (no use separadores)
+					</span>
+				</div>
 
-	<div class="form-group-col-2">
-		<span class="url-form">baxtter.tur.ar</span>
-		<input type="submit" value="Enviar" class="btn-form">	
-	</div>
+				<div class="form-group">
+					<input type="email" name="email" required>
+					<label for="email">Email</label>
+					<span class="msj-error-input">
+						Formato de email inválido
+					</span>
+				</div>
 
-</form><!-- // formulario -->
+				<div class="btn-submit-wrapper">
+					<input type="submit" value="Enviar" class="btn-submit">
+				</div>
+				
+			</div><!-- //.inner-wrapper-form -->
+
+		</form><!-- //default-form -->
+	<?php break;
+}

@@ -8,7 +8,8 @@
 1.0 A) ON READY
 B ) ON LOAD (requieren que todo este cargado)
 PARALLAX / VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
-2.0 POP UP PROMO
+2.0 FORMULARIOS
+3.0 POP UP PROMO
 3.0 OWL SLIDERS
 4.0 
 --------------------------------------------------------------*/
@@ -128,10 +129,250 @@ $( window ).on('load', function(){
 
 });//ON LOAD
 
+/*--------------------------------------------------------------
+2.0 FORMULARIO
+--------------------------------------------------------------*/
 
+var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
+var numeros = '0123456789';
+var letras = 'abcdefghijklmnñopqrstuvwxyz';
+
+//busca los caracteres indicados en un string y devuelve true si existen
+function areThereAny ( cadena, characters ) {
+    for (var i = 0; i < characters.length; i++) {
+       if ( cadena.indexOf(characters[i]) != -1 ) {
+            return true;    
+       }
+   }
+   return false;
+}
+
+//quita numeros de un string
+function cleanedOthers(cadena, caracteres){ 
+
+   //eliminamos uno por uno
+   for (var i = 0; i < caracteres.length; i++) {
+       cadena= cadena.replace(new RegExp(caracteres[i], 'gi'), '');
+   }   
+
+   return cadena;
+}
+
+//quita caracteres extraños del string, los caracteres se pasan como una variable
+function cleanedSpecialCharacters(cadena, specialcharacters){ 
+
+   //eliminamos uno por uno
+   for (var i = 0; i < specialcharacters.length; i++) {
+       cadena= cadena.replace(new RegExp("\\" + specialcharacters[i], 'gi'), '');
+   }   
+
+   return cadena;
+}
+
+//lo pasa a minúsculas
+function toLowerCase(cadena) {
+    cadena = cadena.toLowerCase();
+    return cadena;
+}
+
+//remplasa dashes "-" del string por espacios
+function replaceDashes( cadena ) {
+   cadena = cadena.replace(/-/gi," ");
+   cadena = cadena.replace(/_/gi," ");
+   return cadena;
+}
+
+
+//borra espacios del string
+function removeDashesSpaces( cadena ) {
+   cadena = cadena.replace(/-/gi,"");
+   cadena = cadena.replace(/_/gi,"");
+   cadena = cadena.replace(/ /gi,"");
+   return cadena;
+}
+
+// Quitamos espacios y los sustituimos por - porque nos gusta mas asi
+function replaceSpaces( cadena ) {
+   cadena = cadena.replace(/ /gi,"-");
+   return cadena;
+}
+
+//quita acentos y ñ y lo pasa a minúsculas
+function cleanAcentos( cadena ) {
+
+   // Lo queremos devolver limpio en minusculas
+   cadena = cadena.toLowerCase();
+
+   // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
+   cadena = cadena.replace(/á/gi,"a");
+   cadena = cadena.replace(/é/gi,"e");
+   cadena = cadena.replace(/í/gi,"i");
+   cadena = cadena.replace(/ó/gi,"o");
+   cadena = cadena.replace(/ú/gi,"u");
+   cadena = cadena.replace(/ñ/gi,"n");
+   return cadena;
+}
+
+
+/*
+ * FORMULARIO
+*/
+
+$(document).ready(function() {
+    /*
+     * FUNCIONES DE LOS LABEL
+    */
+    //función que hace zoom out a las etiquetas para escribir en los input:
+    function zoomOutLabel( input ) {
+        var contenedor = $(input).closest('.form-group')
+        var label = $(contenedor).find('label')
+        $(label).addClass('on');
+    }
+    //funcion al hacer click en label
+    function focusInput( label ) {
+        var contenedor = $(label).closest('.form-group')
+        var input = $(contenedor).find('input')
+        $(input).focus();
+    }
+
+    //clic en label, focus en input
+    $(document).on('click', 'label', function(){
+        focusInput( this );
+    });
+
+    //on focus, etiqueta se achica
+    $(document).on('focus', 'input', function(){
+        zoomOutLabel( this );
+        $(this).addClass('input-on');
+    });
+
+
+
+    /*
+     * VALIDACIONES FORMULARIO
+    */
+    //FOCUS OUT INPUT
+    //input text
+    $(document).on('focusout', 'input[type=text]', function() {
+        var valor = $(this).val();
+        var contenedor = $(this).closest('.form-group');
+        var msj = $(contenedor).find('.msj-error-input');
+
+        if ( valor == '' ) {
+            $(msj).fadeIn();
+            return false;  
+        } 
+
+        valor = cleanedSpecialCharacters(valor,specialcharacters);
+        
+        valor = cleanedOthers(valor,numeros);
+        valor = replaceDashes(valor);
+        
+        $(this).val(valor);
+
+        //si hay números devuelve error
+        if ( areThereAny(valor, numeros+specialcharacters) || valor == '' || valor.length < 3) {
+            $(msj).fadeIn();
+            
+        } else { 
+            $(msj).fadeOut();
+           
+        }
+    });
+
+    //input type numbers
+    $(document).on('focusout', 'input[type=number]', function() {
+        
+        var valor = $(this).val();
+        var contenedor = $(this).closest('.form-group');
+        var msj = $(contenedor).find('.msj-error-input');
+
+        if ( valor == '' ) {
+            $(msj).fadeIn();
+            return false;  
+        } 
+        
+        valor = cleanedOthers(valor,letras);
+    
+        valor = cleanedSpecialCharacters(valor,specialcharacters)
+                
+        $(this).val(valor);
+
+        //si hay letras o no pasa alguna de las validaciones devuelve error
+        if ( areThereAny(valor, letras+specialcharacters || valor.length < 7) ) {
+            $(msj).fadeIn();
+            
+        } else {
+            $(msj).fadeOut(); 
+        }
+    });
+
+    //input tyme email
+    $(document).on('focusout', 'input[type=email]', function() {
+        var valor = $(this).val();
+        var contenedor = $(this).closest('.form-group');
+        var msj = $(contenedor).find('.msj-error-input');
+
+        if ( valor == '' ) {
+            $(msj).fadeIn();
+            return false;  
+        } 
+
+        valor = cleanedSpecialCharacters(valor,'#$^&%*()[]\'\"\/{}:;<>,');
+        
+        //remueve algún espacio si hay
+        valor = valor.replace(/ /gi,"");
+        
+        $(this).val(valor);
+
+        //si hay números devuelve error
+        if ( valor == '' || valor.length < 8 || valor.indexOf('@') == -1 || valor.indexOf('@')  == 0 ) {
+            $(msj).fadeIn();
+        } else {
+            $(msj).fadeOut();
+        }
+    });
+
+
+    /*
+     * SUBMIT FORMULARIO
+    */    
+
+    $(document).on('submit', '#first-form', function( e ) {
+        e.preventDefault();
+       
+        var loader = $('.loader');
+        var contenedor = $(loader).closest('form');
+
+    	formData = new FormData( this );
+        formData.append('function','formulario');
+
+    	$.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            //funcion antes de enviar
+            beforeSend: function() {
+                $(loader).fadeIn();
+            },
+            success: function ( response ) {
+                console.log(response);
+                $(loader).fadeOut();     
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+    	});//cierre ajax
+
+    });//submit formulario 1
+
+});//on ready
 
 /*--------------------------------------------------------------
-2.0 POPUP PROMO
+3.0 POPUP PROMO
 --------------------------------------------------------------*/
 
 $(window).on('load', function(){

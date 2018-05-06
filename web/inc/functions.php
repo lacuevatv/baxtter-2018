@@ -13,9 +13,12 @@ require_once 'lib/mobile-detect/Mobile_Detect.php';
 //busca el template $name = nombre del archivo sin extensión
 function getTemplate ( $name, $data = array() ) {
 	$namePage = TEMPLATEDIR . '/'. $name. '.php';
+	$errorPage = TEMPLATEDIR . '/404.php';
 
 	if (is_file($namePage)) {
 		include $namePage;
+	} else {
+		include $errorPage;
 	}
 }
 

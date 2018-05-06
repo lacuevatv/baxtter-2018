@@ -1,0 +1,115 @@
+.redes-sociales {//ul
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+
+    li {
+        margin: 1em;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            display: block;
+        }
+    }
+
+}
+
+.icon-redes {
+    width: 43px;
+    height: 43px;
+    background: green url(../images/sprite.png) no-repeat;
+
+    @media (min-width: $md) {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.icon-redes {
+    .icon-redes-instagram {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+
+    .icon-redes-spotify {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+
+    .icon-redes-youtube {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+
+    .icon-redes-vimeo {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+
+    .icon-redes-twitter {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+
+    .icon-redes-facebook {
+        background-position: 1px 1px;
+        @media (min-width: $md) {
+            background-position: 1px 1px;
+        }
+    }
+}
+
+.icon-redes-xs {
+    width: 16px;
+    height: 16px;
+    .icon-redes-instagram {
+        background-position: 1px 1px;
+    }
+
+    .icon-redes-spotify {
+        background-position: 1px 1px;
+    }
+
+    .icon-redes-youtube {
+        background-position: 1px 1px;
+    }
+
+    .icon-redes-vimeo {
+        background-position: 1px 1px;
+    }
+
+    .icon-redes-twitter {
+        background-position: 1px 1px;
+    }
+
+    .icon-redes-facebook {
+        background-position: 1px 1px;
+    }
+}

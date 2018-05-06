@@ -89,6 +89,16 @@ align-items: center;
 -o-justify-content: center;
 justify-content: center;
 
+display: flex;
+display: -o-flex;
+display: -ms-flex;
+display: -moz-flex;
+display: -webkit-flex;
+-webkit-justify-content: space-between;
+-moz-justify-content: space-between;
+-ms-justify-content: space-between;
+-o-justify-content: space-between;
+justify-content: space-between;
 
 &:hover {
     zoom: 1;

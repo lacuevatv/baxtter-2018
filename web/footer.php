@@ -16,7 +16,6 @@
     
     <!-- SECTION PARTNERS -->
     	<section>
-            
             <!-- TEMP IMAGE -->
             <img src="<?php echo UPLOADSURL; ?>/temp/ref-sponsors.jpg" style="width:100%;display: block; margin: 0 auto;">
 
@@ -24,17 +23,19 @@
 
         <!-- SECTION LEGALES BAXTTER -->
     	<section>
+            <div class="container">
+                <h5>
+                    Baxtter es una empresa autorizada por el ministerio de turismo de la nación para organizar y brindar viajes de egresados.
+                </h5>
 
-             <h5>
-                Baxtter es una empresa autorizada por el ministerio de turismo de la nación para organizar y brindar viajes de egresados.
-            </h5>
+                <!-- TEMP IMAGE -->
+                <img src="<?php echo UPLOADSURL; ?>/temp/ref-legales-turismo.jpg" style="display: block; margin: 0 auto;width:100%;max-width:325px;">
+            </div>
 
-            <!-- TEMP IMAGE -->
-            <img src="<?php echo UPLOADSURL; ?>/temp/ref-legales-turismo.jpg" style="display: block; margin: 0 auto;">
         </section><!-- //SECTION LEGALES BAXTTER -->
 
         <!-- ASIDE LEGALES HIT -->
-    	<aside></aside><!-- //ASIDE LEGALES HIT -->
+    	<?php getTemplate( 'hit' ); ?>
         
     </footer><!--- // .main-footer -->
 
