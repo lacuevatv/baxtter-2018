@@ -22,13 +22,14 @@ define ('UPLOADSURL', MAINSURL . '/contenido');
 define ('UPLOADSFILE', MAINSURL . '/contenido');
 //META TAGS
 define('SITETITLE', 'Somos Baxtter');
-define('METADESCRIPTION', '');
-define('METAKEYS', '');
-define( 'HABILITACIONES', 'Baxtter Viajes E.V. y T 7476 Disp. 109 - Todos los derechos reservados. - Web Site 2018' );
+define('METADESCRIPTION', 'Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 27 años.');
+define('METAKEYS', 'Turismo, viajes de egresados, Baxtter, bariloche, turismo montaña, turismo playa, turismo joven');
+define('SCREENSHOT', MAINSURL . '/assets/images/popupdefault.jpg' );
+define( 'HABILITACIONES', 'Baxtter viajes E.V. y T 7476 Disp. 109 - Todos los derechos reservados. - Web site 2017' );
 define('INSTAGRAM', 'somosbaxtter');//nombre usuario
 //LINKS:
-define( 'EMAILFORMULARIO', 'info@baxtter.tur.ar' );
-define( 'LINK_EMAIL', 'info@baxtter.tur.ar' );
+define( 'EMAILFORMULARIO', 'info@baxtter.com.ar' );
+define( 'LINK_EMAIL', 'info@baxtter.com.ar' );
 define( 'WHATSAPPTEXT', '+54.11.3962.7656');
 define( 'WHATSAPP', '541139627656');
 define('LINK_FACEBOOK', 'https://www.facebook.com/somosbaxtter/');
@@ -36,13 +37,15 @@ define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/somosbaxtter/');
 define('LINK_VIMEO', 'https://vimeo.com/somosbaxtter');
 define('LINK_YOUTUBE', 'https://www.youtube.com/somosbaxtter');
-define('SCREENSHOT', '');
-define('APIKEYGOOGLE', MAINSURL . '/assets/images/popupdefault.jpg' );
+define('LINK_SPOTIFY', 'https://www.spotify.com/somosbaxtter');
+define('LINK_PINTEREST', 'https://www.pinterest.com/somosbaxtter');
+define('APIKEYGOOGLE', '' );
 
 global $categorias;
 $categorias = array(
 	array( 'slug' => 'cold-mountain', 'nombre' => 'Cold Mountain'),
 	array( 'slug' => 'hot-beach', 'nombre' => 'Hot Beach'),
+	array( 'slug' => 'mole', 'nombre' => 'Mole'),
 );
 
 define('POSTPERPAG', '5');//indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos

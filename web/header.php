@@ -57,9 +57,19 @@ global $pageActual;
     ?>
     <header class="main-header">
 
-        
+        <!-- TEMP IMAGE -->
+        <img src="<?php echo UPLOADSURL; ?>/temp/ref-header.jpg" style="width:100%;display: block; margin: 0 auto;">
+
+        <h2>
+            Unicos
+        </h2>
+
+        <form>
+        <legend>
+            Completá el form y nos ponemos en contacto.
+        </legend>
+        </form>
         
     </header> <!-- //.main-header -->
 
-    <main role="main" class="main-wrapper">
-        <div class="inner-wrapper">
+    
