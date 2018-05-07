@@ -1,0 +1,30 @@
+.titulo-seccion {
+    position: relative;
+    text-transform: uppercase;
+    margin: .5em 0;
+    font-size: 200%;
+    line-height: 130%;    
+    color: $color-negro;
+    @media (min-width: $md) {
+        font-size: 150%;
+        line-height: 100%;
+        margin: 1em 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -.2em;
+        left: .05em;
+        width: .5em;
+        height: .1em;
+        background-color: $color-negro;
+    }
+}
+
+.titulo-seccion-claro {
+    color: $color-blanco;
+    &:before {
+        background-color: $color-blanco;
+    }
+}

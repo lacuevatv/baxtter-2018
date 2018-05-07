@@ -57,29 +57,37 @@ $( window ).on('load', function(){
 
     console.log('all loaded')
 
+    //cargar imágenes de fondo por ajax
+    $('.load-images').each(function(){
+        console.log('cargando imagenes');
+        var img = $(this).find('img');
+
+        $(img).attr('src', $(img).attr('data-src') );
+        if ( $(img).attr('src') != '') {
+            $(this).fadeIn();
+        }
+    });//load images
+    
+
+
+
     /*
-    parallax superior:
+    parallax background:
     */
 
     //tomamos las imagenes
-    var background = $('.top-header-content');
-    var img = $('.image-header');
-    var title = $('.title-header');
-    
+    var backgroundPartners = $('#background-partners');
+    var imgPartners = $(backgroundPartners).find('img');
     //guardamos la posicion inicial
     //paralax: funcionar al scroll
-    $(window).scroll(function(){
+    /*$(window).scroll(function(){
 
         var barra = ($(window).scrollTop()); 
         
         var nuevoY = barra*0.9;
-        var nuevoY2 = barra*0.9;
         //movemos los puntos hacia abajo
-        background.css('background-position-y', '-'+nuevoY+'px' );
-        img.css('top',nuevoY+'px');
-
         if ( barra <= 100 && barra >= 0) {
-            title.css('top','48%');   
+            imgPartners.css('top','48%');   
         }
 
         if ( barra <= 200 && barra >= 100) {
@@ -95,7 +103,7 @@ $( window ).on('load', function(){
             title.css('top','88%');   
         }
      
-    });//fin paralax
+    });//fin paralax*/
 
     /*
      * ANIMACIONES
@@ -411,7 +419,23 @@ $(window).on('load', function(){
 //CARGA SLIDER EN MÁS 18
 $(window).on('load', function(){
     
-    $('.owl-carousel').owlCarousel({
+    $('#owl-partners').owlCarousel({
+	    loop:true,
+        margin:10,
+        slideSpeed : 2000,
+        nav:false,
+        doots: true,
+        autoplay: true,
+	    //navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	    }
+    });//owl
+    
+
+    /*$('.owl-carousel').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    nav:true,
@@ -433,7 +457,7 @@ $(window).on('load', function(){
 	            items:8
 	        }
 	    }
-	});//owl
+	});//owl*/
 
 });//on load
 

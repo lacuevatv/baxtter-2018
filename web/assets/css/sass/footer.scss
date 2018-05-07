@@ -3,6 +3,143 @@
     z-index: 1;
 }
 
+//partners
+.partners-section {
+    background-color: $color-rojo-opaco;
+
+    .partners-wrapper {
+        padding: 2em 0;
+        @media (min-width: $md) {
+            padding: 5em 0;
+        }
+
+        .partners-logos {
+            width: 100%;
+            padding: 2em 2em 3em;
+            @media (min-width: $md) {
+                padding: 3em 2em 5em;
+            }
+            
+        }
+    }
+
+    .background-partners {
+        top: -24%;
+        @media (min-width: $md) {
+            top: -44%;
+        } 
+        @media (min-width: $lg) {
+            top: -54%;
+        } 
+        @media (min-width: $xlg) {
+            top: -74%;
+        } 
+    }
+}
+
+.partners-section-movil {
+    .background-partners {
+        top: -76%;
+    }
+
+    .partners-wrapper {
+        padding: 5em 0;
+
+        .partners-logos {
+            width: 100%;
+            padding: 5em 2em 4em;
+        }
+    }
+}
+
+.vertical-content-wrapper {
+    display: none;
+    @media (min-width: $lg) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        padding: 0 3%;
+        
+
+        .left, .right {
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            -o-flex-direction: column;
+            flex-direction: column;
+            height: 60%;
+        }
+        
+
+        .line {
+            display: block;
+            width: 2em;
+            height: .04em;
+            background-color: $color-blanco;
+        }
+        .text {
+            text-transform: uppercase;
+            color: $color-blanco;
+            font-size: 80%;
+        }
+
+        .vertical {
+            @include transform(rotate(-90deg));
+        }
+    }
+}
+
+//turismo legales
+.legales-turismo {
+    padding: 90px 0;
+    text-align: center;
+    img {
+        max-width: 318px;
+        display: block;
+        margin: 0 auto 2em;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        @media (min-width: $sm) {
+            font-size: 80%;
+        }
+        @media (min-width: $sm) {
+            font-size: 70%;
+        }
+        
+    }
+}
+
 //hit legales
 .hit-legales{
     color:$color-blanco;

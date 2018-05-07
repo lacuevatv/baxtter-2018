@@ -1,0 +1,139 @@
+.owl-dots {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+
+    &:hover {
+        zoom: 1;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+    }
+
+    .owl-dot {
+        width: .3em;
+        height: .3em;
+        margin: 0 5px;
+        display: block;
+        background-color: $color-blanco;
+        @include border-radius(50%);
+        cursor: pointer; 
+        @media (min-width: $md) {
+            width: .5em;
+            height: .5em;
+        }
+
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+}
+
+.owl-dot.active {
+    background-color: $color-gris-medio;
+}
+
+.owl-nav {
+    .owl-prev {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        @media (min-width: $sm) {
+            left: 20px;
+        }
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+
+    .owl-next {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        @media (min-width: $sm) {
+            right: 20px;
+        }
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+}
+
+.icon-arrow {
+    display: block;
+    width: 15px;
+    height: 25px;
+    background: url(../images/sprite.png) no-repeat;
+    @media (min-width: $sm) {
+        width: 30px;
+        height: 45px;
+    }
+}
+
+.icon-arrow-left {
+    background-position: -288px -839px;
+    @media (min-width: $sm) {
+        background-position: -115px -756px
+    }
+}
+.icon-arrow-right {
+    background-position: -302px -839px;
+    @media (min-width: $sm) {
+        background-position: -147px -756px
+    }
+}

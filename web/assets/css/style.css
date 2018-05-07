@@ -13,6 +13,7 @@
 9.0 REDES SOCIALES
 10.0 FORMULARIOS
 11.0 MAIN
+12.b TIPOGRAFIAS
 12.0 GALERIAS
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -238,12 +239,153 @@ html, body {
     .sr-only-especial {
       display: none; } }
 
+.section-capas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .section-capas .background-section {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%; }
+    .section-capas .background-section img {
+      width: 100%; }
+  .section-capas .main-section {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .section-capas .front-section {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.load-images {
+  display: none; }
+
+img {
+  width: 100%; }
+
 /*--------------------------------------------------------------
 5.0 footer
 --------------------------------------------------------------*/
 .main-footer {
   position: relative;
   z-index: 1; }
+
+.partners-section {
+  background-color: #ff545a; }
+  .partners-section .partners-wrapper {
+    padding: 2em 0; }
+    @media (min-width: 992px) {
+      .partners-section .partners-wrapper {
+        padding: 5em 0; } }
+    .partners-section .partners-wrapper .partners-logos {
+      width: 100%;
+      padding: 2em 2em 3em; }
+      @media (min-width: 992px) {
+        .partners-section .partners-wrapper .partners-logos {
+          padding: 3em 2em 5em; } }
+  .partners-section .background-partners {
+    top: -24%; }
+    @media (min-width: 992px) {
+      .partners-section .background-partners {
+        top: -44%; } }
+    @media (min-width: 1200px) {
+      .partners-section .background-partners {
+        top: -54%; } }
+    @media (min-width: 1500px) {
+      .partners-section .background-partners {
+        top: -74%; } }
+
+.partners-section-movil .background-partners {
+  top: -76%; }
+.partners-section-movil .partners-wrapper {
+  padding: 5em 0; }
+  .partners-section-movil .partners-wrapper .partners-logos {
+    width: 100%;
+    padding: 5em 2em 4em; }
+
+.vertical-content-wrapper {
+  display: none; }
+  @media (min-width: 1200px) {
+    .vertical-content-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      padding: 0 3%; }
+      .vertical-content-wrapper .left, .vertical-content-wrapper .right {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        height: 60%; }
+      .vertical-content-wrapper .line {
+        display: block;
+        width: 2em;
+        height: .04em;
+        background-color: #fff; }
+      .vertical-content-wrapper .text {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 80%; }
+      .vertical-content-wrapper .vertical {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg); } }
+
+.legales-turismo {
+  padding: 90px 0;
+  text-align: center; }
+  .legales-turismo img {
+    max-width: 318px;
+    display: block;
+    margin: 0 auto 2em; }
+  .legales-turismo h5 {
+    text-transform: uppercase; }
+    @media (min-width: 767px) {
+      .legales-turismo h5 {
+        font-size: 80%; } }
+    @media (min-width: 767px) {
+      .legales-turismo h5 {
+        font-size: 70%; } }
 
 .hit-legales {
   color: #fff;
@@ -816,8 +958,159 @@ form {
   .addresses li.main-address .map-wrapper {
     width: 50%; }
 
+.titulo-seccion {
+  position: relative;
+  text-transform: uppercase;
+  margin: .5em 0;
+  font-size: 200%;
+  line-height: 130%;
+  color: #333; }
+  @media (min-width: 992px) {
+    .titulo-seccion {
+      font-size: 150%;
+      line-height: 100%;
+      margin: 1em 0; } }
+  .titulo-seccion:before {
+    content: '';
+    position: absolute;
+    bottom: -.2em;
+    left: .05em;
+    width: .5em;
+    height: .1em;
+    background-color: #333; }
+
+.titulo-seccion-claro {
+  color: #fff; }
+  .titulo-seccion-claro:before {
+    background-color: #fff; }
+
 /*--------------------------------------------------------------
 12.0 GALERIAS
 --------------------------------------------------------------*/
+.owl-dots {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0; }
+  .owl-dots:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+  .owl-dots .owl-dot {
+    width: .3em;
+    height: .3em;
+    margin: 0 5px;
+    display: block;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer; }
+    @media (min-width: 992px) {
+      .owl-dots .owl-dot {
+        width: .5em;
+        height: .5em; } }
+    .owl-dots .owl-dot:hover {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5; }
+
+.owl-dot.active {
+  background-color: #5c5d5f; }
+
+.owl-nav .owl-prev {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0; }
+  @media (min-width: 767px) {
+    .owl-nav .owl-prev {
+      left: 20px; } }
+  .owl-nav .owl-prev:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+.owl-nav .owl-next {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0; }
+  @media (min-width: 767px) {
+    .owl-nav .owl-next {
+      right: 20px; } }
+  .owl-nav .owl-next:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+
+.icon-arrow {
+  display: block;
+  width: 15px;
+  height: 25px;
+  background: url(../images/sprite.png) no-repeat; }
+  @media (min-width: 767px) {
+    .icon-arrow {
+      width: 30px;
+      height: 45px; } }
+
+.icon-arrow-left {
+  background-position: -288px -839px; }
+  @media (min-width: 767px) {
+    .icon-arrow-left {
+      background-position: -115px -756px; } }
+
+.icon-arrow-right {
+  background-position: -302px -839px; }
+  @media (min-width: 767px) {
+    .icon-arrow-right {
+      background-position: -147px -756px; } }
 
 /*# sourceMappingURL=style.css.map */
