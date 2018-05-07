@@ -35,46 +35,27 @@
             top: -74%;
         } 
     }
-}
-
-.partners-section-movil {
-    .background-partners {
-        top: -76%;
-    }
-
-    .partners-wrapper {
-        padding: 5em 0;
-
-        .partners-logos {
-            width: 100%;
-            padding: 5em 2em 4em;
+    .front-section {
+        display: none;
+        @media (min-width: $lg) {
+            display: block;
         }
-    }
-}
-
-.vertical-content-wrapper {
-    display: none;
-    @media (min-width: $lg) {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        display: -o-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -webkit-flex;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        -ms-justify-content: space-between;
-        -o-justify-content: space-between;
-        justify-content: space-between;
-        padding: 0 3%;
-        
-
+        .line {
+            display: block;
+            width: 2em;
+            height: .04em;
+            background-color: $color-blanco;
+        }
+        .text {
+            text-transform: uppercase;
+            color: $color-blanco;
+            font-size: 60%;
+        }
+    
+        .vertical {
+            @include transform(rotate(-90deg));
+        }
+    
         .left, .right {
             display: flex;
             display: -o-flex;
@@ -96,24 +77,40 @@
             -ms-flex-direction: column;
             -o-flex-direction: column;
             flex-direction: column;
-            height: 60%;
-        }
-        
-
-        .line {
-            display: block;
+            position: absolute;
+            z-index: 2;
+            left: 3%;
+            top: 20%;
+            height: 100%;
             width: 2em;
-            height: .04em;
-            background-color: $color-blanco;
-        }
-        .text {
-            text-transform: uppercase;
-            color: $color-blanco;
-            font-size: 80%;
-        }
+            height: 70%;
 
-        .vertical {
-            @include transform(rotate(-90deg));
+            @media (min-width: $xlg) {
+                left:5%;
+            }
+        }
+    
+        .right {
+            left: initial;
+            right:3%;
+            @media (min-width: $xlg) {
+                right:5%;
+            }
+        }
+    }//.front-section
+}//.partners-section
+
+.partners-section-movil {
+    .background-partners {
+        top: -76%;
+    }
+
+    .partners-wrapper {
+        padding: 5em 0;
+
+        .partners-logos {
+            width: 100%;
+            padding: 5em 2em 4em;
         }
     }
 }
