@@ -2,12 +2,12 @@
     position: relative;
     text-transform: uppercase;
     margin: .5em 0;
-    font-size: 200%;
+    font-size: 250%;
     line-height: 130%;    
     color: $color-negro;
     @media (min-width: $md) {
         font-size: 150%;
-        line-height: 100%;
+        line-height: 150%;
         margin: 1em 0;
     }
 
@@ -26,5 +26,19 @@
     color: $color-blanco;
     &:before {
         background-color: $color-blanco;
+    }
+}
+
+.sub-titulo-seccion {
+    position: relative;
+    text-transform: uppercase;
+    margin: .5em 0;
+    font-size: 125%;
+    line-height: 130%;    
+    color: $color-negro;
+    @media (min-width: $md) {
+        font-size: 100%;
+        line-height: 150%;
+        margin: 1em 0;
     }
 }

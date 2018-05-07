@@ -7,10 +7,7 @@
  * 
 */
 global $dispositivo;
-?>
-
-
-        
+?>      
 
 <!--- footer -->
     <footer class="main-footer">
