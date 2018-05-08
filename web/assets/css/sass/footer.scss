@@ -118,6 +118,7 @@
 
 //turismo legales
 .legales-turismo {
+    position: relative;
     padding: 5em 0 3em;
     text-align: center;
     img {
@@ -133,8 +134,31 @@
         }
         @media (min-width: $md) {
             font-size: 70%;
+        }   
+    }
+
+    .btn-up {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        bottom: 3em;
+        right: 40px;
+        width: 36px;
+        height: 25px;
+        zoom: 1;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+        background: url('../images/sprite.png') no-repeat;
+        background-position: -133px -269px;
+        @media (min-width: $md) {
+            right: 50px;
         }
-        
+        @media (min-width: $lg) {
+            right: 15%;
+        }
+        @media (min-width: $xlg) {
+            right: 24%;
+        }
     }
 }
 

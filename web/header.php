@@ -56,11 +56,12 @@ global $pageActual;
         openPopUp($pageActual);
     ?>
     <header class="main-header">
-        <nav>
-            <?php getTemplate( 'nav' ); ?>
-        </nav>
+        
+        <?php getTemplate( 'nav' ); ?>
 
         <div class="header-wrapper">
+            
+            <!-- ACA ADENTRO VAN LAS CAPAS DEL HEADER -->
             
             <!-- TEMP IMAGE -->
             <?php 

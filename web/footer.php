@@ -109,6 +109,9 @@ global $dispositivo;
                 <h5>
                     <?php echo HABILITACIONES; ?>
                 </h5>
+                <button class="btn-up go-up">
+                    <span class="sr-only">Subir</span>
+                </button>
             </div>
 
         </section><!-- //SECTION LEGALES BAXTTER -->
