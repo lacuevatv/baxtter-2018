@@ -91,13 +91,11 @@
         h6 {
             width: 100%;
             position: relative;
-            text-align: right;
             margin: 3em 0;
             img {
                 width: 147px;
             }
             @media (min-width: $md) {
-                text-align: left;
                 margin: 0;
                 top: 13vh;
             }
@@ -191,6 +189,7 @@
             text-transform: uppercase;
             margin: 2em 0;
             font-size: 130%;
+            font-weight: 500;
 
             li {
                 margin: 1em 0;
@@ -203,6 +202,8 @@
                 cursor: pointer;
                 padding-left: 30px;
                 margin-top: 2em;
+                font-weight: 400;
+                font-size: 80%;
                 @media (min-width: $xs) {
                     padding-left: 45px;
                     margin-top: 0;
@@ -217,7 +218,7 @@
                     display: block;
                     background: url(../images/sprite.png) no-repeat;
                     position: absolute;
-                    bottom: 0;
+                    bottom: 1px;
                     left: 0;
                     background-position: -67px -237px;
                     height: 17px;
@@ -278,6 +279,7 @@
             }
         }
         .bariloche-links {
+            font-weight: 500;
             text-transform: uppercase;
             margin: 2em 0;
             font-size: 130%;
@@ -344,17 +346,13 @@
             color: $color-blanco;
             text-transform: uppercase;
         }
-        h2.titulo-seccion {
-            font-size: 200%;
-            line-height: 120%;
-        }
 
         h3 {
             margin: 2.5em 0 1.5em;
         }
 
         .mole-hoteles {
-            font-size: 90%;
+            font-size: 100%;
             line-height: 150%;
             li {
                 margin: 2em 0;
@@ -434,6 +432,7 @@
     }//.viajo-baxtter-wrapper
 
     .pdfs-links {
+        font-weight: 500;
         text-transform: uppercase;
         margin: 2em 0;
         font-size: 130%;
@@ -483,6 +482,7 @@
 .twitter-section {
     background-color: $color-gris-medio;
     .twitter-wrapper {
+        font-weight: 500;
         color: $color-blanco;
         h1 {
             position: relative;
@@ -516,8 +516,9 @@
         }
 
         .addresses {
+            font-weight: 500;
             text-transform: uppercase;
-            color: $color-gris-medio;
+            color: $color-gris-texto;
             @media (min-width: $md) {
                 font-size: 80%;
                 line-height: 170%;

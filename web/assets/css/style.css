@@ -198,7 +198,7 @@ justify-content: space-between;
 html, body {
   font-family: "Knockout HTF48-Featherweight", "FF Din Round Pro", sans-serif;
   font-family: "FF Din Round Pro", sans-serif;
-  color: #333;
+  color: #464646;
   background-color: #fff;
   font-size: .8em;
   line-height: 1.5em; }
@@ -316,6 +316,7 @@ img {
       height: .04em;
       background-color: #fff; }
     .partners-section .front-section .text {
+      font-weight: 500;
       text-transform: uppercase;
       color: #fff;
       font-size: 60%; }
@@ -371,7 +372,7 @@ img {
     padding: 5em 2em 4em; }
 
 .legales-turismo {
-  padding: 90px 0;
+  padding: 5em 0 3em;
   text-align: center; }
   .legales-turismo img {
     max-width: 318px;
@@ -382,7 +383,7 @@ img {
     @media (min-width: 767px) {
       .legales-turismo h5 {
         font-size: 80%; } }
-    @media (min-width: 767px) {
+    @media (min-width: 992px) {
       .legales-turismo h5 {
         font-size: 70%; } }
 
@@ -758,7 +759,7 @@ form {
       justify-content: space-between; } }
   form legend {
     margin: 2em 0 !important;
-    width: 50%; }
+    width: 70%; }
   form .title-form {
     width: 100%;
     display: flex;
@@ -815,6 +816,8 @@ form {
     z-index: 2;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: 500;
+    color: #9b9d9e;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -907,6 +910,7 @@ form {
   outline: none;
   width: 100%;
   display: inline-block;
+  font-weight: 500;
   background-color: #ee1d23;
   color: #fff;
   padding: .5em 1em;
@@ -938,12 +942,12 @@ form {
     width: 27px;
     height: 30px;
     background: url(../images/sprite.png) no-repeat;
-    background-position: -180px -162px; }
+    background-position: -180px -159px; }
     @media (min-width: 567px) {
       .btn-submit:after {
         height: 50px;
         width: 57px;
-        background-position: -202px -151px;
+        background-position: -202px -150px;
         left: 120px; } }
     @media (min-width: 767px) {
       .btn-submit:after {
@@ -955,18 +959,19 @@ form {
       .btn-submit:after {
         height: 30px;
         width: 24px;
-        background-position: -181px -162px;
+        background-position: -181px -161px;
         left: 76px;
         top: 6px; } }
 
-#reunion-form .subtitulo-seccion:before {
-  content: '';
-  position: absolute;
-  bottom: -.5em;
-  left: .05em;
-  width: 20px;
-  height: 1px;
-  background-color: #333; }
+@media (min-width: 992px) {
+  #reunion-form .subtitulo-seccion:before {
+    content: '';
+    position: absolute;
+    bottom: -.5em;
+    left: .05em;
+    width: 20px;
+    height: 1px;
+    background-color: #464646; } }
 @media (min-width: 992px) {
   #reunion-form {
     font-size: 85%; }
@@ -1055,13 +1060,11 @@ form {
     .nosotros-section .background-section h6 {
       width: 100%;
       position: relative;
-      text-align: right;
       margin: 3em 0; }
       .nosotros-section .background-section h6 img {
         width: 147px; }
       @media (min-width: 992px) {
         .nosotros-section .background-section h6 {
-          text-align: left;
           margin: 0;
           top: 13vh; } }
       @media (min-width: 1500px) {
@@ -1070,7 +1073,7 @@ form {
           display: block;
           width: 170px;
           height: .05em;
-          background-color: #333;
+          background-color: #464646;
           position: absolute;
           bottom: 0;
           left: -190px; } }
@@ -1126,7 +1129,8 @@ form {
   .programas-section .programas-wrapper .programas-links {
     text-transform: uppercase;
     margin: 2em 0;
-    font-size: 130%; }
+    font-size: 130%;
+    font-weight: 500; }
     .programas-section .programas-wrapper .programas-links li {
       margin: 1em 0; }
     .programas-section .programas-wrapper .programas-links button {
@@ -1135,7 +1139,9 @@ form {
       text-transform: uppercase;
       cursor: pointer;
       padding-left: 30px;
-      margin-top: 2em; }
+      margin-top: 2em;
+      font-weight: 400;
+      font-size: 80%; }
       @media (min-width: 567px) {
         .programas-section .programas-wrapper .programas-links button {
           padding-left: 45px;
@@ -1148,7 +1154,7 @@ form {
         display: block;
         background: url(../images/sprite.png) no-repeat;
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         background-position: -67px -237px;
         height: 17px;
@@ -1193,6 +1199,7 @@ form {
         top: -2px;
         left: 0; }
     .bariloche-section .bariloche-wrapper .bariloche-links {
+      font-weight: 500;
       text-transform: uppercase;
       margin: 2em 0;
       font-size: 130%; }
@@ -1245,13 +1252,10 @@ form {
     .mole-section .mole-wrapper h2 {
       color: #fff;
       text-transform: uppercase; }
-    .mole-section .mole-wrapper h2.titulo-seccion {
-      font-size: 200%;
-      line-height: 120%; }
     .mole-section .mole-wrapper h3 {
       margin: 2.5em 0 1.5em; }
     .mole-section .mole-wrapper .mole-hoteles {
-      font-size: 90%;
+      font-size: 100%;
       line-height: 150%; }
       .mole-section .mole-wrapper .mole-hoteles li {
         margin: 2em 0; }
@@ -1308,6 +1312,7 @@ form {
 .viajo-baxtter-section .viajo-baxtter-wrapper h1 {
   margin-bottom: 1em; }
 .viajo-baxtter-section .pdfs-links {
+  font-weight: 500;
   text-transform: uppercase;
   margin: 2em 0;
   font-size: 130%; }
@@ -1336,7 +1341,7 @@ form {
       .viajo-baxtter-section .pdfs-links li {
         margin: 0;
         padding: 0 1em;
-        border-right: 0.05em solid #333; }
+        border-right: 0.05em solid #464646; }
         .viajo-baxtter-section .pdfs-links li:first-child {
           padding-left: 0; }
         .viajo-baxtter-section .pdfs-links li:last-child {
@@ -1349,6 +1354,7 @@ form {
 .twitter-section {
   background-color: #5c5d5f; }
   .twitter-section .twitter-wrapper {
+    font-weight: 500;
     color: #fff; }
     .twitter-section .twitter-wrapper h1 {
       position: relative; }
@@ -1372,8 +1378,9 @@ form {
     .contacto-section .contacto-wrapper h2 {
       margin-bottom: 4em; } }
 .contacto-section .contacto-wrapper .addresses {
+  font-weight: 500;
   text-transform: uppercase;
-  color: #5c5d5f; }
+  color: #9b9d9e; }
   @media (min-width: 992px) {
     .contacto-section .contacto-wrapper .addresses {
       font-size: 80%;
@@ -1394,7 +1401,7 @@ form {
       -o-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .contacto-section .contacto-wrapper .addresses h1 {
-    color: #333;
+    color: #464646;
     font-weight: 500;
     position: relative;
     display: inline-block; }
@@ -1477,9 +1484,10 @@ form {
   position: relative;
   text-transform: uppercase;
   margin: .5em 0;
-  font-size: 250%;
+  font-size: 280%;
   line-height: 130%;
-  color: #333; }
+  color: #464646;
+  font-weight: 300; }
   @media (min-width: 992px) {
     .titulo-seccion {
       font-size: 150%;
@@ -1492,7 +1500,7 @@ form {
     left: .05em;
     width: 20px;
     height: 1px;
-    background-color: #333; }
+    background-color: #464646; }
 
 .titulo-seccion-claro {
   color: #fff; }
@@ -1508,9 +1516,10 @@ form {
   position: relative;
   text-transform: uppercase;
   margin: .5em 0;
-  font-size: 125%;
+  font-size: 145%;
   line-height: 130%;
-  color: #333; }
+  color: #464646;
+  font-weight: 500; }
   @media (min-width: 992px) {
     .subtitulo-seccion {
       font-size: 100%;

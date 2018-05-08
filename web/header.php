@@ -56,18 +56,20 @@ global $pageActual;
         openPopUp($pageActual);
     ?>
     <header class="main-header">
-        <!-- TEMP IMAGE -->
-        <img src="<?php echo UPLOADSURL; ?>/temp/ref-header.jpg" style="width:100%;display: block; margin: 0 auto;">
-
         <nav>
             <?php getTemplate( 'nav' ); ?>
         </nav>
 
         <div class="header-wrapper">
             
-            <div>
-                Únicos
-            </div>
+            <!-- TEMP IMAGE -->
+            <?php 
+            if ( $dispositivo != 'movil' ) {
+                echo '<img src="'.MAINSURL.'/contenido/temp/header.jpg" style="width:100%;margin:0;">';
+            } else {
+                echo '<img src="'.MAINSURL.'/contenido/temp/header-movil.jpg" style="width:100%;margin:0;">';
+            }
+            ?>
  
         </div><!-- //. header-wrapper -->  
 

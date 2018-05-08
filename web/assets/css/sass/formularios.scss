@@ -22,7 +22,7 @@ form {
 
     legend {
         margin: 2em 0!important;
-        width: 50%;
+        width: 70%;
     }
 
     .title-form {
@@ -95,6 +95,8 @@ form {
         z-index:2;
         cursor: pointer;
         text-transform: uppercase;
+        font-weight: 500;
+        color: $color-gris-texto;
         @include transition(all 0.3s);
         @media (min-width: $md) {
             top: 8px;
@@ -222,6 +224,7 @@ form {
     outline: none;
     width: 100%;
     display: inline-block;
+    font-weight: 500;
     background-color: $color-rojo-brillante;
     color: $color-blanco;
     padding: .5em 1em;
@@ -257,11 +260,11 @@ form {
         width: 27px;
         height: 30px;
         background: url(../images/sprite.png) no-repeat;
-        background-position:-180px -162px;
+        background-position:-180px -159px;
         @media (min-width: $xs) {
             height: 50px;
             width: 57px;
-            background-position:-202px -151px;
+            background-position:-202px -150px;
             left: 120px;
         }
         @media (min-width: $sm) {
@@ -273,7 +276,7 @@ form {
         @media (min-width: $md) {
             height: 30px;
             width: 24px;
-            background-position: -181px -162px;
+            background-position: -181px -161px;
             left: 76px;
             top: 6px;
         }
@@ -283,14 +286,16 @@ form {
 
 #reunion-form {
     .subtitulo-seccion {
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: -.5em;
-            left: .05em;
-            width: 20px;
-            height: 1px;
-            background-color: $color-negro;
+        @media (min-width: $md) {
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -.5em;
+                left: .05em;
+                width: 20px;
+                height: 1px;
+                background-color: $color-negro;
+            }
         }
     }
 

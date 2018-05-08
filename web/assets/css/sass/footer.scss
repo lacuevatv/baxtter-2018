@@ -47,6 +47,7 @@
             background-color: $color-blanco;
         }
         .text {
+            font-weight: 500;
             text-transform: uppercase;
             color: $color-blanco;
             font-size: 60%;
@@ -117,7 +118,7 @@
 
 //turismo legales
 .legales-turismo {
-    padding: 90px 0;
+    padding: 5em 0 3em;
     text-align: center;
     img {
         max-width: 318px;
@@ -130,7 +131,7 @@
         @media (min-width: $sm) {
             font-size: 80%;
         }
-        @media (min-width: $sm) {
+        @media (min-width: $md) {
             font-size: 70%;
         }
         
