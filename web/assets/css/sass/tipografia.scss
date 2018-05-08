@@ -16,8 +16,8 @@
         position: absolute;
         bottom: -.5em;
         left: .05em;
-        width: .5em;
-        height: .03em;
+        width: 20px;
+        height: 1px;
         background-color: $color-negro;
     }
 }
@@ -29,7 +29,14 @@
     }
 }
 
-.sub-titulo-seccion {
+.titulo-seccion-celeste {
+    color: $color-celeste;
+    &:before {
+        background-color: $color-celeste;
+    }
+}
+
+.subtitulo-seccion {
     position: relative;
     text-transform: uppercase;
     margin: .5em 0;
@@ -42,3 +49,4 @@
         margin: 1em 0;
     }
 }
+

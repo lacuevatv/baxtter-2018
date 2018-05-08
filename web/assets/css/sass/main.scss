@@ -3,6 +3,10 @@
     z-index: 0;
 }
 
+.main-section-wrapper {
+    padding: 5em 0 5em;
+}
+
 /*
  * NOSOTROS
 */
@@ -47,7 +51,7 @@
         h3 {
             margin-bottom: 2em;
             @media (min-width: $md) {
-                margin-bottom: 3em;
+                margin-bottom: 4em;
             }
         }
 
@@ -84,7 +88,7 @@
             padding-top: 0;
         }
 
-        h1 {
+        h6 {
             width: 100%;
             position: relative;
             text-align: right;
@@ -109,49 +113,43 @@
                     left: -190px;
                 }
             }
-        }//h1
+        }//h6
     }//.background-section
 
 }//.nosotros-section
 
 /*
- * CONTACTO
+* VIDEO
 */
-.addresses {
-    @media (min-width: $md) {
-        display: flex;
-        display: -o-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -webkit-flex;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        -ms-justify-content: space-between;
-        -o-justify-content: space-between;
-        justify-content: space-between;
-        -webkit-flex-wrap: wrap;
-        -moz-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        -o-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
+.video-section {
+    .video-wrapper {}
+}
 
-    li {
-        @media (min-width: $md) {
-            width: 30%;
-            padding-right: 1em;
-
-            &:last-child {
-                padding-right: 0;
+/*
+* REDES SOCIALES
+*/
+.redes-sociales-section {
+    .redes-sociales-wrapper {
+        h3 {
+            margin-bottom: 1em;
+        }
+        h4 {
+            margin-bottom: 2em;
+            @media (min-width: $md) {
+                width: 50%;
             }
         }
-    }
+    }//.redes-sociales-wrapper
+}//.redes-sociales-section
 
-    li.main-address {
-        width: 100%;
-        
+/*
+ * PROGRAMAS
+*/
+.programas-section {
+    background-color: $color-violeta;
+    
+    .programas-wrapper {
         @media (min-width: $md) {
-            padding-right: 0;
             display: flex;
             display: -o-flex;
             display: -ms-flex;
@@ -164,16 +162,480 @@
             justify-content: space-between;
         }
         
+        .logo-escritorio {
+            width: 160px;
+            @media (min-width: $md) {
+                width: 207px;
+            }
+        }
 
-        .contacto-principal {
-            flex-grow: 1;
-            .form-wrapper {}
-        }//.contacto-principal
+        h2 {
+            margin-bottom: 4em;
+        }
 
-        .map-wrapper {
+        .hot-beach {
+            padding: 5em 0;
+            width: 100%;
+            color: $color-blanco;
+        }//.hot-beach
+
+        .cold-mountain {
+            padding: 5em 0;
+            width: 100%;
+            @media (min-width: $md) {
+                padding-left: 10%;
+            }
+        }//.cold-mountain
+
+        .programas-links {
+            text-transform: uppercase;
+            margin: 2em 0;
+            font-size: 130%;
+
+            li {
+                margin: 1em 0;
+            }
+
+            button {
+                position: relative;
+                color: $color-celeste;
+                text-transform: uppercase;
+                cursor: pointer;
+                padding-left: 30px;
+                margin-top: 2em;
+                @media (min-width: $xs) {
+                    padding-left: 45px;
+                    margin-top: 0;
+                }
+                @media (min-width: $md) {
+                    margin-top: 1em;
+                }
+    
+    
+                &:before {
+                    content: '';
+                    display: block;
+                    background: url(../images/sprite.png) no-repeat;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-position: -67px -237px;
+                    height: 17px;
+                    width: 20px;
+                    @media (min-width: $xs) {
+                        background-position: -23px -231px;
+                        height: 26px;
+                        width: 32px;
+                    }
+                }
+            }//button
+
+            button.button-red {
+                color: $color-rojo-rosa;
+                &:before {
+                    background-position: -67px -205px;
+                    @media (min-width: $xs) {
+                        background-position: -23px -196px;
+                    }
+                }
+            }
+        }//.programas-links
+    }//.programas-wrapper
+
+}//.programas-section
+
+
+/*
+ * BARILOCHE
+*/
+.bariloche-section {
+    background-color: $color-gris-oscuro;
+    .bariloche-wrapper {
+        color: $color-blanco;
+        
+        h2 {
+            margin-bottom: 1.5em;
+        }
+
+        p {
+            color: $color-celeste;
+            text-transform: uppercase;
+            padding-left: 1.5em;
+            position: relative;
+            font-size: 110%;
+            line-height: 150%;
+            @media (min-width: $md) {
+                font-size: 80%;
+            }
+
+            &:before {
+                content: '>> ';
+                font-size: 120%;
+                vertical-align: top;
+                position: absolute;
+                top: -2px;
+                left: 0;
+            }
+        }
+        .bariloche-links {
+            text-transform: uppercase;
+            margin: 2em 0;
+            font-size: 130%;
+            @media (min-width: $md) {
+                line-height: 100%;
+                font-size: 100%;
+                display: flex;
+                display: -o-flex;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                -o-align-items: center;
+                align-items: center;
+                -webkit-justify-content: flex-start;
+                -moz-justify-content: flex-start;
+                -ms-justify-content: flex-start;
+                -o-justify-content: flex-start;
+                justify-content: flex-start;
+            }
+
+            li {
+                margin: 1em 0;
+                @media (min-width: $md) {
+                    margin: 0;
+                    padding: 0 1em;
+                    border-right: .05em solid $color-blanco;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                        border-right: none;
+                    }
+                }
+            }
+        }//.bariloche-links
+    }//.bariloche-wrapper
+}//.bariloche-section
+
+
+/*
+ * MOLE
+*/
+
+.mole-section {
+    background-color: $color-rojo-opaco;
+
+    .mole-wrapper {
+        padding: 25em 0 5em;
+        @media (min-width: $xs) {
+            padding: 15em 0 5em;
+        }
+        @media (min-width: $md) {
+            padding: 20em 0;
             width: 50%;
-        }//map-wrapper
-    }//li.main-address
+        }
 
-}//.addresses
+        h2 {
+            color: $color-blanco;
+            text-transform: uppercase;
+        }
+        h2.titulo-seccion {
+            font-size: 200%;
+            line-height: 120%;
+        }
+
+        h3 {
+            margin: 2.5em 0 1.5em;
+        }
+
+        .mole-hoteles {
+            font-size: 90%;
+            line-height: 150%;
+            li {
+                margin: 2em 0;
+                @media (min-width: $md) {
+                    margin: 1em 0;
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            color: $color-celeste;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding-left: 30px;
+            margin-top: 2em;
+            @media (min-width: $xs) {
+                padding-left: 45px;
+                margin-top: 0;
+            }
+            @media (min-width: $md) {
+                margin-top: 1em;
+            }
+
+
+            &:before {
+                content: '';
+                display: block;
+                background: url(../images/sprite.png) no-repeat;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-position: -67px -237px;
+                height: 17px;
+                width: 20px;
+                @media (min-width: $xs) {
+                    background-position: -23px -231px;
+                    height: 26px;
+                    width: 32px;
+                }
+            }
+        }
+    }//.mole-wrapper
+
+    .background-section {
+        h1 {
+            position: absolute;
+            padding-top: 8em;
+            @media (min-width: $xs) {
+                padding-top: 5em;
+            }
+            @media (min-width: $md) {
+                padding-top: 10em;
+            }
+            .logo-movil {
+                width: 80%;
+                max-width: 160px;
+            }
+            .logo-escritorio {
+                width: 138px;
+            }
+        }
+                
+    }//.background-section
+
+}//.mole-section
+
+/*
+ * VIAJO CON BAXTTER
+*/
+.viajo-baxtter-section {
+    
+    .viajo-baxtter-wrapper {
+        h1 {
+            margin-bottom: 1em;
+        }
+    }//.viajo-baxtter-wrapper
+
+    .pdfs-links {
+        text-transform: uppercase;
+        margin: 2em 0;
+        font-size: 130%;
+        @media (min-width: $md) {
+            line-height: 100%;
+            font-size: 80%;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+        }
+
+        li {
+            margin: 1em 0;
+            @media (min-width: $md) {
+                margin: 0;
+                padding: 0 1em;
+                border-right: .05em solid $color-negro;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                }
+            }
+        }
+    }//.pdfs-links
+}//.viajo-baxtter-sectio
+
+/*
+ * TWITTER
+*/
+.twitter-section {
+    background-color: $color-gris-medio;
+    .twitter-wrapper {
+        color: $color-blanco;
+        h1 {
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                width: 47px;
+                height: 40px;
+                background: url(../images/sprite.png) no-repeat;
+                background-position: -19px -264px;
+                position: absolute;
+                top: -47px;
+                left: -2px;
+            } 
+        }
+    }//.twitter-wrapper
+}//.twitter-section
+
+
+/*
+ * CONTACTO
+*/
+.contacto-section {
+    .contacto-wrapper {
+        
+        h2 {
+            margin-bottom: 2em;
+            @media (min-width: $md) {
+                margin-bottom: 4em;
+            }
+        }
+
+        .addresses {
+            text-transform: uppercase;
+            color: $color-gris-medio;
+            @media (min-width: $md) {
+                font-size: 80%;
+                line-height: 170%;
+                display: flex;
+                display: -o-flex;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                -webkit-justify-content: space-between;
+                -moz-justify-content: space-between;
+                -ms-justify-content: space-between;
+                -o-justify-content: space-between;
+                justify-content: space-between;
+                -webkit-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                -o-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                color: $color-negro;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 3em;
+                    height: 1px;
+                    background-color: $color-celeste;
+                    position: absolute;
+                    top: 10px;
+                    right: -20px;
+                    @media (min-width: $sm) {
+                        top: 18px;
+                    }
+                    @media (min-width: $md) {
+                        top: 10px;
+                    }
+                }
+            }
+        
+            li {
+                margin-bottom: 2em;
+                @media (min-width: $md) {
+                    width: 22%;
+                    padding-right: .5em;
+        
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        
+            li.main-address {
+                width: 100%;
+                margin-bottom: 3em;
+                font-size: 130%;
+                line-height: 140%;
+                @media (min-width: $md) {
+                    font-size: 110%;
+                    line-height: 150%;
+                    padding-right: 0;
+                    display: flex;
+                    display: -o-flex;
+                    display: -ms-flex;
+                    display: -moz-flex;
+                    display: -webkit-flex;
+                    -webkit-justify-content: space-between;
+                    -moz-justify-content: space-between;
+                    -ms-justify-content: space-between;
+                    -o-justify-content: space-between;
+                    justify-content: space-between;
+                }
+                
+        
+                .contacto-principal {
+                    flex-grow: 1;
+                    @media (min-width: $md) {
+                        padding-right: 1em;
+                        display: flex;
+                        display: -o-flex;
+                        display: -ms-flex;
+                        display: -moz-flex;
+                        display: -webkit-flex;
+                        -webkit-justify-content: space-between;
+                        -moz-justify-content: space-between;
+                        -ms-justify-content: space-between;
+                        -o-justify-content: space-between;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                    }
+                    .form-wrapper {
+                        margin: 2em 0 1em;
+                        @media (min-width: $md) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }//.contacto-principal
+        
+                .map-wrapper {
+                    width: 100%;
+                    margin: 3em 0;
+                    @media (min-width: $md) {
+                        padding-left: 1em;
+                        margin: 0;
+                        width: 50%;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+                    
+                }//map-wrapper
+            }//li.main-address
+        
+        }//.addresses
+    }//.contacto-wrapper
+}//.contacto-section
+
 

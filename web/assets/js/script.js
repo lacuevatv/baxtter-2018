@@ -11,7 +11,7 @@ PARALLAX / VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 2.0 FORMULARIOS
 3.0 POP UP PROMO
 3.0 OWL SLIDERS
-4.0 
+4.0 TWIITER
 --------------------------------------------------------------*/
 
 var baseUrl = 'http://' + window.location.host;
@@ -462,3 +462,113 @@ $(window).on('load', function(){
 });//on load
 
 
+/*--------------------------------------------------------------
+3.0 OWL TWITTER
+--------------------------------------------------------------*/
+$(document).ready(function(){
+    //espera cinco segundos para que carguen los twitters
+    setTimeout (slider_twiters_on, 5000)
+    
+    function slider_twiters_on() {
+        var tweets = $('.tweets');
+        var tweet = $('.tweets ul li');
+        var numeroTweets = tweets.length;
+        var seguidor = $('.twetts-dots');
+        var i = 0;
+        var sleepTime = 3000;
+        var animateDur = 500;
+
+        setTimeout(function(){
+            tweet.eq(i).animate({
+            'left' : '+=960px'
+            },animateDur, function(){
+                //reset primer slider para tenerlo listo
+                tweet.eq(i).css('left', '-960px');
+                //sigue la animacion
+                setTimeout(function(){
+                    tweet.eq(i+2).animate({
+                    'left' : '+=960px'
+                    },animateDur, function(){
+                        setTimeout(function(){
+                            tweet.eq(i+3).animate({
+                            'left' : '+=960px'
+                            },animateDur, function(){
+                                setTimeout(function(){
+                                    tweet.eq(i+4).animate({
+                                    'left' : '+=960px'
+                                    },animateDur, function(){
+                                        setTimeout(function(){
+                                            tweet.eq(i).animate({
+                                            'left' : '+=960px'
+                                            },animateDur, function(){
+                                                tweet.eq(i+1).css('left', '-960px');
+                                                tweet.eq(i+2).css('left', '-960px');
+                                                tweet.eq(i+3).css('left', '-960px');
+                                                slider_twiters_on();        
+                                            })
+                                        },sleepTime)
+                                        
+                                    })
+                                }, sleepTime)
+                            })
+                        }, sleepTime)
+                    })
+                }, sleepTime)
+            });
+        }, sleepTime)
+
+        setTimeout(function(){
+            tweet.eq(i+1).animate({
+            'left' : '+=960px'
+            },animateDur, function(){
+                seguidor.eq(i).toggleClass('active');
+                seguidor.eq(i+1).toggleClass('active');
+                setTimeout(function(){
+                    tweet.eq(i+1).animate({
+                    'left' : '+=960px'
+                    },animateDur, function(){
+                        seguidor.eq(i+1).toggleClass('active');
+                        seguidor.eq(i+2).toggleClass('active');
+                        setTimeout(function(){
+                            tweet.eq(i+2).animate({
+                            'left' : '+=960px'
+                            },animateDur, function(){
+                                seguidor.eq(i+2).toggleClass('active');
+                                seguidor.eq(i+3).toggleClass('active');
+                                setTimeout(function(){
+                                    tweet.eq(i+3).animate({
+                                    'left' : '+=960px'
+                                    },animateDur, function(){
+                                        seguidor.eq(i+3).toggleClass('active');
+                                        seguidor.eq(i+4).toggleClass('active');
+                                        setTimeout(function(){
+                                            tweet.eq(i+4).animate({
+                                            'left' : '+=960px'
+                                            },animateDur, function(){
+                                                seguidor.eq(i+4).toggleClass('active');
+                                                seguidor.eq(i).toggleClass('active');
+                                                tweet.eq(i+4).css('left', '-960px');
+                                            })
+                                        }, sleepTime)
+                                    })
+                                }, sleepTime)
+                            })
+                        }, sleepTime)
+                    })
+                }, sleepTime)
+            });
+        }, sleepTime)
+
+    } //slider_twiters_on();
+    
+
+    $('.tweets').twittie(
+        {
+            'hashtag' :' SOMOSBAXTTER',
+            'count' : '5',
+            'template' : '{{tweet}} - {{user_name}}',
+            'apiPath' : 'inc/twitter/tweet.php'
+        }, function() {
+        console.log('twitter');
+    });
+});

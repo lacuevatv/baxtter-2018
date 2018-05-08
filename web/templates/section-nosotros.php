@@ -13,24 +13,26 @@ global $dispositivo;
     
     <div class="background-section">
         <div class="container">
-            <h1>
-                <span class="sr-only">Baxtter</span>
+            <h6>
                 <img src="<?php echo MAINSURL; ?>/assets/images/logo-nosotros.png" alt="Baxter logo texto">
-            </h1>
+            </h6>
         </div>
     </div>
 
     <div class="main-section container">
 
-        <div class="nosotros-wrapper">
+        <div class="main-section-wrapper nosotros-wrapper">
 
             <div class="left">
                 <hgroup>
+                    <h1>
+                        <span class="sr-only">Baxtter</span>
+                    </h1>
                     <h2 class="titulo-seccion">
                         Descubrí una nueva forma de hacer el viaje de egresados
                     </h2>
                     
-                    <h3 class="sub-titulo-seccion">
+                    <h3 class="subtitulo-seccion">
                         Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 27 años.
                     </h3>
                 </hgrounp>
@@ -71,31 +73,42 @@ global $dispositivo;
             </div>
         </div>
     </div><!-- //. container -->   
-
-
-
-
-
-        <div class="video-baxtter">
-            <h3>
-                <span class="sr-only">Video Baxtter</span>
-            </h3>
-
-            <!-- TEMP IMAGE -->
-            <img src="<?php echo UPLOADSURL; ?>/temp/ref-video.jpg" style="width:100%;display: block; margin: 0 auto;">
-        
-        </div>
-
-        <div class="container">
-            <h3>
-                Somos hipersociales
-            </h3>
-            <p>
-                Conocé los detalles de nuestros programas exclusivamente en nuestras redes.
-            </p>
-            
-            <ul class="redes-sociales">
-                <?php getTemplate('redes-sociales'); ?>
-            </ul>
-    </div><!-- //. container -->
 </section><!-- //SECTION NOSOTROS -->
+
+
+<section id="video" class="section-capas video-section">
+    <div class="main-section">
+
+        <div class="video-wrapper">
+            <div class="video-baxtter">
+                <h3>
+                    <span class="sr-only">Video Baxtter</span>
+                </h3>
+
+                <!-- TEMP IMAGE -->
+                <img src="<?php echo UPLOADSURL; ?>/temp/ref-video.jpg" style="width:100%;display: block; margin: 0 auto;">
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="redes-sociales" class="section-capas redes-sociales-section">
+    <div class="main-section container">
+
+        <div class="main-section-wrapper redes-sociales-wrapper">
+            <div class="redes-sociales-baxtter">
+                <h3 class="titulo-seccion">
+                    Somos hiper sociales
+                </h3>
+                <h4 class="subtitulo-seccion">
+                    Conocé los detalles de nuestros programas exclusivamente en nuestras redes.
+                </h4>
+                
+                <ul class="redes-sociales">
+                    <?php getTemplate( 'redes-sociales' ); ?>
+                </ul>
+            </div>
+        </div>
+    </div><!-- //. container -->
+</section>

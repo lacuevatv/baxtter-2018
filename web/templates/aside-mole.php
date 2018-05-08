@@ -8,26 +8,37 @@
 */
 global $dispositivo;
 ?>
-<aside>
-    <!-- TEMP IMAGE -->
-    <img src="<?php echo UPLOADSURL; ?>/temp/ref-hotel.jpg" style="width:100%;display: block; margin: 0 auto;">
-    <!--
-    <div class="container">
-        <hgroup>
+<aside id="mole" class="section-capas mole-section">
+
+    <div class="background-section">
+        <div class="container">
             <h1>
-                Mole
+                <?php 
+                if ( $dispositivo != 'movil' ) {
+                    echo '<img src="'.MAINSURL.'/assets/images/mole-logo.png" alt="Mole - Logo" class="logo-escritorio">';    
+                } else {
+                    echo '<img src="'.MAINSURL.'/assets/images/movil/mole-logo-movil.png" alt="Mole - Logo" class="logo-movil">';
+                }
+                ?>
+                
+                <span class="sr-only">Mole</span>
             </h1>
+        </div>
+    </div>
 
-            <h2>
-                Una ciudad en el corazón de otra ciudad.
-            </h2>
+    <div class="main-section container">
+        <div class="main-section-wrapper mole-wrapper">
+            <hgroup>
+                <h2 class="titulo-seccion">
+                    Una ciudad en el corazón de otra ciudad.
+                </h2>
 
-            <h3>
-                Un nuevo concepto en hotelería para jóvenes.
-            </h3>
-        </hgroup>
+                <h3 class="subtitulo-seccion">
+                    Un nuevo concepto en hotelería para jóvenes.
+                </h3>
+            </hgroup>
 
-            <ul>
+            <ul class="mole-hoteles">
                 <li>
                     <h2>
                         Aguas del sur
@@ -65,6 +76,7 @@ global $dispositivo;
             <button>
                 Ver galería de imágenes
             </button>
-        </div><!-- //. container -->
+        </div><!-- //.mole-wrapper -->
+    </div><!-- //. container -->
     
 </aside><!-- //ASIDE MOLE -->

@@ -8,16 +8,29 @@
 */
 global $dispositivo;
 ?>
-<aside>
+<aside id="twitter" class="section-capas twitter-section">
+    <div class="main-section container">
+
+        <div class="main-section-wrapper twitter-wrapper">
             
-    <!-- TEMP IMAGE -->
-    <img src="<?php echo UPLOADSURL; ?>/temp/ref-twitter.jpg" style="width:100%;display: block; margin: 0 auto;">
-
-    <div class="container">
-        <!--<h1>
-            #SomosBaxtter
-        </h1>-->
-
+            <h1 class="titulo-seccion titulo-seccion-celeste">
+                #SomosBaxtter
+            </h1>
+            
+            <div class="tweets-container">
+            
+                <div class="tweets"></div>
+            
+            </div>
+            
+            <ul class="twetts-dots-wrapper">
+                <li class="twetts-dots active"></li>
+                <li class="twetts-dots"></li>
+                <li class="twetts-dots"></li>
+                <li class="twetts-dots"></li>
+                <li class="twetts-dots"></li>
+            </ul>
+            
+        </div><!-- //.twitter-wrapper -->
     </div><!-- //. container -->
-    
 </aside><!-- //ASIDE TWITTER -->

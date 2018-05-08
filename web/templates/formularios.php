@@ -3,9 +3,21 @@
 switch ($data) {
 	case 'reunion': ?>
 		<!-- reunion-form -->
-		<form method="POST" name="default-form" id="default-form">
+		<form method="POST" name="reunion-form" id="reunion-form">
 			<div class="loader"></div>
-			<div class="inner-wrapper-form">
+			
+			<div class="title-form">
+				<h2 class="titulo-seccion">
+					Pedí tu reunión
+				</h2>
+
+				<legend class="subtitulo-seccion">
+					Completá el form y nos ponemos en contacto
+				</legend>
+
+			</div>
+
+			<div class="inner-wrapper-form margin-right">
 
 				<div class="form-group">
 					<input type="text" name="name-school">
@@ -42,7 +54,7 @@ switch ($data) {
 
 			</div><!-- //.inner-wrapper-form -->
 
-			<div class="inner-wrapper-form">
+			<div class="inner-wrapper-form margin-left">
 
 				<div class="form-group">
 					<input type="number" name="year-trip">
@@ -70,9 +82,7 @@ switch ($data) {
 					</span>
 				</div>
 
-				<div class="btn-submit-wrapper">
-					<input type="submit" value="Enviar" class="btn-submit">
-				</div>
+				<button type="submit" class="btn-submit">Enviar</button>
 
 			</div><!-- //.inner-wrapper-form -->
 
@@ -117,9 +127,9 @@ switch ($data) {
 					</span>
 				</div>
 
-				<div class="btn-submit-wrapper">
-					<input type="submit" value="Enviar" class="btn-submit">
-				</div>
+				
+				<button type="submit" class="btn-submit">Enviar</button>
+				
 				
 			</div><!-- //.inner-wrapper-form -->
 

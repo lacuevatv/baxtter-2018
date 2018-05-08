@@ -9,11 +9,11 @@
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
 
     li {
-        margin: 1em;
+        margin: .5em;
 
         &:first-child {
             margin-left: 0;
@@ -34,12 +34,12 @@
         }
     }
 
-}
+}//.redes-sociales
 
 .icon-redes {
     width: 43px;
     height: 43px;
-    background: green url(../images/sprite.png) no-repeat;
+    background: url(../images/sprite.png) no-repeat;
 
     @media (min-width: $md) {
         width: 32px;
@@ -47,51 +47,49 @@
     }
 }
 
-.icon-redes {
-    .icon-redes-instagram {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
-    }
-
-    .icon-redes-spotify {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
-    }
-
-    .icon-redes-youtube {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
-    }
-
-    .icon-redes-vimeo {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
-    }
-
-    .icon-redes-twitter {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
-    }
-
-    .icon-redes-facebook {
-        background-position: 1px 1px;
-        @media (min-width: $md) {
-            background-position: 1px 1px;
-        }
+.icon-redes-instagram {
+    background-position: -21px -3px;
+    @media (min-width: $md) {
+        background-position: -23px -56px;
     }
 }
 
-.icon-redes-xs {
+.icon-redes-spotify {
+    background-position: -82px -3px;
+    @media (min-width: $md) {
+        background-position: -67px -56px;
+    }
+}
+
+.icon-redes-youtube {
+    background-position: -143px -3px;
+    @media (min-width: $md) {
+        background-position: -113px -56px;
+    }
+}
+
+.icon-redes-vimeo {
+    background-position: -205px -3px;
+    @media (min-width: $md) {
+        background-position: -157px -56px;
+    }
+}
+
+.icon-redes-twitter {
+    background-position: -264px -3px;
+    @media (min-width: $md) {
+        background-position: -201px -56px;
+    }
+}
+
+.icon-redes-facebook {
+    background-position: -320px -3px;
+    @media (min-width: $md) {
+        background-position: -243px -56px;
+    }
+}
+
+.icon-xs {
     width: 16px;
     height: 16px;
     .icon-redes-instagram {

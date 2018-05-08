@@ -8,143 +8,174 @@
 */
 global $dispositivo;
 ?>
-<section>
-    <!-- TEMP IMAGE -->
-    <img src="<?php echo UPLOADSURL; ?>/temp/ref-hot-cold.jpg" style="width:100%;display: block; margin: 0 auto;">
-    <!--
-    <div class="container"
-        <h1>
-            Programas
-        </h1>
-        <h2>
-            Baxtter Hot Beach
-        </h2>
-        <ul>
-            <li>
-                <a href="#" target="_blank">
-                    Hoteles
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Servicios incluidos
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Itinerario de viaje
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Contrato tipo
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Tarifario
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Ver galería de imágenes
+<section id="programas">
+    <h1><span class="sr-only">Programas</span></h1>
+    
+    <div class="section-capas programas-section">
+        <div class="background-section">
+        </div><!-- // .background-section -->
 
-                    <ul class="galeria-data">
-                        <li>imagen1.jpg</li>
-                        <li>imagen2.jpg</li>
-                        <li>imagen3.jpg</li>
+        <div class="main-section container">
+            <div class="main-section-wrapper programas-wrapper">
+                <div class="hot-beach">
+                    <h2>
+                        <span class="sr-only">Baxtter Hot Beach</span>
+                        <?php 
+                        if ( $dispositivo != 'movil' ) {
+                            echo '<img src="'.MAINSURL.'/assets/images/hot-beach.png" alt="Baxtter Hot Beach Logo" class="logo-escritorio">';
+                        } else {
+                            echo '<img src="'.MAINSURL.'/assets/images/movil/hot-beach-movil.png" alt="Baxtter Hot Beach Logo" class="logo-escritorio">';
+                        }
+                        ?>
+                    </h2>
+                    <ul class="programas-links">
+                        <li>
+                            <a href="#" target="_blank">
+                                Hoteles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Servicios incluidos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Itinerario de viaje
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Contrato tipo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Tarifario
+                            </a>
+                        </li>
+                        <li>
+                        <button>
+                                Ver galería de imágenes
+                                <ul class="data-carga galeria-data">
+                                    <li>imagen1.jpg</li>
+                                    <li>imagen2.jpg</li>
+                                    <li>imagen3.jpg</li>
+                                </ul>
+                            </button>
+                        </li>
                     </ul>
-                </a>
-            </li>
-        </ul>
+                </div> <!-- // .hot-beach --> 
 
-        <h2>
-            Baxtter Cold Mountain
-        </h2>
-        <ul>
-            <li>
-                <a href="#" target="_blank">
-                    Hoteles
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Servicios incluidos
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Itinerario de viaje
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Contrato tipo
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Tarifario
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Ver galería de imágenes
-
-                    <ul class="galeria-data">
-                        <li>imagen1.jpg</li>
-                        <li>imagen2.jpg</li>
-                        <li>imagen3.jpg</li>
+                <div class="cold-mountain">
+                    <h2>
+                        <span class="sr-only">Baxtter Cold Mountain</span>
+                        <?php 
+                        if ( $dispositivo != 'movil' ) {
+                            echo '<img src="'.MAINSURL.'/assets/images/cold-mountain.png" alt="Baxtter Cold Mountain Logo" class="logo-escritorio">';
+                        } else {
+                            echo '<img src="'.MAINSURL.'/assets/images/movil/cold-mountain-movil.png" alt="Baxtter Cold Mountain Logo" class="logo-escritorio">';
+                        }
+                        ?>
+                    </h2>
+                    <ul class="programas-links">
+                        <li>
+                            <a href="#" target="_blank">
+                                Hoteles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Servicios incluidos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Itinerario de viaje
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Contrato tipo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                Tarifario
+                            </a>
+                        </li>
+                        <li>
+                            <button class="button-red">
+                                Ver galería de imágenes
+                                <ul class="data-carga galeria-data">
+                                    <li>imagen1.jpg</li>
+                                    <li>imagen2.jpg</li>
+                                    <li>imagen3.jpg</li>
+                                </ul>
+                            </button>
+                        </li>
                     </ul>
-                </a>
-            </li>
-        </ul>
+                </div> <!-- // .cold-mountain --> 
+            </div><!-- // .programas-wrapper -->
 
-        <h2>
-            Bariloche
-        </h2>
-        <ul>
-            <li>
-                <a href="#" target="_blank">
-                    Cómo comprar
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Dónde pagar
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Cruz Roja
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Uai
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Certificaciones N8
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    Ver galería de imágenes
+        </div><!-- // .main-section container -->
 
-                    <ul class="galeria-data">
-                        <li>imagen1.jpg</li>
-                        <li>imagen2.jpg</li>
-                        <li>imagen3.jpg</li>
-                    </ul>
-                </a>
-            </li>
-        </ul>
+    </div><!-- // .section-capas .programas-section -->
 
-        <p>
-            Dale Clic y descargá a tu dispositivo el resumen de la información
-        </p>
-        
-    </div><!-- //. container -->    
+    <div class="section-capas bariloche-section">
+        <div class="background-section">
+        </div><!-- // .background-section -->
+
+        <div class="main-section container">
+            <div class="main-section-wrapper bariloche-wrapper">
+                <h2 class="titulo-seccion titulo-seccion-claro">
+                    Bariloche
+                </h2>
+                <ul class="bariloche-links">
+                    <li>
+                        <a href="#" target="_blank">
+                            Cómo comprar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            Dónde pagar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            Cruz Roja
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            Uai
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            Certificaciones N8
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            Ver galería de imágenes
+
+                            <ul class="data-carga galeria-data">
+                                <li>imagen1.jpg</li>
+                                <li>imagen2.jpg</li>
+                                <li>imagen3.jpg</li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+
+                <p>
+                    <em>Dale Clic y descargá a tu dispositivo el resumen de la información</em>
+                </p>
+            </div><!-- // .bariloche-wrapper -->
+
+        </div><!-- // .main-section container -->
+    </div><!-- // .section-capas .bariloche-section -->
+    
 </section><!-- // SECTION PROGRAMAS -->

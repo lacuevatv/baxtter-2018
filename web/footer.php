@@ -124,6 +124,8 @@ global $dispositivo;
     <script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
     <!------- owl ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/owl.carousel.min.js"></script>
+    <!------- twitter ------>
+    <script src="<?php echo MAINSURL; ?>/assets/js/tweetie.min.js"></script>
 
     <!------- OWN SCRIPT ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>

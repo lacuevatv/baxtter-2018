@@ -121,6 +121,19 @@ img {
     width: 100%;
 }
 
+.no-content {
+    &:before {
+        content: none!important;
+    }
+    &:after {
+        content: none!important;
+    }
+}
+
+.data-carga {
+    display: none;
+}
+
 /*--------------------------------------------------------------
 5.0 footer
 --------------------------------------------------------------*/

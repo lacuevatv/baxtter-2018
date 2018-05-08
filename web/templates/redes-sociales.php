@@ -24,7 +24,7 @@ $redes = array(
 
 for ($i=0; $i < count($redes); $i++) { ?>
     <li>
-        <a href="<?php echo $redes[$i]['link']; ?>" target="_blank" class="icon-redes icon-redes<?php if ($data == 'nav') { echo '-xs'; } ?> icon-redes-<?php echo strtolower($redes[$i]['name']); ?>">
+        <a href="<?php echo $redes[$i]['link']; ?>" target="_blank" class="icon-redes <?php if ($data == 'nav') { echo 'icon-xs'; } ?> icon-redes-<?php echo strtolower($redes[$i]['name']); ?><?php if ($data == 'nav') { echo '-xs'; } ?>">
             <span class="sr-only<?php if ($data == 'nav') { echo ' sr-only-especial'; } ?>">
                 <?php echo $redes[$i]['name']; ?>
             </span>
