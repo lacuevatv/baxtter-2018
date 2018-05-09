@@ -11,7 +11,7 @@ PARALLAX / VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 2.0 FORMULARIOS
 3.0 POP UP PROMO
 3.0 OWL SLIDERS
-4.0 TWIITER
+4.0 TWITTER
 --------------------------------------------------------------*/
 
 var baseUrl = 'http://' + window.location.host;

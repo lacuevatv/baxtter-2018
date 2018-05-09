@@ -20,16 +20,14 @@ global $dispositivo;
             <div class="tweets-container">
             
                 <div class="tweets"></div>
-            
+                <ul class="twetts-dots-wrapper">
+                    <li class="twetts-dots active"></li>
+                    <li class="twetts-dots"></li>
+                    <li class="twetts-dots"></li>
+                    <li class="twetts-dots"></li>
+                    <li class="twetts-dots"></li>
+                </ul>
             </div>
-            
-            <ul class="twetts-dots-wrapper">
-                <li class="twetts-dots active"></li>
-                <li class="twetts-dots"></li>
-                <li class="twetts-dots"></li>
-                <li class="twetts-dots"></li>
-                <li class="twetts-dots"></li>
-            </ul>
             
         </div><!-- //.twitter-wrapper -->
     </div><!-- //. container -->

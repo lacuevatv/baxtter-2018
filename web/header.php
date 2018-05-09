@@ -22,6 +22,7 @@ global $pageActual;
 <link rel="mask-icon" href="<?php echo MAINSURL; ?>/safari-pinned-tab.svg" color="#7a7a7a">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#c4c4c4">
+<meta name="format-detection" content="telephone=no">
 <link type="text/plain" rel="author" href="<?php echo MAINSURL; ?>/humans.txt" />
 <!-- SEO SECCTION -->
     <meta name="keywords" content="<?php echo METAKEYS; ?>">

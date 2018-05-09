@@ -285,7 +285,7 @@
             font-size: 130%;
             @media (min-width: $md) {
                 line-height: 100%;
-                font-size: 100%;
+                font-size: 90%;
                 display: flex;
                 display: -o-flex;
                 display: -ms-flex;
@@ -482,6 +482,7 @@
 .twitter-section {
     background-color: $color-gris-medio;
     .twitter-wrapper {
+        padding: 10em 0 5em;
         font-weight: 500;
         color: $color-blanco;
         h1 {
@@ -498,7 +499,69 @@
                 left: -2px;
             } 
         }
+        .tweets-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            .tweets {
+                padding: 20px 0;
+                position: relative;
+                height: 150px;
+
+                li {
+                    position: absolute;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 140%;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    @media (min-width: $md) {
+                        font-size: 80%;
+                    }
+
+                    &:nth-child(1) {
+                        left: 0px;
+                    }
+                    &:nth-child(2) {
+                        left: -960px;
+                    }
+                    &:nth-child(3) {
+                        left: -960px;
+                    }
+                    &:nth-child(4) {
+                        left: -960px;
+                    }
+                    &:nth-child(5) {
+                        left: -960px;
+                    }
+                }
+            }
+
+            .twetts-dots-wrapper {
+                width: 100%;
+                max-width: 768px;
+                margin: 0 auto;
+                text-align: center;
+                .twetts-dots {
+                    display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    margin: 0 5px;
+                    background-color: #fff;
+                    -webkit-border-radius: 50px;
+                    -moz-border-radius: 50px;
+                    -ms-border-radius: 50px;
+                    border-radius: 50px;
+                }
+                .active {
+                    opacity: 0.6;
+                }
+            }
+        }//.tweets-container
+
     }//.twitter-wrapper
+    
+    
 }//.twitter-section
 
 
@@ -520,7 +583,7 @@
             text-transform: uppercase;
             color: $color-gris-texto;
             @media (min-width: $md) {
-                font-size: 80%;
+                font-size: 70%;
                 line-height: 170%;
                 display: flex;
                 display: -o-flex;

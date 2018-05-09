@@ -348,16 +348,16 @@ img {
       flex-direction: column;
       position: absolute;
       z-index: 2;
-      left: 3%;
       top: 20%;
       height: 100%;
       width: 2em;
       height: 70%; }
+    .partners-section .front-section .left {
+      left: 3%; }
       @media (min-width: 1500px) {
-        .partners-section .front-section .left, .partners-section .front-section .right {
+        .partners-section .front-section .left {
           left: 5%; } }
     .partners-section .front-section .right {
-      left: initial;
       right: 3%; }
       @media (min-width: 1500px) {
         .partners-section .front-section .right {
@@ -392,7 +392,7 @@ img {
     position: absolute;
     cursor: pointer;
     bottom: 3em;
-    right: 40px;
+    right: 6px;
     width: 36px;
     height: 25px;
     zoom: 1;
@@ -404,9 +404,14 @@ img {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease; }
+    @media (min-width: 567px) {
+      .legales-turismo .btn-up {
+        right: 40px;
+        bottom: 2em; } }
     @media (min-width: 992px) {
       .legales-turismo .btn-up {
-        right: 50px; } }
+        right: 50px;
+        bottom: 3em; } }
     @media (min-width: 1200px) {
       .legales-turismo .btn-up {
         right: 15%; } }
@@ -462,7 +467,7 @@ img {
       position: absolute;
       text-transform: uppercase;
       display: inline-block;
-      left: -157px;
+      left: -167px;
       top: -10px;
       width: 196px;
       font-size: 60%;
@@ -1046,7 +1051,10 @@ img {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
-    transition: all 1s ease; }
+    transition: all 1s ease;
+    zoom: 1;
+    filter: alpha(opacity=70);
+    opacity: 0.7; }
     .btn-hover-underline:hover:after {
       content: '';
       -webkit-transition: all 1s ease;
@@ -1452,7 +1460,7 @@ img {
     background-position: -94px -165px; }
 
 .icon-redes-facebook-xs {
-  background-position: -113px -143px;
+  background-position: -111px -143px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -1462,7 +1470,7 @@ img {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    background-position: -113px -165px; }
+    background-position: -111px -165px; }
 
 /*--------------------------------------------------------------
 10.0 FORMULARIOS
@@ -1950,7 +1958,7 @@ form {
       @media (min-width: 992px) {
         .bariloche-section .bariloche-wrapper .bariloche-links {
           line-height: 100%;
-          font-size: 100%;
+          font-size: 90%;
           display: flex;
           display: -o-flex;
           display: -ms-flex;
@@ -2098,6 +2106,7 @@ form {
 .twitter-section {
   background-color: #5c5d5f; }
   .twitter-section .twitter-wrapper {
+    padding: 10em 0 5em;
     font-weight: 500;
     color: #fff; }
     .twitter-section .twitter-wrapper h1 {
@@ -2112,6 +2121,51 @@ form {
         position: absolute;
         top: -47px;
         left: -2px; }
+    .twitter-section .twitter-wrapper .tweets-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      .twitter-section .twitter-wrapper .tweets-container .tweets {
+        padding: 20px 0;
+        position: relative;
+        height: 150px; }
+        .twitter-section .twitter-wrapper .tweets-container .tweets li {
+          position: absolute;
+          width: 100%;
+          text-align: left;
+          font-size: 140%;
+          line-height: 140%;
+          text-transform: uppercase; }
+          @media (min-width: 992px) {
+            .twitter-section .twitter-wrapper .tweets-container .tweets li {
+              font-size: 80%; } }
+          .twitter-section .twitter-wrapper .tweets-container .tweets li:nth-child(1) {
+            left: 0px; }
+          .twitter-section .twitter-wrapper .tweets-container .tweets li:nth-child(2) {
+            left: -960px; }
+          .twitter-section .twitter-wrapper .tweets-container .tweets li:nth-child(3) {
+            left: -960px; }
+          .twitter-section .twitter-wrapper .tweets-container .tweets li:nth-child(4) {
+            left: -960px; }
+          .twitter-section .twitter-wrapper .tweets-container .tweets li:nth-child(5) {
+            left: -960px; }
+      .twitter-section .twitter-wrapper .tweets-container .twetts-dots-wrapper {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        text-align: center; }
+        .twitter-section .twitter-wrapper .tweets-container .twetts-dots-wrapper .twetts-dots {
+          display: inline-block;
+          width: 7px;
+          height: 7px;
+          margin: 0 5px;
+          background-color: #fff;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px; }
+        .twitter-section .twitter-wrapper .tweets-container .twetts-dots-wrapper .active {
+          opacity: 0.6; }
 
 /*
  * CONTACTO
@@ -2127,7 +2181,7 @@ form {
   color: #9b9d9e; }
   @media (min-width: 992px) {
     .contacto-section .contacto-wrapper .addresses {
-      font-size: 80%;
+      font-size: 70%;
       line-height: 170%;
       display: flex;
       display: -o-flex;
