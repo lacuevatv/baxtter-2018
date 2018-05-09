@@ -38,7 +38,7 @@ global $dispositivo;
                 </hgrounp>
 
                 <?php if ( $dispositivo != 'movil' ) : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27 btn-hover-grayscale">
                 <?php endif; ?>
             </div>
 

@@ -20,7 +20,7 @@ var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 //se pasa con numeral #page
 function scrollToID ( id ) {
     $('html, body').stop().animate({
-        scrollTop: $(id).offset().top -90
+        scrollTop: $(id).offset().top
     }, 'slow');
 }
 
@@ -30,20 +30,52 @@ function setHeightContentVideo() {
 }
 
 /*--------------------------------------------------------------
-1.0 NAVIGATION / AJAX FORMS
+1.0 NAVIGATION
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
 
     /*
-     * MENU basico
+     * SCROLL TOP
     */
-    //scroll top
     $('.go-up').click(function(){
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
     });
+    /*
+     * SCROLL TO (links)
+    */
+   $('.scroll-to').click(function( e ){
+        e.preventDefault();
+        var href = '#'+$(this).attr('href');
+        scrollToID(href);
+        if ( window.innerWidth < 992 ) {
+            MovilMenuToggle();
+        }
+   });
+   
+    /*
+     * TOGGLE
+    */
+   $('.toggle').click(MovilMenuToggle);
+
+   function MovilMenuToggle (){
+       $('.toggle').toggleClass('toggle-open');
+         $('.brand-name').toggleClass('brand-name-open');
+       
+        var menu = $('.menus-wrapper')
+        var h = menu.prop('scrollHeight');
+        if ( $(menu).height() == 0 ) {
+            menu.animate({
+                'height': h+'px',
+            }, 500);
+        } else {
+            menu.animate({
+                'height': '0px',
+            }, 500);
+        }
+   }
 
 
 });//.ready()

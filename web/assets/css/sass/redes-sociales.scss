@@ -36,7 +36,44 @@
 
 }//.redes-sociales
 
+.secondary-menu {
+    li {
+        margin: .5em 0;
+        @media (min-width: $md) {
+            margin: .01em;
+        }
+        
+        &:first-child {
+            margin-left: 0;
+            margin-right: 1em
+        }
+        &:nth-child(2) {
+            margin-right: 1em
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            span {
+                @media (max-width: $sm) {
+                    width: auto;
+                    height: auto;
+                    overflow: visible;
+                    color: white;
+                    clip: unset;
+                    padding-left: 35px;
+                    display: block;
+                    position: relative;
+                    top: -12px;
+                }
+            }
+        }
+    }
+}//.secondary-menu
+
 .icon-redes {
+    display: block;
     width: 43px;
     height: 43px;
     background: url(../images/sprite.png) no-repeat;
@@ -47,72 +84,187 @@
     }
 }
 
+.icon-email-tel {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 13px;
+        display: block;
+        width: 22px;
+        height: 16px;
+        background: url(../images/sprite.png) no-repeat;
+        @media (min-width: $md) {
+            bottom: 5px;
+        }
+    }
+    
+}
+
 .icon-redes-instagram {
-    background-position: -21px -3px;
+    background-position: 0px -3px;
     @media (min-width: $md) {
-        background-position: -23px -56px;
+        background-position: -2px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -2px -96px;
+            //@include transform(translateY(-5px));
+        }
     }
 }
 
 .icon-redes-spotify {
-    background-position: -82px -3px;
+    background-position: -58px -3px;
     @media (min-width: $md) {
-        background-position: -67px -56px;
+        background-position: -46px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -46px -96px;
+        }
     }
 }
 
 .icon-redes-youtube {
-    background-position: -143px -3px;
+    background-position: -120px -3px;
     @media (min-width: $md) {
-        background-position: -113px -56px;
+        background-position: -91px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -91px -96px;
+        }
     }
 }
 
 .icon-redes-vimeo {
-    background-position: -205px -3px;
+    background-position: -181px -3px;
     @media (min-width: $md) {
-        background-position: -157px -56px;
+        background-position: -136px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -136px -96px;
+        }
     }
 }
 
 .icon-redes-twitter {
-    background-position: -264px -3px;
+    background-position: -240px -3px;
     @media (min-width: $md) {
-        background-position: -201px -56px;
+        background-position: -178px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -178px -96px;
+        }
     }
 }
 
 .icon-redes-facebook {
-    background-position: -320px -3px;
+    background-position: -293px -3px;
     @media (min-width: $md) {
-        background-position: -243px -56px;
+        background-position: -221px -56px;
+        @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -221px -96px;
+        }
     }
 }
 
 .icon-xs {
-    width: 16px;
+    width: 22px;
     height: 16px;
-    .icon-redes-instagram {
-        background-position: 1px 1px;
-    }
+}
 
-    .icon-redes-spotify {
-        background-position: 1px 1px;
+.icon-redes-email-xs {
+    @include transition(all 1s ease);
+    &:before{
+        @include transition(all 1s ease);
+        background-position: -133px -143px;
     }
+    &:hover {
+        @include transition(all 1s ease);
+        &:before{
+            background-position: -133px -165px;
+            @include transition(all 1s ease);
+        }
+    }
+}
+.icon-redes-telefono-xs {
+    &:before{
+        background-position: -159px -143px;
+    }
+    &:hover {
+        @include transition(all 1s ease);
+        &:before{
+            background-position: -159px -165px;
+            @include transition(all 1s ease);
+        }
+    }
+}
+.icon-redes-instagram-xs {
+    background-position: -6px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -6px -165px;
+        }
+}
 
-    .icon-redes-youtube {
-        background-position: 1px 1px;
-    }
+.icon-redes-spotify-xs {
+    background-position: -27px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -27px -165px;
+        }
+    
+}
 
-    .icon-redes-vimeo {
-        background-position: 1px 1px;
-    }
+.icon-redes-youtube-xs {
+    background-position: -50px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -50px -165px;
+        }
+    
+    
+}
 
-    .icon-redes-twitter {
-        background-position: 1px 1px;
-    }
+.icon-redes-vimeo-xs {
+    background-position: -72px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -72px -165px;
+        }
+    
+    
+}
 
-    .icon-redes-facebook {
-        background-position: 1px 1px;
-    }
+.icon-redes-twitter-xs {
+    background-position: -94px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -94px -165px;
+        }
+    
+}
+
+.icon-redes-facebook-xs {
+    background-position: -113px -143px;
+    @include transition(all 1s ease);
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -113px -165px;
+        }
+    
 }

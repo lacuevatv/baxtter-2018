@@ -149,7 +149,8 @@
         filter: alpha(opacity=50);
         opacity: 0.5;
         background: url('../images/sprite.png') no-repeat;
-        background-position: -133px -269px;
+        background-position: -113px -240px;
+        @include transition(all 1s ease);
         @media (min-width: $md) {
             right: 50px;
         }
@@ -158,6 +159,10 @@
         }
         @media (min-width: $xlg) {
             right: 24%;
+        }
+        &:hover {
+            @include transition(all 1s ease);
+            background-position: -113px -269px;
         }
     }
 }

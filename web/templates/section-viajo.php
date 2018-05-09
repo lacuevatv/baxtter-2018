@@ -17,27 +17,27 @@ global $dispositivo;
             </h1>
             <ul class="pdfs-links">
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" class="btn-hover-red">
                         Ficha médica
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" class="btn-hover-red">
                         Ficha de adhesión
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" class="btn-hover-red">
                         Tips de viaje
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" class="btn-hover-red">
                         Protocolos de seguridad
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" class="btn-hover-red">
                         Bases y condiciones
                     </a>
                 </li>

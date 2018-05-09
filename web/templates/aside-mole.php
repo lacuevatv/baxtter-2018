@@ -73,7 +73,7 @@ global $dispositivo;
                 </li>
             </ul>
 
-            <button>
+            <button class="btn-hover-underline">
                 Ver galería de imágenes
             </button>
         </div><!-- //.mole-wrapper -->

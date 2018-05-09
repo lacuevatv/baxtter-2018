@@ -22,7 +22,18 @@ $redes = array(
     ),
 );
 
-for ($i=0; $i < count($redes); $i++) { ?>
+if ( $data == 'nav-movil' ) {
+    for ($i=0; $i < count($redes); $i++) { ?>
+        <li>
+            <a href="<?php echo $redes[$i]['link']; ?>" target="_blank" class="movil-none">
+                <?php echo $redes[$i]['name']; ?>
+            </a>
+        </li>
+    <?php } 
+
+} else {
+
+    for ($i=0; $i < count($redes); $i++) { ?>
     <li>
         <a href="<?php echo $redes[$i]['link']; ?>" target="_blank" class="icon-redes <?php if ($data == 'nav') { echo 'icon-xs'; } ?> icon-redes-<?php echo strtolower($redes[$i]['name']); ?><?php if ($data == 'nav') { echo '-xs'; } ?>">
             <span class="sr-only<?php if ($data == 'nav') { echo ' sr-only-especial'; } ?>">
@@ -31,3 +42,4 @@ for ($i=0; $i < count($redes); $i++) { ?>
         </a>
     </li>
 <?php }
+}

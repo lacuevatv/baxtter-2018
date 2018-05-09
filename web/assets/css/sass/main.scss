@@ -220,11 +220,11 @@
                     position: absolute;
                     bottom: 1px;
                     left: 0;
-                    background-position: -67px -237px;
+                    background-position: -47px -237px;
                     height: 17px;
                     width: 20px;
                     @media (min-width: $xs) {
-                        background-position: -23px -231px;
+                        background-position: -2px -231px;
                         height: 26px;
                         width: 32px;
                     }
@@ -234,9 +234,9 @@
             button.button-red {
                 color: $color-rojo-rosa;
                 &:before {
-                    background-position: -67px -205px;
+                    background-position: -47px -205px;
                     @media (min-width: $xs) {
-                        background-position: -23px -196px;
+                        background-position: -2px -196px;
                     }
                 }
             }
@@ -385,11 +385,11 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                background-position: -67px -237px;
+                background-position: -47px -237px;
                 height: 17px;
                 width: 20px;
                 @media (min-width: $xs) {
-                    background-position: -23px -231px;
+                    background-position: -2px -231px;
                     height: 26px;
                     width: 32px;
                 }
@@ -492,7 +492,7 @@
                 width: 47px;
                 height: 40px;
                 background: url(../images/sprite.png) no-repeat;
-                background-position: -19px -264px;
+                background-position: 2px -264px;
                 position: absolute;
                 top: -47px;
                 left: -2px;

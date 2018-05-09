@@ -30,32 +30,32 @@ global $dispositivo;
                     </h2>
                     <ul class="programas-links">
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
                         <li>
-                        <button>
+                        <button class="btn-hover-underline">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <li>imagen1.jpg</li>
@@ -80,32 +80,32 @@ global $dispositivo;
                     </h2>
                     <ul class="programas-links">
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
                         <li>
-                            <button class="button-red">
+                            <button class="button-red btn-hover-underline">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <li>imagen1.jpg</li>
@@ -133,32 +133,32 @@ global $dispositivo;
                 </h2>
                 <ul class="bariloche-links">
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Cómo comprar
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Dónde pagar
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Cruz Roja
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Uai
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Certificaciones N8
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" class="btn-hover-gray">
                             Ver galería de imágenes
 
                             <ul class="data-carga galeria-data">

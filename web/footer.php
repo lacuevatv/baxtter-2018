@@ -99,7 +99,7 @@ global $dispositivo;
                 if( $dispositivo == 'movil' ) {
                     echo '<img src="' . MAINSURL . '/assets/images/movil/legales-turismo-movil.png" alt="Legales Turismo Nación">';
                 } else {
-                    echo '<img src="' . MAINSURL . '/assets/images/logo-legales-turismo.png" alt="Legales Turismo Nación">';
+                    echo '<img src="' . MAINSURL . '/assets/images/logo-legales-turismo.png" alt="Legales Turismo Nación" class="btn-hover-grayscale">';
                 }
             ?>
 
