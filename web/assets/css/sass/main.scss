@@ -190,6 +190,9 @@
             margin: 2em 0;
             font-size: 130%;
             font-weight: 500;
+            @media (min-width: $md) {
+                font-size: 110%;
+            }
 
             li {
                 margin: 1em 0;
@@ -589,14 +592,13 @@
         @media (min-width: $sm) {
             img {
                 width: 200%;
-                @include transform(50%);
             }
         }
         @media (min-width: $md) {
             top: -44%;
             img {
                 width: 100%;
-                @include transform(initial);
+                @include transform(translateX(0%));
             }
         } 
         @media (min-width: $lg) {

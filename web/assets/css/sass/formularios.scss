@@ -38,10 +38,12 @@ form {
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
         justify-content: space-between;
+        @media (min-width: $md) {
+            font-size: 120%;
+        }
     }
     .inner-wrapper-form {
         width: 100%;
-        
     }
 
 
@@ -310,7 +312,7 @@ form {
     }
 
     @media (min-width: $md) {
-        font-size: 85%;
+        font-size: 75%;
 
         h2 {
             margin-top: 0;
