@@ -78,5 +78,20 @@ global $dispositivo;
             </button>
         </div><!-- //.mole-wrapper -->
     </div><!-- //. container -->
+
+    <!-- front -->
+    <div class="front-section">
+            
+        <div class="left biggerxxl">
+            <span class="text vertical color-negro w160px align-right">Complejo Mole</span>
+            <span class="line vertical fondo-negro w160px"></span>
+        </div>
+        
+        <div class="right biggerxxl">
+            <span class="line vertical fondo-negro w160px"></span>
+            <span class="text vertical color-negro w160px">Viví la experiencia Baxtter</span>
+        </div>    
+        
+    </div><!-- //front -->
     
 </aside><!-- //ASIDE MOLE -->

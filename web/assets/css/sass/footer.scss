@@ -35,71 +35,7 @@
             top: -74%;
         } 
     }
-    .front-section {
-        display: none;
-        @media (min-width: $lg) {
-            display: block;
-        }
-        .line {
-            display: block;
-            width: 2em;
-            height: .04em;
-            background-color: $color-blanco;
-        }
-        .text {
-            font-weight: 500;
-            text-transform: uppercase;
-            color: $color-blanco;
-            font-size: 60%;
-        }
     
-        .vertical {
-            @include transform(rotate(-90deg));
-        }
-    
-        .left, .right {
-            display: flex;
-            display: -o-flex;
-            display: -ms-flex;
-            display: -moz-flex;
-            display: -webkit-flex;
-            -webkit-align-items: center;
-            -moz-align-items: center;
-            -ms-align-items: center;
-            -o-align-items: center;
-            align-items: center;
-            -webkit-justify-content: space-between;
-            -moz-justify-content: space-between;
-            -ms-justify-content: space-between;
-            -o-justify-content: space-between;
-            justify-content: space-between;
-            -webkit-flex-direction: column;
-            -moz-flex-direction: column;
-            -ms-flex-direction: column;
-            -o-flex-direction: column;
-            flex-direction: column;
-            position: absolute;
-            z-index: 2;
-            top: 20%;
-            height: 100%;
-            width: 2em;
-            height: 70%;
-        }
-    
-        .left {
-            left: 3%;
-            @media (min-width: $xlg) {
-                left:5%;
-            }
-        }
-
-        .right {
-            right:3%;
-            @media (min-width: $xlg) {
-                right:5%;
-            }
-        }
-    }//.front-section
 }//.partners-section
 
 .partners-section-movil {

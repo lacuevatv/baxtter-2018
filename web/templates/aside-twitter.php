@@ -9,7 +9,14 @@
 global $dispositivo;
 ?>
 <aside id="twitter" class="section-capas twitter-section">
-    <div class="main-section container">
+
+    <!-- background -->
+    <div id="background-twitter" class="background-section load-images background-twitter">
+            
+        <img data-src="<?php echo MAINSURL; ?>/assets/images/fondo-twiiter-imagen.jpg" alt="Twitter Baxtter - Background" class="fondo">
+    </div><!-- //background -->
+
+    <div class="main-section container main-section-twitter">
 
         <div class="main-section-wrapper twitter-wrapper">
             
@@ -31,4 +38,20 @@ global $dispositivo;
             
         </div><!-- //.twitter-wrapper -->
     </div><!-- //. container -->
+
+    <!-- front -->
+    <div class="front-section">
+            
+        <div class="left medium">
+            <span class="text vertical ">Twitter</span>
+            <span class="line vertical "></span>
+        </div>
+        
+        <div class="right medium">
+            <span class="text vertical ">#somosbaxtter</span>
+            <span class="line vertical "></span>
+        </div>    
+        
+    </div><!-- //front -->
+
 </aside><!-- //ASIDE TWITTER -->

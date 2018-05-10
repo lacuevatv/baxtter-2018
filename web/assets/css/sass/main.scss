@@ -104,7 +104,7 @@
                     content: '';
                     display: block;
                     width: 170px;
-                    height: .05em;
+                    height: 1px;
                     background-color: $color-negro;
                     position: absolute;
                     bottom: 0;
@@ -414,7 +414,19 @@
             .logo-escritorio {
                 width: 138px;
             }
-        }
+            @media (min-width: $xlg) {
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 170px;
+                    height: 1px;
+                    background-color: $color-negro;
+                    position: absolute;
+                    bottom: 70px;
+                    left: -190px;
+                }
+            }
+        }//h1
                 
     }//.background-section
 
@@ -481,6 +493,12 @@
 */
 .twitter-section {
     background-color: $color-gris-medio;
+
+    .main-section-twitter {
+        background: url(../images/color-twitter-mascara.png) no-repeat;
+        background-size: cover;
+    }
+
     .twitter-wrapper {
         padding: 10em 0 5em;
         font-weight: 500;
@@ -561,6 +579,19 @@
 
     }//.twitter-wrapper
     
+    .background-twitter {
+        top: -24%;
+        @media (min-width: $md) {
+            top: -44%;
+        } 
+        @media (min-width: $lg) {
+            top: -54%;
+        } 
+        @media (min-width: $xlg) {
+            top: -74%;
+        }
+
+    }//.background-twitter
     
 }//.twitter-section
 
@@ -703,3 +734,115 @@
 }//.contacto-section
 
 
+/*
+ * FRONT SECTION - contenido vertical
+*/
+.front-section {
+    display: none;
+    @media (min-width: $lg) {
+        display: block;
+    }
+
+    .left, .right {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        top: 25%;
+        top: 5em;
+        width: 2em;
+        height: 50%;
+    }
+
+    .partners {
+        height: 70%;
+    }
+
+    .medium {
+        top: 10em;
+    }
+
+    .bigger {
+        top: 10em;
+        height: 60%;
+    }
+
+    .biggerxl {
+        top: 15em;
+        height: 50%;
+    }
+
+    .biggerxxl {
+        top: 20em;
+        height: 50%;
+    }
+
+    .left {
+        left: 3%;
+        @media (min-width: $xlg) {
+            left:5%;
+        }
+    }
+
+    .right {
+        right:3%;
+        @media (min-width: $xlg) {
+            right:5%;
+        }
+    }
+
+    .vertical {
+        @include transform(rotate(-90deg));
+    }
+
+    .line {
+        display: block;
+        width: 2em;
+        height: 0.5px;
+        background-color: $color-blanco;
+    }
+    .text {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $color-blanco;
+        font-size: 60%;
+    }
+
+    .fondo-negro {
+        background-color: $color-negro;
+    }
+
+    .color-negro {
+        color: $color-negro;
+    }
+
+    .w80px {
+        width: 80px;
+    }
+
+    .w160px {
+        width: 160px;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+}//.front-section

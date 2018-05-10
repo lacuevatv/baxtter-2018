@@ -80,6 +80,22 @@ global $pageActual;
             <div class="main-section-wrapper">
                 <?php getTemplate( 'formularios', 'reunion' ); ?>
             </div>
+
+            <!-- front -->
+            <div class="front-section">
+                
+                <div class="left">
+                    <span class="text vertical color-negro align-right">Form</span>
+                    <span class="line vertical fondo-negro"></span>
+                </div>
+                
+                <div class="right">
+                    <span class="text vertical color-negro">BXR</span>
+                    <span class="line vertical fondo-negro"></span>
+                </div>    
+                
+            </div><!-- //front -->
+
         </div><!-- //. container --><!-- //.form-header-wrapper -->
 
     </header> <!-- //.main-header -->

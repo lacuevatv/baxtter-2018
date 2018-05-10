@@ -90,4 +90,19 @@ global $dispositivo;
         </div>
     </div><!-- //. container -->
 
+    <!-- front -->
+    <div class="front-section">
+            
+            <div class="left bigger">
+            <span class="text vertical color-negro w80px align-right">Contacto</span>
+            <span class="line vertical fondo-negro w80px"></span>
+        </div>
+        
+        <div class="right bigger">
+            <span class="text vertical color-negro w80px align-right">Baxtter</span>
+            <span class="line vertical fondo-negro w80px"></span>
+        </div>    
+        
+    </div><!-- //front -->
+
 </section><!-- // SECTION CONTACTO -->

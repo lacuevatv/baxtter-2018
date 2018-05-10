@@ -73,6 +73,22 @@ global $dispositivo;
             </div>
         </div>
     </div><!-- //. container -->   
+
+    <!-- front -->
+    <div class="front-section">
+            
+        <div class="left biggerxl">
+            <span class="text vertical color-negro w160px align-right">BRC_Lifestyle</span>
+            <span class="line vertical fondo-negro w160px"></span>
+        </div>
+        
+        <div class="right biggerxl">
+            <span class="line vertical fondo-negro w160px"></span>
+            <span class="text vertical color-negro w160px">Viví la experiencia Baxtter</span>
+        </div>    
+        
+    </div><!-- //front -->
+
 </section><!-- //SECTION NOSOTROS -->
 
 
@@ -94,6 +110,7 @@ global $dispositivo;
 </section>
 
 <section id="redes-sociales" class="section-capas redes-sociales-section">
+    
     <div class="main-section container">
 
         <div class="main-section-wrapper redes-sociales-wrapper">
@@ -111,4 +128,19 @@ global $dispositivo;
             </div>
         </div>
     </div><!-- //. container -->
+
+    <!-- front -->
+    <div class="front-section">
+            
+        <div class="left">
+            <span class="text vertical color-negro">Social</span>
+            <span class="line vertical fondo-negro"></span>
+        </div>
+        
+        <div class="right">
+            <span class="text vertical color-negro">Bxr</span>
+            <span class="line vertical fondo-negro"></span>
+        </div>    
+        
+    </div><!-- //front -->
 </section>

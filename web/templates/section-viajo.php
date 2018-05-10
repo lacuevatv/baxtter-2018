@@ -45,4 +45,19 @@ global $dispositivo;
         </div>
     </div><!-- //. container -->
 
+    <!-- front -->
+    <div class="front-section">
+            
+        <div class="left">
+            <span class="text vertical color-negro">Viaje</span>
+            <span class="line vertical fondo-negro"></span>
+        </div>
+        
+        <div class="right">
+            <span class="text vertical color-negro">Ficha</span>
+            <span class="line vertical fondo-negro"></span>
+        </div>    
+        
+    </div><!-- //front -->
+
 </section><!-- // SECTION VIAJO CON BAXTTER -->

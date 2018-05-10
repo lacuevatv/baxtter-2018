@@ -176,6 +176,20 @@ global $dispositivo;
             </div><!-- // .bariloche-wrapper -->
 
         </div><!-- // .main-section container -->
+
+        <div class="front-section">
+            
+            <div class="left">
+                <span class="text vertical w80px align-right">Bariloche</span>
+                <span class="line vertical"></span>
+            </div>
+            
+            <div class="right">
+                <span class="text vertical w80px align-right">Hot / Cold</span>
+                <span class="line vertical"></span>
+            </div>    
+            
+        </div><!-- //front -->
     </div><!-- // .section-capas .bariloche-section -->
     
 </section><!-- // SECTION PROGRAMAS -->

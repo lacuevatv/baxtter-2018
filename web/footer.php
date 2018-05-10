@@ -75,12 +75,12 @@ global $dispositivo;
             <!-- front -->
             <div class="front-section">
             
-                <div class="left">
+                <div class="left partners">
                     <span class="text vertical ">Gracias</span>
                     <span class="line vertical "></span>
                 </div>
                 
-                <div class="right">
+                <div class="right partners">
                     <span class="text vertical ">#somosbaxtter</span>
                     <span class="line vertical "></span>
                 </div>    
