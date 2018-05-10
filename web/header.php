@@ -65,14 +65,15 @@ global $pageActual;
             <!-- ACA ADENTRO VAN LAS CAPAS DEL HEADER -->
             
             <!-- TEMP IMAGE -->
+            <div class="load-images">
             <?php 
             if ( $dispositivo != 'movil' ) {
-                echo '<img src="'.MAINSURL.'/contenido/temp/header.jpg" style="width:100%;margin:0;">';
+                echo '<img data-src="'.MAINSURL.'/contenido/temp/header.jpg" style="width:100%;margin:0;">';
             } else {
-                echo '<img src="'.MAINSURL.'/contenido/temp/header-movil.jpg" style="width:100%;margin:0;">';
+                echo '<img data-src="'.MAINSURL.'/contenido/temp/header-movil.jpg" style="width:100%;margin:0;">';
             }
             ?>
- 
+            </div>
         </div><!-- //. header-wrapper -->  
 
         

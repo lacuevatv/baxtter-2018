@@ -7,7 +7,6 @@
 >>> TABLE OF CONTENTS:
 1.0 A) ON READY
 B ) ON LOAD (requieren que todo este cargado)
-PARALLAX / VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 2.0 FORMULARIOS
 3.0 POP UP PROMO
 3.0 OWL SLIDERS
@@ -138,17 +137,17 @@ $( window ).on('load', function(){
     });//fin paralax*/
 
     /*
-     * ANIMACIONES
+     * IN VIEW
     */
-    var $animation_elements_2 = $('.animation-element');
+    var $animation_elements = $('.movil-element');
     var $window = $(window);
 
-    function check_if_in_view_2() {
+    function check_if_in_view() {
       var window_height = $window.height();
       var window_top_position = $window.scrollTop();
       var window_bottom_position = (window_top_position + window_height);
 
-      $.each($animation_elements_2, function() {
+      $.each($animation_elements, function() {
         var $element = $(this);
         var element_height = $element.outerHeight();
         var element_top_position = $element.offset().top;
@@ -157,15 +156,115 @@ $( window ).on('load', function(){
         //check to see if this current container is within viewport
         if ((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
-          $element.addClass('in-view-2');
+          $element.addClass('in-view');
         } else {
-          $element.removeClass('in-view-2');
+          $element.removeClass('in-view');
         }
       });
     }
 
-    $window.on('scroll resize', check_if_in_view_2);
+    $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
+
+
+    /*
+    *  MOVIMIENTO LENTO DE IMAGENES
+    */
+    var partnersBackground = $('.background-partners');
+    var twitterBackground = $('.background-twitter');
+
+    $(window).scroll(function(){
+        //valor de barra que necesitan todos
+        var barra = ($(window).scrollTop());
+        
+        
+        /*
+        * partnersBackground
+        */
+        if ( partnersBackground.hasClass('in-view') ) {
+            var modificador = 60; 
+            
+            //vemos si es movil
+            if ( partnersBackground.hasClass('dispositivo-movil') ) {
+                modificador = 70;
+
+                var porcentaje = barra * 0.02 - modificador;
+                
+                $(partnersBackground).css('top', '-'+porcentaje + '%'); 
+
+            } else {
+                //version pc
+                if ( window.innerWidth < 1366 ) {
+                    modificador = 80;
+                }
+                if ( window.innerWidth < 992 ) {
+                    modificador = 264;
+                }
+                
+                var porcentaje = barra * 0.02 - modificador;
+                
+                //cuando es menor a 992 la imagen se rompe y por lo tanto se la protege para que no quede vacio el espacio
+                if ( window.innerWidth < 992 ) {
+                    if ( porcentaje < -1 || porcentaje > -6 ) {
+                        $(partnersBackground).css('top', '-' +porcentaje + '%');  
+                    }
+                } else {
+                    //luego, si es mayor a 992 no pasa nada
+                    $(partnersBackground).css('top', '-'+porcentaje + '%'); 
+    
+                }
+            }
+        }//partnersBackground
+
+
+        /*
+        * BackgroundTwitter
+        */
+        if ( twitterBackground.hasClass('in-view') ) {
+            var modificador = 0; 
+            
+            if ( window.innerWidth < 1440 ) {
+                modificador = 40;
+            }
+            if ( window.innerWidth < 1200 ) {
+                modificador = 80;
+            }
+
+            if ( window.innerWidth < 992 ) {
+                modificador = 170;
+            }
+            if ( window.innerWidth < 768 ) {
+                modificador = 60;
+            }
+            
+            
+            var porcentaje = barra * 0.02 - modificador;
+            
+            //cuando es menor a 992 la imagen se rompe y por lo tanto se la protege para que no quede vacio el espacio
+            if ( window.innerWidth < 992 ) {
+                if ( porcentaje > -54 || porcentaje < -4 ) {
+                    $(twitterBackground).css('top', '-' +porcentaje + '%');  
+                }
+            } else {
+                //luego, si es mayor a 992 no pasa nada
+                $(twitterBackground).css('top', '-'+porcentaje + '%'); 
+
+            }
+            
+
+            
+
+            
+
+            console.log( porcentaje );
+        }//partnersTwitter
+
+
+
+
+
+
+    });//WINDOWS SCROLL
 
 });//ON LOAD
 

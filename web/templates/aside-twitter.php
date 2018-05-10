@@ -11,7 +11,7 @@ global $dispositivo;
 <aside id="twitter" class="section-capas twitter-section">
 
     <!-- background -->
-    <div id="background-twitter" class="background-section load-images background-twitter">
+    <div id="background-twitter" class="background-section load-images background-twitter movil-element">
             
         <img data-src="<?php echo MAINSURL; ?>/assets/images/fondo-twiiter-imagen.jpg" alt="Twitter Baxtter - Background" class="fondo">
     </div><!-- //background -->

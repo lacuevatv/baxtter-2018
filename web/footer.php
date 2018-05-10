@@ -18,7 +18,7 @@ global $dispositivo;
 
         <section class="section-capas partners-section partners-section-movil">
             
-            <div id="background-partners" class="background-section load-images background-partners">
+            <div id="background-partners" class="background-section load-images background-partners dispositivo-movil movil-element">
                 <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/fondo-partners-movil.jpg" alt="Partners Baxtter - Background">
             </div>
 
@@ -46,7 +46,7 @@ global $dispositivo;
         
         <section class="section-capas partners-section">
             <!-- background -->
-            <div id="background-partners" class="background-section load-images background-partners">
+            <div id="background-partners" class="background-section load-images background-partners movil-element">
             
                 <img data-src="<?php echo MAINSURL; ?>/assets/images/fondo-partners-escritorio.jpg" alt="Partners Baxtter - Background">
                 

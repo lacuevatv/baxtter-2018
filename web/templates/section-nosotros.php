@@ -13,7 +13,7 @@ global $dispositivo;
     
     <div class="background-section">
         <div class="container">
-            <h6>
+            <h6 class="movil-element">
                 <img src="<?php echo MAINSURL; ?>/assets/images/logo-nosotros.png" alt="Baxter logo texto">
             </h6>
         </div>

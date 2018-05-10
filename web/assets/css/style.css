@@ -295,7 +295,7 @@ img {
         .partners-section .partners-wrapper .partners-logos {
           padding: 3em 2em 5em; } }
   .partners-section .background-partners {
-    top: -24%; }
+    top: -6%; }
     @media (min-width: 992px) {
       .partners-section .background-partners {
         top: -44%; } }
@@ -614,7 +614,7 @@ img {
   padding: 0 25px; }
   @media (min-width: 767px) {
     .menus-wrapper {
-      padding: 120px 50px; } }
+      padding: 0 50px; } }
   @media (min-width: 992px) {
     .menus-wrapper {
       background-color: transparent;
@@ -2123,13 +2123,32 @@ form {
         .twitter-section .twitter-wrapper .tweets-container .twetts-dots-wrapper .active {
           opacity: 0.6; }
   .twitter-section .background-twitter {
-    top: -24%; }
+    top: -40%; }
+    .twitter-section .background-twitter img {
+      width: 280%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    @media (min-width: 767px) {
+      .twitter-section .background-twitter img {
+        width: 200%;
+        -webkit-transform: 50%;
+        -moz-transform: 50%;
+        -ms-transform: 50%;
+        transform: 50%; } }
     @media (min-width: 992px) {
       .twitter-section .background-twitter {
-        top: -44%; } }
+        top: -44%; }
+        .twitter-section .background-twitter img {
+          width: 100%;
+          -webkit-transform: initial;
+          -moz-transform: initial;
+          -ms-transform: initial;
+          transform: initial; } }
     @media (min-width: 1200px) {
       .twitter-section .background-twitter {
-        top: -54%; } }
+        top: -49%; } }
     @media (min-width: 1500px) {
       .twitter-section .background-twitter {
         top: -74%; } }

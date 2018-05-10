@@ -580,12 +580,27 @@
     }//.twitter-wrapper
     
     .background-twitter {
-        top: -24%;
+        top: -40%;
+        img {
+            width: 280%;
+            @include transform(translateX(-50%));
+        }
+
+        @media (min-width: $sm) {
+            img {
+                width: 200%;
+                @include transform(50%);
+            }
+        }
         @media (min-width: $md) {
             top: -44%;
+            img {
+                width: 100%;
+                @include transform(initial);
+            }
         } 
         @media (min-width: $lg) {
-            top: -54%;
+            top: -49%;
         } 
         @media (min-width: $xlg) {
             top: -74%;
