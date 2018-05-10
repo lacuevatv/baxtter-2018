@@ -88,6 +88,21 @@
             padding-top: 0;
         }
 
+        .experiencia {
+            @media (min-width: $sm) {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(../images/sobreimpresion-vivi-la-experiencia.png);
+                background-size: contain;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+        }
+
         h6 {
             width: 100%;
             position: relative;
@@ -334,6 +349,13 @@
 
 .mole-section {
     background-color: $color-rojo-opaco;
+    @media (min-width: $lg) {
+        height: 790px;
+    }
+    @media (min-width: $xlg) {
+        height: 1080px;
+    }
+    
 
     .mole-wrapper {
         padding: 25em 0 5em;
@@ -341,8 +363,12 @@
             padding: 15em 0 5em;
         }
         @media (min-width: $md) {
-            padding: 20em 0;
+            padding: 12em 0;
+            width: 60%;
+        }
+        @media (min-width: $xlg) {
             width: 50%;
+            padding: 20em 0;
         }
 
         h2 {
@@ -401,6 +427,38 @@
     }//.mole-wrapper
 
     .background-section {
+        .video-wrapper{
+            display: none;
+            @media (min-width: $lg) {
+                display: block;
+                position: absolute;
+                left: 50%;
+                width: 50%;
+                height: 100%;
+                top: 0;
+            }
+            img {
+                width: auto;
+                height: 100%;
+            }
+    
+        }//.video-wrapper
+
+        .mole-experiencia {
+            @media (min-width: $sm) {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(../images/sobreimpresion-mole-youth.png);
+                background-size: contain;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+        }
+
         h1 {
             position: absolute;
             padding-top: 8em;
@@ -408,6 +466,9 @@
                 padding-top: 5em;
             }
             @media (min-width: $md) {
+                padding-top: 3em;
+            }
+            @media (min-width: $xlg) {
                 padding-top: 10em;
             }
             .logo-movil {
@@ -432,6 +493,15 @@
         }//h1
                 
     }//.background-section
+
+    .front-section {
+        .deco-diagonal {
+            width: 10%;
+            @media (min-width: $xlg) {
+                width: 15%;
+            }
+        }
+    }//.front-section
 
 }//.mole-section
 
@@ -760,6 +830,38 @@
         display: block;
     }
 
+    .deco-diagonal {
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: -1%;
+        width: 15%;
+        height: 80%;
+
+        img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .deco-diagonal-top {
+        position: absolute;
+        display: block;
+        left: 49%;
+        top: -1%;
+        width: 20.5%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
     .left, .right {
         display: flex;
         display: -o-flex;
@@ -808,8 +910,12 @@
     }
 
     .biggerxxl {
-        top: 20em;
-        height: 50%;
+        top: 10em;
+        height: 60%;
+        @media (min-width: $xlg) {
+            top: 20em;
+            height: 50%;
+        }
     }
 
     .left {
@@ -828,6 +934,15 @@
 
     .vertical {
         @include transform(rotate(-90deg));
+    }
+
+    .vertical-more-bottom {
+        @media (min-width: $md) {
+            @include transform(rotate(-90deg) translateX(-50px));
+        }
+        @media (min-width: $xlg) {
+            @include transform(rotate(-90deg));
+        }
     }
 
     .line {
@@ -849,6 +964,10 @@
 
     .color-negro {
         color: $color-negro;
+    }
+
+    .color-celeste {
+        color: $color-celeste;
     }
 
     .w80px {

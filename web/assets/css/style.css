@@ -1755,6 +1755,18 @@ form {
     @media (min-width: 992px) {
       .nosotros-section .background-section {
         padding-top: 0; } }
+    @media (min-width: 767px) {
+      .nosotros-section .background-section .experiencia {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(../images/sobreimpresion-vivi-la-experiencia.png);
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat; } }
     .nosotros-section .background-section h6 {
       width: 100%;
       position: relative;
@@ -1941,6 +1953,12 @@ form {
 */
 .mole-section {
   background-color: #ff545a; }
+  @media (min-width: 1200px) {
+    .mole-section {
+      height: 790px; } }
+  @media (min-width: 1500px) {
+    .mole-section {
+      height: 1080px; } }
   .mole-section .mole-wrapper {
     padding: 25em 0 5em; }
     @media (min-width: 567px) {
@@ -1948,8 +1966,12 @@ form {
         padding: 15em 0 5em; } }
     @media (min-width: 992px) {
       .mole-section .mole-wrapper {
-        padding: 20em 0;
-        width: 50%; } }
+        padding: 12em 0;
+        width: 60%; } }
+    @media (min-width: 1500px) {
+      .mole-section .mole-wrapper {
+        width: 50%;
+        padding: 20em 0; } }
     .mole-section .mole-wrapper h2 {
       color: #fff;
       text-transform: uppercase; }
@@ -1992,6 +2014,31 @@ form {
             background-position: -2px -231px;
             height: 26px;
             width: 32px; } }
+  .mole-section .background-section .video-wrapper {
+    display: none; }
+    @media (min-width: 1200px) {
+      .mole-section .background-section .video-wrapper {
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        top: 0; } }
+    .mole-section .background-section .video-wrapper img {
+      width: auto;
+      height: 100%; }
+  @media (min-width: 767px) {
+    .mole-section .background-section .mole-experiencia {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(../images/sobreimpresion-mole-youth.png);
+      background-size: contain;
+      background-attachment: fixed;
+      background-repeat: no-repeat; } }
   .mole-section .background-section h1 {
     position: absolute;
     padding-top: 8em; }
@@ -1999,6 +2046,9 @@ form {
       .mole-section .background-section h1 {
         padding-top: 5em; } }
     @media (min-width: 992px) {
+      .mole-section .background-section h1 {
+        padding-top: 3em; } }
+    @media (min-width: 1500px) {
       .mole-section .background-section h1 {
         padding-top: 10em; } }
     .mole-section .background-section h1 .logo-movil {
@@ -2016,6 +2066,11 @@ form {
         position: absolute;
         bottom: 70px;
         left: -190px; } }
+  .mole-section .front-section .deco-diagonal {
+    width: 10%; }
+    @media (min-width: 1500px) {
+      .mole-section .front-section .deco-diagonal {
+        width: 15%; } }
 
 /*
  * VIAJO CON BAXTTER
@@ -2274,6 +2329,30 @@ form {
   @media (min-width: 1200px) {
     .front-section {
       display: block; } }
+  .front-section .deco-diagonal {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: -1%;
+    width: 15%;
+    height: 80%; }
+    .front-section .deco-diagonal img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+  .front-section .deco-diagonal-top {
+    position: absolute;
+    display: block;
+    left: 49%;
+    top: -1%;
+    width: 20.5%;
+    height: 100%; }
+    .front-section .deco-diagonal-top img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
   .front-section .left, .front-section .right {
     display: flex;
     display: -o-flex;
@@ -2312,8 +2391,12 @@ form {
     top: 15em;
     height: 50%; }
   .front-section .biggerxxl {
-    top: 20em;
-    height: 50%; }
+    top: 10em;
+    height: 60%; }
+    @media (min-width: 1500px) {
+      .front-section .biggerxxl {
+        top: 20em;
+        height: 50%; } }
   .front-section .left {
     left: 3%; }
     @media (min-width: 1500px) {
@@ -2329,6 +2412,18 @@ form {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg); }
+  @media (min-width: 992px) {
+    .front-section .vertical-more-bottom {
+      -webkit-transform: rotate(-90deg) translateX(-50px);
+      -moz-transform: rotate(-90deg) translateX(-50px);
+      -ms-transform: rotate(-90deg) translateX(-50px);
+      transform: rotate(-90deg) translateX(-50px); } }
+  @media (min-width: 1500px) {
+    .front-section .vertical-more-bottom {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); } }
   .front-section .line {
     display: block;
     width: 2em;
@@ -2343,6 +2438,8 @@ form {
     background-color: #464646; }
   .front-section .color-negro {
     color: #464646; }
+  .front-section .color-celeste {
+    color: #34fff7; }
   .front-section .w80px {
     width: 80px; }
   .front-section .w160px {

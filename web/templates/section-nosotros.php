@@ -11,7 +11,8 @@ global $dispositivo;
 
 <section id="nosotros" class="section-capas nosotros-section">
     
-    <div class="background-section">
+    <div id="background_nosotros" class="background-section">
+        
         <div class="container">
             <h6 class="movil-element">
                 <img src="<?php echo MAINSURL; ?>/assets/images/logo-nosotros.png" alt="Baxter logo texto">
@@ -77,14 +78,18 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left biggerxl">
+        <div class="left biggerxxl">
             <span class="text vertical color-negro w160px align-right">BRC_Lifestyle</span>
             <span class="line vertical fondo-negro w160px"></span>
         </div>
         
-        <div class="right biggerxl">
+        <div class="deco-diagonal load-images">
+            <img data-src="<?php echo MAINSURL; ?>/assets/images/triangulo-degradado.svg">
+        </div>
+
+        <div class="right biggerxxl">
             <span class="line vertical fondo-negro w160px"></span>
-            <span class="text vertical color-negro w160px">Viví la experiencia Baxtter</span>
+            <span class="text vertical color-celeste w160px">Viví la experiencia Baxtter</span>
         </div>    
         
     </div><!-- //front -->

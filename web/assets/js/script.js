@@ -88,7 +88,10 @@ $( window ).on('load', function(){
 
     console.log('all loaded')
 
-    //cargar imágenes de fondo por ajax
+    /*
+     * CARGA ASINCRONA DE IMAGENES
+    */
+    //cargar imágenes con img src
     $('.load-images').each(function(){
         console.log('cargando imagenes');
         var img = $(this).find('img');
@@ -98,6 +101,17 @@ $( window ).on('load', function(){
             $(this).fadeIn();
         }
     });//load images
+
+
+    //carga imagenes cuya carga es por css (background)
+    function loadImagesBackgroundCSS ( contenedor, clase ) {
+        var html = '<div class="'+clase+'"></div>';
+        contenedor.prepend($(html));
+    }
+    if (window.innerWidth > 992 ) {
+        loadImagesBackgroundCSS ( $('#background_nosotros'), 'experiencia'); 
+        loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia');
+    }
     
 
 
@@ -250,13 +264,7 @@ $( window ).on('load', function(){
                 $(twitterBackground).css('top', '-'+porcentaje + '%'); 
 
             }
-            
 
-            
-
-            
-
-            console.log( porcentaje );
         }//partnersTwitter
 
 

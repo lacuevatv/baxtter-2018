@@ -10,7 +10,12 @@ global $dispositivo;
 ?>
 <aside id="mole" class="section-capas mole-section">
 
-    <div class="background-section">
+    <div id="background_mole" class="background-section">
+
+        <div class="video-wrapper load-images">
+            <img data-src="<?php echo MAINSURL; ?>/contenido/temp/foto-mole.jpg" alt="Mole Youth City">
+        </div>
+
         <div class="container">
             <h1>
                 <?php 
@@ -86,10 +91,17 @@ global $dispositivo;
             <span class="text vertical color-negro w160px align-right">Complejo Mole</span>
             <span class="line vertical fondo-negro w160px"></span>
         </div>
+        <div class="deco-diagonal-top load-images">
+            <img data-src="<?php echo MAINSURL; ?>/assets/images/triangulo-rojo.svg">
+        </div>
+
+        <div class="deco-diagonal load-images">
+            <img data-src="<?php echo MAINSURL; ?>/assets/images/triangulo-blanco.svg">
+        </div>
         
         <div class="right biggerxxl">
-            <span class="line vertical fondo-negro w160px"></span>
-            <span class="text vertical color-negro w160px">Viví la experiencia Baxtter</span>
+            <span class="line vertical fondo-negro w160px vertical-more-bottom"></span>
+            <span class="text vertical color-negro w160px vertical-more-bottom">Viví la experiencia Baxtter</span>
         </div>    
         
     </div><!-- //front -->
