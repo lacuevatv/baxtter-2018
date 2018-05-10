@@ -6,13 +6,27 @@
  * FOOTER
  * 
 */
-global $dispositivo;
+$dispositivo = dispositivo();
 ?>
 <section id="programas">
     <h1><span class="sr-only">Programas</span></h1>
     
     <div class="section-capas programas-section">
         <div class="background-section">
+            <div class="load-images hot-cold-images">
+            <?php 
+            if ( $dispositivo == 'pc' ) {
+                echo '<img src="'.MAINSURL.'/assets/images/fondo-hot.png" alt="Baxtter Hot Beach Logo" class="background-hot">';
+                echo '<img src="'.MAINSURL.'/assets/images/fondo-cold.png" alt="Baxtter Hot Beach Logo" class="background-cold">';
+            } elseif($dispositivo == 'tablet' ) {
+                echo '<img src="'.MAINSURL.'/assets/images/movil/hot-fondo-movil.png" alt="Baxtter Hot Beach Logo" class="background-hot background-hot-tablet">';
+                echo '<img src="'.MAINSURL.'/assets/images/movil/fondo-cold-movil.png" alt="Baxtter Hot Beach Logo" class="background-cold background-cold-tablet">';
+            } else {
+                echo '<img src="'.MAINSURL.'/assets/images/movil/hot-fondo-movil.png" alt="Baxtter Hot Beach Logo" class="background-hot">';
+                echo '<img src="'.MAINSURL.'/assets/images/movil/fondo-cold-movil.png" alt="Baxtter Hot Beach Logo" class="background-cold">';
+            }
+            ?>
+            </div>
         </div><!-- // .background-section -->
 
         <div class="main-section container">

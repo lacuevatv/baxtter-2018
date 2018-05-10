@@ -162,6 +162,7 @@
     background-color: $color-violeta;
     
     .programas-wrapper {
+        padding: 0;
         @media (min-width: $md) {
             display: flex;
             display: -o-flex;
@@ -187,15 +188,21 @@
         }
 
         .hot-beach {
-            padding: 5em 0;
+            padding: 5em 0 3em;
             width: 100%;
             color: $color-blanco;
         }//.hot-beach
 
         .cold-mountain {
-            padding: 5em 0;
+            padding: 5em 0 3em;
             width: 100%;
             @media (min-width: $md) {
+                padding-left: 10%;
+            }
+            @media (min-width: $lg) {
+                padding-left: 25%;
+            }
+            @media (min-width: $xlg) {
                 padding-left: 10%;
             }
         }//.cold-mountain
@@ -260,6 +267,74 @@
             }
         }//.programas-links
     }//.programas-wrapper
+
+    .background-section {
+        .hot-cold-images {
+            .background-hot {
+                @media (min-width: $sm) {
+                    position: relative;
+                    top: -300px;
+                }
+                @media (min-width: $md) {
+                    position: absolute;
+                    top: auto;
+                    width: 100%;
+                    bottom: 0%;
+                    left: 0;
+                }
+                @media (min-width: $lg) {
+                    width: 90%;
+                }
+                @media (min-width: $xlg) {
+                    width: 70%;
+                    bottom: -15%;
+                }
+            }
+            
+            .background-cold {
+                position: absolute;
+                top: 470px;
+                width: 150%;
+                right: 0;
+                @media (min-width: $xs) {
+                    top: 612px;
+                }
+                @media (min-width: $sm) {
+                    top: 840px;
+                    width: 120%;
+                }
+                @media (min-width: $md) {
+                    position: absolute;
+                    width: auto;
+                    height: 100%;
+                    top: 0;
+                    right: -35%;
+                }
+                @media (min-width: $lg) {
+                    right: -25%;
+                }
+                @media (min-width: $xlg) {
+                    right: -13%;
+                }
+                @media (min-width: 1600px) {
+                    right: -5%;
+                }
+                @media (min-width: 1700px) {
+                    right: 0;
+                }
+            }
+
+            .background-hot-tablet {}
+            .background-cold-tablet {
+                @media (min-width: $md) {
+                    right: 0px!important;
+                }
+                @media (min-width: $lg) {
+                    height: 120%;
+                }
+            }
+        }//.hot-cold-images
+    }//.background-section
 
 }//.programas-section
 
@@ -438,8 +513,12 @@
                 top: 0;
             }
             img {
+                display: none;
                 width: auto;
                 height: 100%;
+                @media (min-width: $lg) {
+                    display: block;
+                }
             }
     
         }//.video-wrapper

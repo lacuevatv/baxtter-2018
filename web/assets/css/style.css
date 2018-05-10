@@ -1807,83 +1807,146 @@ form {
 */
 .programas-section {
   background-color: #745dad; }
-  @media (min-width: 992px) {
-    .programas-section .programas-wrapper {
-      display: flex;
-      display: -o-flex;
-      display: -ms-flex;
-      display: -moz-flex;
-      display: -webkit-flex;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      -o-justify-content: space-between;
-      justify-content: space-between; } }
-  .programas-section .programas-wrapper .logo-escritorio {
-    width: 160px; }
+  .programas-section .programas-wrapper {
+    padding: 0; }
     @media (min-width: 992px) {
-      .programas-section .programas-wrapper .logo-escritorio {
-        width: 207px; } }
-  .programas-section .programas-wrapper h2 {
-    margin-bottom: 4em; }
-  .programas-section .programas-wrapper .hot-beach {
-    padding: 5em 0;
-    width: 100%;
-    color: #fff; }
-  .programas-section .programas-wrapper .cold-mountain {
-    padding: 5em 0;
-    width: 100%; }
-    @media (min-width: 992px) {
-      .programas-section .programas-wrapper .cold-mountain {
-        padding-left: 10%; } }
-  .programas-section .programas-wrapper .programas-links {
-    text-transform: uppercase;
-    margin: 2em 0;
-    font-size: 130%;
-    font-weight: 500; }
-    @media (min-width: 992px) {
-      .programas-section .programas-wrapper .programas-links {
-        font-size: 110%; } }
-    .programas-section .programas-wrapper .programas-links li {
-      margin: 1em 0; }
-    .programas-section .programas-wrapper .programas-links button {
-      position: relative;
-      color: #34fff7;
-      text-transform: uppercase;
-      cursor: pointer;
-      padding-left: 30px;
-      margin-top: 2em;
-      font-weight: 400;
-      font-size: 80%; }
-      @media (min-width: 567px) {
-        .programas-section .programas-wrapper .programas-links button {
-          padding-left: 45px;
-          margin-top: 0; } }
+      .programas-section .programas-wrapper {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between; } }
+    .programas-section .programas-wrapper .logo-escritorio {
+      width: 160px; }
       @media (min-width: 992px) {
-        .programas-section .programas-wrapper .programas-links button {
-          margin-top: 1em; } }
-      .programas-section .programas-wrapper .programas-links button:before {
-        content: '';
-        display: block;
-        background: url(../images/sprite.png) no-repeat;
+        .programas-section .programas-wrapper .logo-escritorio {
+          width: 207px; } }
+    .programas-section .programas-wrapper h2 {
+      margin-bottom: 4em; }
+    .programas-section .programas-wrapper .hot-beach {
+      padding: 5em 0 3em;
+      width: 100%;
+      color: #fff; }
+    .programas-section .programas-wrapper .cold-mountain {
+      padding: 5em 0 3em;
+      width: 100%; }
+      @media (min-width: 992px) {
+        .programas-section .programas-wrapper .cold-mountain {
+          padding-left: 10%; } }
+      @media (min-width: 1200px) {
+        .programas-section .programas-wrapper .cold-mountain {
+          padding-left: 25%; } }
+      @media (min-width: 1500px) {
+        .programas-section .programas-wrapper .cold-mountain {
+          padding-left: 10%; } }
+    .programas-section .programas-wrapper .programas-links {
+      text-transform: uppercase;
+      margin: 2em 0;
+      font-size: 130%;
+      font-weight: 500; }
+      @media (min-width: 992px) {
+        .programas-section .programas-wrapper .programas-links {
+          font-size: 110%; } }
+      .programas-section .programas-wrapper .programas-links li {
+        margin: 1em 0; }
+      .programas-section .programas-wrapper .programas-links button {
+        position: relative;
+        color: #34fff7;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding-left: 30px;
+        margin-top: 2em;
+        font-weight: 400;
+        font-size: 80%; }
+        @media (min-width: 567px) {
+          .programas-section .programas-wrapper .programas-links button {
+            padding-left: 45px;
+            margin-top: 0; } }
+        @media (min-width: 992px) {
+          .programas-section .programas-wrapper .programas-links button {
+            margin-top: 1em; } }
+        .programas-section .programas-wrapper .programas-links button:before {
+          content: '';
+          display: block;
+          background: url(../images/sprite.png) no-repeat;
+          position: absolute;
+          bottom: 1px;
+          left: 0;
+          background-position: -47px -237px;
+          height: 17px;
+          width: 20px; }
+          @media (min-width: 567px) {
+            .programas-section .programas-wrapper .programas-links button:before {
+              background-position: -2px -231px;
+              height: 26px;
+              width: 32px; } }
+      .programas-section .programas-wrapper .programas-links button.button-red {
+        color: #fe477a; }
+        .programas-section .programas-wrapper .programas-links button.button-red:before {
+          background-position: -47px -205px; }
+          @media (min-width: 567px) {
+            .programas-section .programas-wrapper .programas-links button.button-red:before {
+              background-position: -2px -196px; } }
+  @media (min-width: 767px) {
+    .programas-section .background-section .hot-cold-images .background-hot {
+      position: relative;
+      top: -300px; } }
+  @media (min-width: 992px) {
+    .programas-section .background-section .hot-cold-images .background-hot {
+      position: absolute;
+      top: auto;
+      width: 100%;
+      bottom: 0%;
+      left: 0; } }
+  @media (min-width: 1200px) {
+    .programas-section .background-section .hot-cold-images .background-hot {
+      width: 90%; } }
+  @media (min-width: 1500px) {
+    .programas-section .background-section .hot-cold-images .background-hot {
+      width: 70%;
+      bottom: -15%; } }
+  .programas-section .background-section .hot-cold-images .background-cold {
+    position: absolute;
+    top: 470px;
+    width: 150%;
+    right: 0; }
+    @media (min-width: 567px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        top: 612px; } }
+    @media (min-width: 767px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        top: 840px;
+        width: 120%; } }
+    @media (min-width: 992px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
         position: absolute;
-        bottom: 1px;
-        left: 0;
-        background-position: -47px -237px;
-        height: 17px;
-        width: 20px; }
-        @media (min-width: 567px) {
-          .programas-section .programas-wrapper .programas-links button:before {
-            background-position: -2px -231px;
-            height: 26px;
-            width: 32px; } }
-    .programas-section .programas-wrapper .programas-links button.button-red {
-      color: #fe477a; }
-      .programas-section .programas-wrapper .programas-links button.button-red:before {
-        background-position: -47px -205px; }
-        @media (min-width: 567px) {
-          .programas-section .programas-wrapper .programas-links button.button-red:before {
-            background-position: -2px -196px; } }
+        width: auto;
+        height: 100%;
+        top: 0;
+        right: -35%; } }
+    @media (min-width: 1200px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        right: -25%; } }
+    @media (min-width: 1500px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        right: -13%; } }
+    @media (min-width: 1600px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        right: -5%; } }
+    @media (min-width: 1700px) {
+      .programas-section .background-section .hot-cold-images .background-cold {
+        right: 0; } }
+  @media (min-width: 992px) {
+    .programas-section .background-section .hot-cold-images .background-cold-tablet {
+      right: 0px !important; } }
+  @media (min-width: 1200px) {
+    .programas-section .background-section .hot-cold-images .background-cold-tablet {
+      height: 120%; } }
 
 /*
  * BARILOCHE
@@ -2025,8 +2088,12 @@ form {
         height: 100%;
         top: 0; } }
     .mole-section .background-section .video-wrapper img {
+      display: none;
       width: auto;
       height: 100%; }
+      @media (min-width: 1200px) {
+        .mole-section .background-section .video-wrapper img {
+          display: block; } }
   @media (min-width: 767px) {
     .mole-section .background-section .mole-experiencia {
       position: absolute;
