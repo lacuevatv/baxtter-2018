@@ -76,6 +76,13 @@ $(document).ready(function(){
         }
    }
 
+   /*
+    * ARROW DOWN
+    * */
+   $(document).on('click', '.title-arrow', function(){
+       scrollToID( '#formularioprincipal' )
+   });
+
 
 });//.ready()
 
@@ -116,10 +123,10 @@ $( window ).on('load', function(){
     * CARGA EL HEADER
     */
    //ESTA PUESTO EN SETtIME OUT POR QUE SINO LOCALMENTE NO ME DOY CUENTA
-    setTimeout(function(){
+    /*setTimeout(function(){
         loadHeader (loadHeader( startAnimation() ) );   
-    },1000)
-   
+    },1000)*/
+    loadHeader (loadHeader( startAnimation() ) );   
     //esta funcion primero carga el header y luego las imágenes
     function loadHeader ( callback ) {
         //primero, cargar todas las imágenes sin mostrarlas
@@ -142,14 +149,25 @@ $( window ).on('load', function(){
     function startAnimation() {
         //si es movil
         if ( window.innerWidth < 768 ) {
-            console.log('es celular')
+            setTimeout(function(){
+                $('.header-images-wrapper').addClass('header-images-wrapper-open');
+                $('.header-wrapper').addClass('header-wrapper-open');
+                $('.header-wrapper .sol-movil').addClass('sol-move-up');
+                $('.header-wrapper .girl-movil').addClass('girl-fade');
+                $('.title-header').addClass('title-header-open');
+                loadImage ( $('.title-arrow'), agregaClase($('.title-arrow'),'slide-down') );
+            },1000);
+
         } else {
+            setTimeout(function(){
             $('.header-images-wrapper').addClass('header-images-wrapper-open');
             $('.header-wrapper').addClass('header-wrapper-open');
-            $('.header-wrapper .sol').addClass('sol-move-up');
-            $('.header-wrapper .girl').addClass('girl-fade');
-            $('.title-header').addClass('title-header-open');
-            loadImage ( $('.title-arrow'), agregaClase($('.title-arrow'),'slide-down') )
+            
+                $('.header-wrapper .sol').addClass('sol-move-up');
+                $('.header-wrapper .girl').addClass('girl-fade');
+                $('.title-header').addClass('title-header-open');
+                loadImage ( $('.title-arrow'), agregaClase($('.title-arrow'),'slide-down') );
+            },1000);
         }
     }
     //funcion que carga imagen y ejecuta una accion
@@ -169,39 +187,8 @@ $( window ).on('load', function(){
     function agregaClase (el, clase) {
         $(el).addClass(clase);
     }
-    /*
-    PARALLAX BACKGROUND IMAGENES TWIITER Y PARTNERS
-    */
 
-    //tomamos las imagenes
-    var backgroundPartners = $('#background-partners');
-    var imgPartners = $(backgroundPartners).find('img');
-    //guardamos la posicion inicial
-    //paralax: funcionar al scroll
-    /*$(window).scroll(function(){
 
-        var barra = ($(window).scrollTop()); 
-        
-        var nuevoY = barra*0.9;
-        //movemos los puntos hacia abajo
-        if ( barra <= 100 && barra >= 0) {
-            imgPartners.css('top','48%');   
-        }
-
-        if ( barra <= 200 && barra >= 100) {
-            title.css('top','58%');   
-        }
-        if ( barra <= 300 && barra >= 200) {
-            title.css('top','68%');   
-        }
-        if ( barra <= 400 && barra >= 300) {
-            title.css('top','78%');   
-        }
-        if ( barra <= 500 && barra >= 400) {
-            title.css('top','88%');   
-        }
-     
-    });//fin paralax*/
 
     /*
      * IN VIEW
@@ -235,7 +222,93 @@ $( window ).on('load', function(){
 
 
     /*
-    *  MOVIMIENTO LENTO DE IMAGENES
+     * PARALLAX HEADER PC
+    */
+
+    var imagenesHeader = $('.header-images-wrapper');
+    var tituloPagina = $('.title-header');
+
+    $(window).scroll(function(){
+       //valor de barra que necesitan todos
+       var barra = ($(window).scrollTop());
+  
+       //imagenesHeader muevo una por vez:
+       //Imagen 1: sol
+        if (  $(imagenesHeader[1]).hasClass('in-view') ) {
+      
+           var modificador = -25; 
+           
+           //vemos si es movil
+           if ( $(imagenesHeader[1]).hasClass('sol-movil') ) {
+               modificador = -30;
+
+               var porcentaje = barra * 0.1 - modificador;
+               
+               $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
+
+           } else {
+               
+               var porcentaje = barra * 0.08 - modificador;
+               $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
+               
+           }
+           
+       }//Imagen 1: sol
+
+       //Imagen 2: girl
+       if (  $(imagenesHeader[2]).hasClass('in-view') ) {
+      
+        var modificador = 0; 
+        
+            //vemos si es movil
+            if ( $(imagenesHeader[2]).hasClass('sol-movil') ) {
+                modificador = 0;
+
+                var porcentaje = barra * 0.7 - modificador;
+                
+                $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+
+            } else {
+                //version pc
+                
+                var porcentaje = barra * 0.05 - modificador;
+                $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+                
+            }
+            
+        }//Imagen 2: girl
+
+        //titulo: unicos
+       if (  $(tituloPagina).hasClass('in-view') ) {
+      
+        var modificador = 0; 
+        
+            //vemos si es movil
+       if (  $(tituloPagina).hasClass('in-view') ) {
+            if ( $(tituloPagina).hasClass('titulo-movil') ) {
+                modificador = 0;
+
+                var porcentaje = barra * 0.4 - modificador;
+                
+                $(tituloPagina).css('botom', porcentaje + 'px'); 
+
+            } else {
+                //version pc
+                var porcentaje = barra * 0.3 - modificador;
+                //debugger;
+                $(tituloPagina).css('transform', 'translateY(-' + porcentaje + '%)'); 
+            }
+        }     
+        }//titulo: unicos
+       
+    });
+
+
+
+
+
+    /*
+     * PARALLAX BACKGROUND IMAGENES TWIITER Y PARTNERS
     */
     var partnersBackground = $('.background-partners');
     var twitterBackground = $('.background-twitter');

@@ -68,25 +68,25 @@ global $dispositivo;
             
             <?php if ( $dispositivo != 'movil' ) : ?>
 
-                <div class="header-images-wrapper degradado">
+                <div class="header-images-wrapper degradado movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/degradado-header.jpg">
                 </div>
-                <div class="header-images-wrapper sol">
+                <div class="header-images-wrapper sol movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/sol.png">
                 </div>
-                <div class="header-images-wrapper girl">
+                <div class="header-images-wrapper girl movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/chica.png">
                 </div>
             
                 <?php else : ?>
 
-                <div class="header-images-wrapper degradado-movil">
+                <div class="header-images-wrapper degradado-movil movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/degradado-sup-movil.jpg">
                 </div>
-                <div class="header-images-wrapper sol-movil">
+                <div class="header-images-wrapper sol-movil movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/sol-sup-movil.png">
                 </div>
-                <div class="header-images-wrapper girl-movil">
+                <div class="header-images-wrapper girl-movil movil-element">
                     <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/chica-movil.png">
                 </div>
             
@@ -95,9 +95,9 @@ global $dispositivo;
             </div><!-- //.header-capas -->
 
             <div class="main-section container">
-                <div class="title-header">
-                    <h1>Unicos</h1>
-                    <div class="title-arrow movil-element">
+                <div class="title-header movil-element">
+                    <h1>Únicos</h1>
+                    <div role="button" class="title-arrow movil-element">
                         <img data-src="<?php echo MAINSURL; ?>/assets/images/arrow-down.png" class="btn-hover-grayscale">
                     </div>
                 </div>
@@ -106,7 +106,7 @@ global $dispositivo;
         </div><!-- //. header-wrapper -->  
 
         
-        <div class="container form-header-wrapper">
+        <div id="formularioprincipal" class="container form-header-wrapper">
             <div class="main-section-wrapper">
                 <?php getTemplate( 'formularios', 'reunion' ); ?>
             </div>
