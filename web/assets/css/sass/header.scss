@@ -6,9 +6,183 @@
 @import 'nav';
 
 .header-wrapper {
+    height: 350px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    @include transition(all 1s ease-out);
+    .title-header {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        padding-top: 150px;
+        @include transition(all 1s ease);
+
+        h1 {
+            text-align: center;
+            font-family: $fuente-secundaria;
+            text-transform: uppercase;
+            font-size: 8em;
+            line-height: 100%;
+            @include transition(all 1s ease);
+        }
+
+        .title-arrow {
+            position: relative;
+            @include transition(all 1s ease);
+            opacity: 0;
+            cursor: pointer;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 50px;
+                @media (min-width: $md) {
+                    width: 80px;
+                }
+            }//img
+        }//.title-arrow
+    }//.title-header
+
+    .title-header-open {
+        position: absolute;
+        bottom: 110px;
+        opacity: 1;
+        @include transition(all 1s ease);
+        @media (min-width: $xs) {
+            bottom: 70px;
+        }
+        @media (min-width: $sm) {
+            bottom: 90px;
+        }
+        @media (min-width: $md) {
+            bottom: 80px;
+        }
+        h1 {
+            @include transition(all 1s ease);
+            color: $color-blanco;
+        }
+    }
+
+    .headercapas {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+
+        .header-images-wrapper {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            
+        }
+
+        .header-images-wrapper-open {
+            visibility: visible;
+        }
+
+        .sol-movil {
+            top: 30vh;
+        }
+
+        .girl-movil {
+            @media (min-width: $xs) {
+                top: -50vh;
+            }
+        }
+
+        .degradado {
+            @media (min-width: $sm) {
+                img {
+                    width: 200%;
+                    @include transform(translateX(-25%));
+                }
+            }
+            @media (min-width: $md) {
+                img {
+                    width: 200%;
+                    @include transform(translateX(-25%));
+                }
+            }
+        }
+
+        .sol {
+            top: 25vh;
+            
+        }
+
+        .sol-move-up {
+            animation-name: sol-move-up;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sol-move-up {
+            from {opacity: 0;transform:translateY(200px);}
+            to {opacity: 1;transform:translateY(0px);}
+        }
+
+        .girl {
+            @media (min-width: $sm) {
+                img {
+                    width: 200%;
+                    @include transform(translateX(-25%));
+                }
+            }
+            @media (min-width: $md) {
+                img {
+                    width: 150%;
+                    @include transform(translateX(-17%));
+                }
+            }
+            @media (min-width: $lg) {
+                img {
+                    width: 100%;
+                    @include transform(translateX(0));
+                }
+            }
+        }
+
+        .girl-fade {
+            animation-name: girl-fade;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes girl-fade {
+            from {opacity: 0;filter: blur(2px);}
+            to {opacity: 1;filter: blur(0%);}
+        }
+
+    }//.headercapas
+
+
+}//.header-wrapper
+.header-wrapper-open {
+    visibility: visible;
+    @include transition(all 1s ease-out);
+    height: 100vh;
+    @media (min-width: $sm) {
+        height: 80vh;
+    }
+    @media (min-width: $md) {
+        height: 100vh;
+    }
+    
+    @media (min-height: 1090px) {
+        height: 70vh;
+    }
+
 }
+
+
+/*
+ * FORM HEADER
+*/
 
 .form-header-wrapper {
     position: relative;

@@ -83,15 +83,15 @@ $(document).ready(function(){
  * FUNCIONES QUE REQUIEREN QUE TODO ESTE CARGADO
 */
 
-
 $( window ).on('load', function(){
 
     console.log('all loaded')
-
+    
     /*
      * CARGA ASINCRONA DE IMAGENES
     */
-    //cargar imágenes con img src
+
+    //carga las imágenes con img src
     $('.load-images').each(function(){
         console.log('cargando imagenes');
         var img = $(this).find('img');
@@ -102,7 +102,6 @@ $( window ).on('load', function(){
         }
     });//load images
 
-
     //carga imagenes cuya carga es por css (background)
     function loadImagesBackgroundCSS ( contenedor, clase ) {
         var html = '<div class="'+clase+'"></div>';
@@ -112,12 +111,66 @@ $( window ).on('load', function(){
         loadImagesBackgroundCSS ( $('#background_nosotros'), 'experiencia'); 
         loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia');
     }
-    
-
-
 
     /*
-    parallax background:
+    * CARGA EL HEADER
+    */
+   //ESTA PUESTO EN SETtIME OUT POR QUE SINO LOCALMENTE NO ME DOY CUENTA
+    setTimeout(function(){
+        loadHeader (loadHeader( startAnimation() ) );   
+    },1000)
+   
+    //esta funcion primero carga el header y luego las imágenes
+    function loadHeader ( callback ) {
+        //primero, cargar todas las imágenes sin mostrarlas
+        $('.header-images-wrapper').each(function(){
+            var img = $(this).find('img');
+    
+            $(img).attr('src', $(img).attr('data-src') );
+            
+        });
+        $('.title-arrow')
+
+        //Luego ejecutar la Animacion
+        function EjecutarCallBack() {
+            if (typeof callback != 'undefined') {
+                callback();
+            }
+        }
+    }
+    //funcion que muestra el header una vez cargadas las imagenes
+    function startAnimation() {
+        //si es movil
+        if ( window.innerWidth < 768 ) {
+            console.log('es celular')
+        } else {
+            $('.header-images-wrapper').addClass('header-images-wrapper-open');
+            $('.header-wrapper').addClass('header-wrapper-open');
+            $('.header-wrapper .sol').addClass('sol-move-up');
+            $('.header-wrapper .girl').addClass('girl-fade');
+            $('.title-header').addClass('title-header-open');
+            loadImage ( $('.title-arrow'), agregaClase($('.title-arrow'),'slide-down') )
+        }
+    }
+    //funcion que carga imagen y ejecuta una accion
+    function loadImage ( el, callback ) {
+        var img = $(el).find('img');
+    
+        $(img).attr('src', $(img).attr('data-src') );
+        
+        //Luego ejecutar la Animacion
+        function EjecutarCallBack() {
+            if (typeof callback != 'undefined') {
+                callback();
+            }
+        }
+    }
+    //agrega la clase dada al elemento dado
+    function agregaClase (el, clase) {
+        $(el).addClass(clase);
+    }
+    /*
+    PARALLAX BACKGROUND IMAGENES TWIITER Y PARTNERS
     */
 
     //tomamos las imagenes

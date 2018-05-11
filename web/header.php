@@ -6,6 +6,7 @@
  * HEADER
 */
 global $pageActual;
+global $dispositivo;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -61,19 +62,47 @@ global $pageActual;
         <?php getTemplate( 'nav' ); ?>
 
         <div class="header-wrapper">
-            
+             
             <!-- ACA ADENTRO VAN LAS CAPAS DEL HEADER -->
+            <div class="headercapas">
             
-            <!-- TEMP IMAGE -->
-            <div class="load-images">
-            <?php 
-            if ( $dispositivo != 'movil' ) {
-                echo '<img data-src="'.MAINSURL.'/contenido/temp/header.jpg" style="width:100%;margin:0;">';
-            } else {
-                echo '<img data-src="'.MAINSURL.'/contenido/temp/header-movil.jpg" style="width:100%;margin:0;">';
-            }
-            ?>
+            <?php if ( $dispositivo != 'movil' ) : ?>
+
+                <div class="header-images-wrapper degradado">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/degradado-header.jpg">
+                </div>
+                <div class="header-images-wrapper sol">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/sol.png">
+                </div>
+                <div class="header-images-wrapper girl">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/chica.png">
+                </div>
+            
+                <?php else : ?>
+
+                <div class="header-images-wrapper degradado-movil">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/degradado-sup-movil.jpg">
+                </div>
+                <div class="header-images-wrapper sol-movil">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/sol-sup-movil.png">
+                </div>
+                <div class="header-images-wrapper girl-movil">
+                    <img data-src="<?php echo MAINSURL; ?>/assets/images/movil/chica-movil.png">
+                </div>
+            
+                <?php endif; ?>
+                
+            </div><!-- //.header-capas -->
+
+            <div class="main-section container">
+                <div class="title-header">
+                    <h1>Unicos</h1>
+                    <div class="title-arrow movil-element">
+                        <img data-src="<?php echo MAINSURL; ?>/assets/images/arrow-down.png" class="btn-hover-grayscale">
+                    </div>
+                </div>
             </div>
+
         </div><!-- //. header-wrapper -->  
 
         
