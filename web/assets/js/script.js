@@ -320,7 +320,6 @@ $( window ).on('load', function(){
             if ( experienciaBackground.hasClass('in-view') ) {
                 var modificador = 30; 
                 
-                
                 //tiene solo version pc
                     
                 var porcentaje = barra * 0.03 - modificador;

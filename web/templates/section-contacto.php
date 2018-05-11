@@ -40,8 +40,9 @@ global $dispositivo;
                 <?php if ( $dispositivo != 'movil' ) : ?>
                     <div class="map-wrapper">
 
-                        <!-- TEMP IMAGE -->
-                        <img src="<?php echo UPLOADSURL; ?>/temp/ref-mapa.jpg" style="width:100%;height:100%;display: block; margin: 0 auto;">
+                        <!-- TEMP IMAGE 
+                        <img src="<?php echo UPLOADSURL; ?>/temp/ref-mapa.jpg" style="width:100%;height:100%;display: block; margin: 0 auto;">-->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.844766310177!2d-58.5074174850565!3d-34.48146205854595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1b25adc8187%3A0x9ab3c44aafb5f935!2sBaxtter+Viajes!5e0!3m2!1ses!2sar!4v1526068414623" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     </div>
                 <?php endif; ?>
