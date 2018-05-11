@@ -1,0 +1,688 @@
+/*--------------------------------------------------------------
+Reset
+--------------------------------------------------------------*/
+
+@import 'sass/reset';
+
+/*--------------------------------------------------------------
+Fuentes
+--------------------------------------------------------------*/
+
+@import 'sass/fonts';
+
+/*--------------------------------------------------------------
+variables
+--------------------------------------------------------------*/
+
+@import 'sass/variables';
+
+/*--------------------------------------------------------------
+General
+--------------------------------------------------------------*/
+
+html, body {
+    font-family: $fuente-secundaria;
+    font-family: $fuente-principal;
+    color: $color-negro;
+    background-color: $color-blanco;
+    font-size: .8em;
+    line-height: 1.5em;
+    @media (min-width: $xs) {
+        font-size: 1em;
+    }
+    @media (min-width: $sm) {
+        font-size: 1.2em;
+    line-height: 1.5em;
+    }
+    @media (min-width: $md) {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+}
+
+.wrapper-site {//wrapper principal junto al body
+    position: relative;
+    z-index: 1;
+}
+
+.container {//container generico para que todo tenga el mismo ancho
+    padding: 0 40px;
+    @media (min-width: $xs) {
+        padding: 0 40px;
+    }
+    @media (min-width: $md) {
+        padding: 0 50px;
+    }
+    @media (min-width: $lg) {
+        padding: 0 15%;
+    }
+    @media (min-width: $xlg) {
+        padding: 0 24%;
+    }
+}
+
+.sr-only-especial {
+    display: block;
+    @media (min-width: $md) {
+        display: none;
+    }
+}
+
+.section-capas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    @media (min-width: $lg) {
+        height: 100vh;
+    }
+
+    .background-section {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        
+        img {
+            width: 100%;
+        }
+    }
+    .main-section {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+.load-images {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.no-content {
+    &:before {
+        content: none!important;
+    }
+    &:after {
+        content: none!important;
+    }
+}
+
+.data-carga {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+footer
+--------------------------------------------------------------*/
+
+@import 'sass/footer';
+
+/*--------------------------------------------------------------
+ANIMATIONS
+--------------------------------------------------------------*/
+
+@import 'sass/animations';
+
+/*--------------------------------------------------------------
+TRIPOGRAFIAS
+--------------------------------------------------------------*/
+
+@import 'sass/tipografia';
+
+/*--------------------------------------------------------------
+LANDING
+--------------------------------------------------------------*/
+
+.nosotros-section {
+    background-color: $color-gris-claro;
+
+    .nosotros-wrapper {
+        padding: 15em 0 5em;
+        @media (min-width: $md) {
+            padding: 18em 0;
+            padding: 27vh 0;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            > div {
+                width: 50%;
+            }
+        }//media
+        .left {
+            @media (min-width: $md) {
+                padding-right: 3em;
+            }
+        }
+
+        .right {
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+            flex-direction: flex-start;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            -o-flex-direction: column;
+            flex-direction: column;
+
+            .btn-wrapper {
+                width: 100%;
+                margin-bottom: 1em;
+                
+                span {
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 80%;
+                    font-weight: 500;
+                    margin-top: 0.3em
+                }
+                button {
+                    cursor: pointer;
+                    background-color: $color-rojo-opaco;
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    color: $color-blanco;
+                    text-align: left;
+                    text-transform: uppercase;
+                    padding: .5em 1em;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 70px;
+                        top: -2px;
+                        width: 27px;
+                        height: 30px;
+                        background: url(../images/sprite.png) no-repeat;
+                        background-position:-125px -182px;
+                        @include transition(all .3s ease);
+                        @media (min-width: $xs) {
+                            height: 30px;
+                            width: 37px;
+                            background-position:-150px -182px;
+                            left: 90px;
+                            top: 6px
+                        }
+                        @media (min-width: $sm) {
+                            left: 130px;
+                            top: 14px
+                        }
+                        @media (min-width: $md) {
+                            height: 30px;
+                            width: 24px;
+                            background-position: -125px -182px;
+                            left: 96px;
+                            top: 6px;
+                        }
+                    }//after
+                
+                    &:hover {
+                        background-color: $color-celeste;
+                        color: $color-negro;
+                        @include transition(all .3s ease-out);
+                        zoom: 1;
+                        filter: alpha(opacity=90);
+                        opacity: 0.9;
+                        @media (min-width: $md) {
+                            &:after {
+                                left: 96px;
+                                background-position: -101px -182px;
+                            }
+                        }
+                
+                    }//hover}
+
+                }
+            }
+
+            #travelone {
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff4262+0,4372ce+100 */
+                background: #ff4262; /* Old browsers */
+                background: -moz-linear-gradient(left, #ff4262 0%, #4372ce 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, #ff4262 0%,#4372ce 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, #ff4262 0%,#4372ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4262', endColorstr='#4372ce',GradientType=1 ); /* IE6-9 */
+            }
+
+            #payone {
+                background-color: $color-gris-medio;
+                &:after {
+                    left:140px;
+                    @media (min-width: $xs) {
+                        left: 226px;
+                    }
+                    @media (min-width: $sm) {
+                        left: 290px;
+                    }
+                    @media (min-width: $md) {
+                        left: 226px;
+                    }
+                }
+            }
+        }//.right
+
+        
+
+        h2 {
+            font-size: 200%;
+            margin-bottom: 2em;
+            @media (min-width: $md) {
+                font-size: 130%;
+                margin: 1em .1em;
+                margin-bottom: 3em;
+            }
+        }
+
+        h3 {
+            margin-bottom: 2em;
+            @media (min-width: $md) {
+                margin-bottom: 4em;
+            }
+        }
+
+        p {
+            margin: 1em 0;
+            @media (min-width: $md) {
+                margin: 0;
+                margin-bottom: .8em;
+                font-size: 80%;
+            }
+        }
+
+        .logo-27 {
+            display: none;
+            @media (min-width: $md) {
+                display: block;
+                max-width: 150px;
+            }
+        }
+        .logo-27-movil {
+            display: block;
+            width: 40%;
+            max-width: 180px;
+            margin: 3em 0 2em;
+            @media (min-width: $md) {
+                display: none;
+            }
+        }
+    }//.nosotros-wrapper
+
+    .background-section {
+        padding-top: 5em;
+        @media (min-width: $md) {
+            padding-top: 0;
+        }
+
+        .experiencia {
+            @media (min-width: $sm) {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(../images/sobreimpresion-vivi-la-experiencia.png);
+                background-size: contain;
+                //background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position-x: 0%;
+            }
+        }
+
+        h6 {
+            width: 100%;
+            position: relative;
+            margin: 3em 0;
+            img {
+                width: 147px;
+            }
+            @media (min-width: $md) {
+                margin: 0;
+                top: 13vh;
+            }
+            @media (min-width: $xlg) {
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 170px;
+                    height: 1px;
+                    background-color: $color-negro;
+                    position: absolute;
+                    bottom: 0;
+                    left: -190px;
+                }
+            }
+        }//h6
+    }//.background-section
+
+}//.nosotros-section
+
+
+/*
+ * FRONT SECTION - contenido vertical
+*/
+.front-section {
+    display: none;
+    @media (min-width: $lg) {
+        display: block;
+    }
+
+    .deco-diagonal {
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: -1%;
+        width: 15%;
+        height: 80%;
+
+        img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .deco-diagonal-top {
+        position: absolute;
+        display: block;
+        left: 49%;
+        top: -1%;
+        width: 20.5%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .left, .right {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        top: 25%;
+        top: 5em;
+        width: 2em;
+        height: 50%;
+    }
+
+    .partners {
+        height: 70%;
+    }
+
+    .medium {
+        top: 10em;
+    }
+
+    .bigger {
+        top: 10em;
+        height: 60%;
+    }
+
+    .biggerxl {
+        top: 15em;
+        height: 50%;
+    }
+
+    .biggerxxl {
+        top: 8em;
+        height: 60%;
+        @media (min-width: $xlg) {
+            top: 10em;
+            height: 60%;
+        }
+    }
+
+    .left {
+        opacity: 0;
+        left: 3%;
+        animation-name: slide-left;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+	    animation-fill-mode: forwards;
+        @media (min-width: $xlg) {
+            left:5%;
+        }
+    }
+
+
+    @keyframes slide-left {
+        from {opacity: 0;transform:translateX(-50%);}
+        to {opacity: 1;transform:translateX(0);}
+    }
+    @keyframes slide-right {
+        from {opacity: 0;transform:translateX(50%);}
+        to {opacity: 1;transform:translateX(0);}
+    }
+
+    .right {
+        opacity: 0;
+        right:3%;
+        animation-name: slide-right;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+	    animation-fill-mode: forwards;
+        @media (min-width: $xlg) {
+            right:5%;
+        }
+    }
+
+    .vertical {
+        @include transform(rotate(-90deg));
+    }
+
+    .vertical-more-bottom {
+        @media (min-width: $md) {
+            @include transform(rotate(-90deg) translateX(-50px));
+        }
+        @media (min-width: $xlg) {
+            @include transform(rotate(-90deg));
+        }
+    }
+
+    .line {
+        display: block;
+        width: 2em;
+        height: 0.5px;
+        background-color: $color-blanco;
+    }
+    .text {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $color-blanco;
+        font-size: 60%;
+    }
+
+    .fondo-negro {
+        background-color: $color-negro;
+    }
+
+    .color-negro {
+        color: $color-negro;
+    }
+
+    .color-celeste {
+        color: $color-celeste;
+    }
+
+    .w80px {
+        width: 80px;
+    }
+
+    .w160px {
+        width: 160px;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+}//.front-section
+
+
+.contenedor-travelone, .contenedor-payone {
+    display: none;
+}
+
+.contenedor-open {
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        @media (min-width: $md) {
+            height: 90%;
+            width: 90%;
+        }
+    }
+
+    .close-btn {
+        -webkit-align-self: flex-end;
+        -moz-align-self: flex-end;
+        -ms-align-self: flex-end;
+        -o-align-self: flex-end;
+        align-self: flex-end;
+        margin-bottom: 0%;
+        margin-right: 5%;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        display: block;
+        border: none;
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        @include transition(all 1s);
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        .tog1 {
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background-color: $color-blanco;
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            @include transform(rotate(45deg));
+            @include transition(all 0.3s);
+        }
+        
+        .tog3 {
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background-color: $color-blanco;
+            @include transform(rotate(-45deg));
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            @include transition(all 0.3s);
+        }
+    }
+
+}
+.close-btn:hover .tog2 {
+  left: 5px;
+}
+
+.toggle-open .tog1 {
+    background-color: $color-blanco;
+    @include transform(rotate(45deg));
+    top: initial;
+}
+.toggle-open .tog3 {
+    background-color: $color-blanco;
+    @include transform(rotate(-45deg));
+    top: initial;
+}

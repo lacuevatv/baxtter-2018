@@ -1887,6 +1887,10 @@ form {
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
         justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
         flex-wrap: wrap; }
         .nosotros-section .nosotros-wrapper > div {
           width: 50%; }

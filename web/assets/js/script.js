@@ -91,8 +91,6 @@ $(document).ready(function(){
 */
 
 $( window ).on('load', function(){
-
-    console.log('all loaded')
     
     /*
      * CARGA ASINCRONA DE IMAGENES
@@ -100,7 +98,6 @@ $( window ).on('load', function(){
 
     //carga las imágenes con img src
     $('.load-images').each(function(){
-        console.log('cargando imagenes');
         var img = $(this).find('img');
 
         $(img).attr('src', $(img).attr('data-src') );
@@ -323,7 +320,7 @@ $( window ).on('load', function(){
                 //tiene solo version pc
                     
                 var porcentaje = barra * 0.03 - modificador;
-                console.log(porcentaje)
+                
                 $(experienciaBackground).css('background-position-x', porcentaje + '%'); 
 
             }
