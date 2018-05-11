@@ -1939,8 +1939,8 @@ form {
         left: 0;
         background: url(../images/sobreimpresion-vivi-la-experiencia.png);
         background-size: contain;
-        background-attachment: fixed;
-        background-repeat: no-repeat; } }
+        background-repeat: no-repeat;
+        background-position-x: 0%; } }
     .nosotros-section .background-section h6 {
       width: 100%;
       position: relative;

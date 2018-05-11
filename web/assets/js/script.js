@@ -115,17 +115,14 @@ $( window ).on('load', function(){
         contenedor.prepend($(html));
     }
     if (window.innerWidth > 992 ) {
-        loadImagesBackgroundCSS ( $('#background_nosotros'), 'experiencia'); 
+        loadImagesBackgroundCSS ( $('#background_nosotros'), 'experiencia movil-element'); 
         loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia');
     }
 
     /*
     * CARGA EL HEADER
     */
-   //ESTA PUESTO EN SETtIME OUT POR QUE SINO LOCALMENTE NO ME DOY CUENTA
-    /*setTimeout(function(){
-        loadHeader (loadHeader( startAnimation() ) );   
-    },1000)*/
+
     loadHeader (loadHeader( startAnimation() ) );   
     //esta funcion primero carga el header y luego las imágenes
     function loadHeader ( callback ) {
@@ -304,20 +301,36 @@ $( window ).on('load', function(){
     });
 
 
-
-
-
     /*
-     * PARALLAX BACKGROUND IMAGENES TWIITER Y PARTNERS
+     * PARALLAX BACKGROUND IMAGENES NOSOTROS - TWIITER Y PARTNERS
     */
     var partnersBackground = $('.background-partners');
     var twitterBackground = $('.background-twitter');
+    var experienciaBackground = $('.experiencia');
 
     $(window).scroll(function(){
         //valor de barra que necesitan todos
         var barra = ($(window).scrollTop());
         
         
+        /*
+        * experienciaBackground
+        */
+       if (window.innerWidth > 992) {
+            if ( experienciaBackground.hasClass('in-view') ) {
+                var modificador = 30; 
+                
+                
+                //tiene solo version pc
+                    
+                var porcentaje = barra * 0.03 - modificador;
+                console.log(porcentaje)
+                $(experienciaBackground).css('background-position-x', porcentaje + '%'); 
+
+            }
+        
+        }//ExperienciaBackground
+
         /*
         * partnersBackground
         */
