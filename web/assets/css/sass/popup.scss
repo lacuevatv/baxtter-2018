@@ -24,10 +24,13 @@
     z-index: 1111;
     top: -25px;
     right: -25px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: url(../images/sprite.png);
-    background-position: -440px -551px;
+    background-position: -235px -136px;
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background: url(../images/sprite2x.png) no-repeat;
+    }
     cursor: pointer;
 
     &:hover {

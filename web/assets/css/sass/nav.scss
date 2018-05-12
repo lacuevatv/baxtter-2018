@@ -335,6 +335,9 @@
                 height: 16px;
                 background: url(../images/sprite.png) no-repeat;
                 background-position: -178px -143px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background: url(../images/sprite2x.png) no-repeat;
+                }
                 @media (min-width: $md) {
                     bottom: 4px;
                     background-position: -157px -143px;
@@ -358,6 +361,9 @@
                     background: url(../images/sprite.png) no-repeat;   
                     bottom: 4px;
                     background-position: -134px -143px;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                        background: url(../images/sprite2x.png) no-repeat;
+                    }
                 }
             }
         }// .email-icon-after

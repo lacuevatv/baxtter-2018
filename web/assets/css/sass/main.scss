@@ -252,6 +252,9 @@
                     background-position: -47px -237px;
                     height: 17px;
                     width: 20px;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                        background: url(../images/sprite2x.png) no-repeat;
+                    }
                     @media (min-width: $xs) {
                         background-position: -2px -231px;
                         height: 26px;
@@ -495,6 +498,9 @@
                 background-position: -47px -237px;
                 height: 17px;
                 width: 20px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background: url(../images/sprite2x.png) no-repeat;
+                }
                 @media (min-width: $xs) {
                     background-position: -2px -231px;
                     height: 26px;
@@ -670,6 +676,9 @@
                 position: absolute;
                 top: -47px;
                 left: -2px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background: url(../images/sprite2x.png) no-repeat;
+                }
             } 
         }
         .tweets-container {

@@ -347,6 +347,9 @@ img {
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+      .legales-turismo .btn-up {
+        background: url(../images/sprite2x.png) no-repeat; } }
     @media (min-width: 567px) {
       .legales-turismo .btn-up {
         right: 40px;
@@ -779,6 +782,9 @@ img {
         height: 16px;
         background: url(../images/sprite.png) no-repeat;
         background-position: -178px -143px; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+          .menus-wrapper .secondary-menu-movil .movil-icon-after:before {
+            background: url(../images/sprite2x.png) no-repeat; } }
         @media (min-width: 992px) {
           .menus-wrapper .secondary-menu-movil .movil-icon-after:before {
             bottom: 4px;
@@ -799,6 +805,9 @@ img {
           background: url(../images/sprite.png) no-repeat;
           bottom: 4px;
           background-position: -134px -143px; } }
+    @media only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 992px) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 992px) and (min-resolution: 240dpi) {
+      .menus-wrapper .secondary-menu-movil .email-icon-after:before {
+        background: url(../images/sprite2x.png) no-repeat; } }
 
 @media (min-width: 992px) {
   .movil-none {
@@ -999,11 +1008,14 @@ img {
   z-index: 1111;
   top: -25px;
   right: -25px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: url(../images/sprite.png);
-  background-position: -440px -551px;
+  background-position: -235px -136px;
   cursor: pointer; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+    .close-popup {
+      background: url(../images/sprite2x.png) no-repeat; } }
   .close-popup:hover {
     zoom: 1;
     filter: alpha(opacity=50);
@@ -1355,6 +1367,9 @@ img {
   width: 43px;
   height: 43px;
   background: url(../images/sprite.png) no-repeat; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+    .icon-redes {
+      background: url(../images/sprite2x.png) no-repeat; } }
   @media (min-width: 992px) {
     .icon-redes {
       width: 32px;
@@ -1373,6 +1388,9 @@ img {
     width: 22px;
     height: 16px;
     background: url(../images/sprite.png) no-repeat; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+      .icon-email-tel:before {
+        background: url(../images/sprite2x.png) no-repeat; } }
     @media (min-width: 992px) {
       .icon-email-tel:before {
         bottom: 5px; } }
@@ -1825,6 +1843,9 @@ form {
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+      .btn-submit:after {
+        background: url(../images/sprite2x.png) no-repeat; } }
     @media (min-width: 567px) {
       .btn-submit:after {
         height: 30px;
@@ -2081,6 +2102,9 @@ form {
           background-position: -47px -237px;
           height: 17px;
           width: 20px; }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            .programas-section .programas-wrapper .programas-links button:before {
+              background: url(../images/sprite2x.png) no-repeat; } }
           @media (min-width: 567px) {
             .programas-section .programas-wrapper .programas-links button:before {
               background-position: -2px -231px;
@@ -2273,6 +2297,9 @@ form {
         background-position: -47px -237px;
         height: 17px;
         width: 20px; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+          .mole-section .mole-wrapper button:before {
+            background: url(../images/sprite2x.png) no-repeat; } }
         @media (min-width: 567px) {
           .mole-section .mole-wrapper button:before {
             background-position: -2px -231px;
@@ -2406,6 +2433,9 @@ form {
         position: absolute;
         top: -47px;
         left: -2px; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+          .twitter-section .twitter-wrapper h1:after {
+            background: url(../images/sprite2x.png) no-repeat; } }
     .twitter-section .twitter-wrapper .tweets-container {
       width: 100%;
       overflow: hidden;
@@ -2874,6 +2904,9 @@ form {
   width: 15px;
   height: 25px;
   background: url(../images/sprite.png) no-repeat; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+    .icon-arrow {
+      background: url(../images/sprite2x.png) no-repeat; } }
   @media (min-width: 767px) {
     .icon-arrow {
       width: 30px;

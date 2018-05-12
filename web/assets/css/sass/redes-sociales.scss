@@ -77,6 +77,9 @@
     width: 43px;
     height: 43px;
     background: url(../images/sprite.png) no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background: url(../images/sprite2x.png) no-repeat;
+    }
 
     @media (min-width: $md) {
         width: 32px;
@@ -97,6 +100,9 @@
         width: 22px;
         height: 16px;
         background: url(../images/sprite.png) no-repeat;
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background: url(../images/sprite2x.png) no-repeat;
+        }
         @media (min-width: $md) {
             bottom: 5px;
         }
