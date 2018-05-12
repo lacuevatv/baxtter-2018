@@ -85,7 +85,7 @@ switch ($data) {
 				<button type="submit" class="btn-submit">Enviar</button>
 
 			</div><!-- //.inner-wrapper-form -->
-
+			<span class="msj-form"></span>
 		</form><!-- //reunion-form -->
 	<?php break;
 	
@@ -132,7 +132,7 @@ switch ($data) {
 				
 				
 			</div><!-- //.inner-wrapper-form -->
-
+			<span class="msj-form"></span>
 		</form><!-- //default-form -->
 	<?php break;
 }

@@ -18,13 +18,36 @@ if( isAjax() ) {
 	$function = isset($_POST['function']) ? $_POST['function'] : '';
 
 	switch ( $function ) {
-		case 'formulario':
-
+		case 'formulario-reunion':
+			
 			// Valores enviados desde el formulario
-			var_dump($_POST);
+			$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
+			$alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
+			$cargo     = isset( $_POST['charge'] ) ? $_POST['charge'] : '';
+			$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
+			$yearTrip  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
+			$name      = isset( $_POST['name'] ) ? $_POST['name'] : '';
+			$tel       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+			
+			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$alumnos. '<br> Año de viaje: ' .$yearTrip. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $name . '<br> Teléfono: '. $tel . '<br> Email: '. $email . '<br>';
 
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			//enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
+			//enviarFormulario( EMAILFORMULARIO , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
+
+		break;
+
+		case 'formulario-default':
+			
+			// Valores enviados desde el formulario
+			$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
+			$yearTrip  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
+			$name      = isset( $_POST['name'] ) ? $_POST['name'] : '';
+			$tel       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+
+			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telephone . '<br> Email: '. $email . '<br> Año de Viaje: ' . $yearTrip .'<br>';
+
+			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
+			//enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
 
 		break;
 
@@ -45,15 +68,15 @@ function enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email) {
 			$smtpClave = '';  // Mi contraseña
 
 			$mail = new PHPMailer();
-			$mail->IsSMTP();
+			/*$mail->IsSMTP();
 			$mail->SMTPAuth = true;
-			$mail->Port = 587; 
+			$mail->Port = 587; */
 			$mail->IsHTML(true); 
 			$mail->CharSet = 'utf-8';
 
-			$mail->Host = $smtpHost; 
+			/*$mail->Host = $smtpHost; 
 			$mail->Username = $smtpUsuario; 
-			$mail->Password = $smtpClave;
+			$mail->Password = $smtpClave;*/
 
 			$mail->From = $smtpUsuario; // Email desde donde envío el correo.
 			$mail->FromName = $nombre;

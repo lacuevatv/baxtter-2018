@@ -1649,6 +1649,26 @@ form {
     left: 0;
     background-size: 20%;
     z-index: 111; }
+  form .msj-form {
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    color: red;
+    font-size: 110%;
+    text-transform: lowercase; }
+    @media (min-width: 767px) {
+      form .msj-form {
+        bottom: -50px;
+        font-size: 100%; } }
+    @media (min-width: 992px) {
+      form .msj-form {
+        bottom: -30px;
+        right: auto;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); } }
 
 .form-group {
   position: relative;
@@ -2560,7 +2580,8 @@ form {
             margin-bottom: 0; } }
     .contacto-section .contacto-wrapper .addresses li.main-address .map-wrapper {
       width: 100%;
-      margin: 3em 0; }
+      margin: 3em 0;
+      height: 450px; }
       @media (min-width: 992px) {
         .contacto-section .contacto-wrapper .addresses li.main-address .map-wrapper {
           padding-left: 1em;

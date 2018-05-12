@@ -70,6 +70,25 @@ form {
         background-size: 20%;
         z-index: 111;
     }
+    .msj-form {
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        color: red;
+        font-size: 110%;
+        text-transform: lowercase;
+        @media (min-width: $sm) {
+            bottom: -50px;
+            font-size: 100%;
+        }
+        @media (min-width: $md) {
+            bottom: -30px;
+            right: auto;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+    
 }//form
 
 .form-group {

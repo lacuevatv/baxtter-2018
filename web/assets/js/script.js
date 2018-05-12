@@ -412,7 +412,7 @@ $( window ).on('load', function(){
 });//ON LOAD
 
 /*--------------------------------------------------------------
-2.0 FORMULARIO
+2.0 FORMULARIOS
 --------------------------------------------------------------*/
 
 var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
@@ -529,7 +529,6 @@ $(document).ready(function() {
     });
 
 
-
     /*
      * VALIDACIONES FORMULARIO
     */
@@ -620,14 +619,13 @@ $(document).ready(function() {
      * SUBMIT FORMULARIO
     */    
 
-    $(document).on('submit', '#first-form', function( e ) {
+    $(document).on('submit', '#reunion-form', function( e ) {
         e.preventDefault();
-       
         var loader = $('.loader');
         var contenedor = $(loader).closest('form');
-
+        var msj = $(this).find('.msj-form');
     	formData = new FormData( this );
-        formData.append('function','formulario');
+        formData.append('function','formulario-reunion');
 
     	$.ajax( {
             type: 'POST',
@@ -641,8 +639,9 @@ $(document).ready(function() {
                 $(loader).fadeIn();
             },
             success: function ( response ) {
-                console.log(response);
-                $(loader).fadeOut();     
+                //console.log(response);
+                $(loader).fadeOut(); 
+                msj.html(response);    
             },
             error: function ( ) {
                 console.log('error');
@@ -650,6 +649,38 @@ $(document).ready(function() {
     	});//cierre ajax
 
     });//submit formulario 1
+
+    $(document).on('submit', '#default-form', function( e ) {
+        e.preventDefault();
+        var loader = $('.loader');
+        var msj = $(this).find('.msj-form');
+        var contenedor = $(loader).closest('form');
+
+    	formData = new FormData( this );
+        formData.append('function','formulario-default');
+
+    	$.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            //funcion antes de enviar
+            beforeSend: function() {
+                $(loader).fadeIn();
+            },
+            success: function ( response ) {
+                //console.log(response);
+                $(loader).fadeOut(); 
+                msj.html(response);    
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+    	});//cierre ajax
+
+    });//submit formulario default
 
 });//on ready
 
