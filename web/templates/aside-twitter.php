@@ -42,12 +42,12 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left medium movil-element slide-left">
+        <div class="left medium animate-element slide-left">
             <span class="text vertical ">Twitter</span>
             <span class="line vertical "></span>
         </div>
         
-        <div class="right medium movil-element slide-right">
+        <div class="right medium animate-element slide-right">
             <span class="text vertical ">#somosbaxtter</span>
             <span class="line vertical "></span>
         </div>    

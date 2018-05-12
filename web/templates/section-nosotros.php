@@ -14,7 +14,7 @@ global $dispositivo;
     <div id="background_nosotros" class="background-section">
         
         <div class="container">
-            <h6 class="movil-element slide-up">
+            <h6 class="animate-element slide-up">
                 <img src="<?php echo MAINSURL; ?>/assets/images/logo-nosotros.png" alt="Baxter logo texto">
             </h6>
         </div>
@@ -29,7 +29,7 @@ global $dispositivo;
                     <h1>
                         <span class="sr-only">Baxtter</span>
                     </h1>
-                    <h2 class="titulo-seccion movil-element slide-up">
+                    <h2 class="titulo-seccion animate-element slide-up">
                         Descubrí una nueva forma de hacer el viaje de egresados
                     </h2>
                     
@@ -67,9 +67,9 @@ global $dispositivo;
                 </p>
 
                 <?php if ( $dispositivo != 'movil' ) : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27-movil movil-element slide-up">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27-movil animate-element slide-up">
                 <?php else : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/movil/logo-27-movil.png" alt="Logo Baxtter, 27 años" class="logo-27-movil movil-element slide-up">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/movil/logo-27-movil.png" alt="Logo Baxtter, 27 años" class="logo-27-movil animate-element slide-up">
                 <?php endif; ?>
             </div>
         </div>
@@ -78,7 +78,7 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left biggerxxl movil-element slide-left">
+        <div class="left biggerxxl animate-element slide-left">
             <span class="text vertical color-negro w160px align-right">BRC_Lifestyle</span>
             <span class="line vertical fondo-negro w160px"></span>
         </div>
@@ -87,7 +87,7 @@ global $dispositivo;
             <img data-src="<?php echo MAINSURL; ?>/assets/images/triangulo-degradado.svg">
         </div>
 
-        <div class="right biggerxxl movil-element slide-right">
+        <div class="right biggerxxl animate-element slide-right">
             <span class="line vertical fondo-negro w160px"></span>
             <span class="text vertical color-celeste w160px">Viví la experiencia Baxtter</span>
         </div>    
@@ -127,7 +127,7 @@ global $dispositivo;
                     Conocé los detalles de nuestros programas exclusivamente en nuestras redes.
                 </h4>
                 
-                <ul class="redes-sociales movil-element slide-up">
+                <ul class="redes-sociales animate-element slide-up">
                     <?php getTemplate( 'redes-sociales' ); ?>
                 </ul>
             </div>
@@ -137,12 +137,12 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left movil-element slide-left">
+        <div class="left animate-element slide-left">
             <span class="text vertical color-negro">Social</span>
             <span class="line vertical fondo-negro"></span>
         </div>
         
-        <div class="right movil-element slide-right">
+        <div class="right animate-element slide-right">
             <span class="text vertical color-negro">Bxr</span>
             <span class="line vertical fondo-negro"></span>
         </div>    

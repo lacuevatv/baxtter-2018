@@ -1,0 +1,54 @@
+.titulo-seccion {
+    position: relative;
+    text-transform: uppercase;
+    margin: .5em 0;
+    font-size: 280%;
+    line-height: 130%;    
+    color: $color-negro;
+    font-weight: 300;
+    @media (min-width: $md) {
+        font-size: 150%;
+        line-height: 150%;
+        margin: 1em 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -.5em;
+        left: .05em;
+        width: 20px;
+        height: 1px;
+        background-color: $color-negro;
+    }
+}
+
+.titulo-seccion-claro {
+    color: $color-blanco;
+    &:before {
+        background-color: $color-blanco;
+    }
+}
+
+.titulo-seccion-celeste {
+    color: $color-celeste;
+    &:before {
+        background-color: $color-celeste;
+    }
+}
+
+.subtitulo-seccion {
+    position: relative;
+    text-transform: uppercase;
+    margin: .5em 0;
+    font-size: 145%;
+    line-height: 130%;    
+    color: $color-negro;
+    font-weight: 500;
+    @media (min-width: $md) {
+        font-size: 100%;
+        line-height: 150%;
+        margin: 1em 0;
+    }
+}
+
