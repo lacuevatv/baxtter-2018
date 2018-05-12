@@ -750,18 +750,12 @@ LANDING
     padding: 15em 0 5em; }
     @media (min-width: 992px) {
       .nosotros-section .nosotros-wrapper {
-        padding: 18em 0;
-        padding: 27vh 0;
+        padding: 30vh 0;
         display: flex;
         display: -o-flex;
         display: -ms-flex;
         display: -moz-flex;
         display: -webkit-flex;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
         -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
@@ -801,7 +795,7 @@ LANDING
       flex-direction: column; }
       .nosotros-section .nosotros-wrapper .right .btn-wrapper {
         width: 100%;
-        margin-bottom: 1em; }
+        margin-top: 4vh; }
         .nosotros-section .nosotros-wrapper .right .btn-wrapper span {
           display: block;
           text-transform: uppercase;

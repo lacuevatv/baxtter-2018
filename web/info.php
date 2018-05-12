@@ -127,7 +127,7 @@ require_once 'inc/config.php';
         </div>
     </aside>
     <aside class="contenedor-payone">
-    <button class="close-btn">
+        <button class="close-btn">
             <span class="tog1"></span>
             <span class="tog3"></span>
         </button>
@@ -135,7 +135,7 @@ require_once 'inc/config.php';
              <div class="typeform-widget" data-url="https://viajes.typeform.com/to/jzmiS5" style="width: 100%; height: 90%;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
         </div>
     </aside>
-
+    
 <!--- footer -->
     <footer class="main-footer">
 <!-- ASIDE LEGALES HIT -->
