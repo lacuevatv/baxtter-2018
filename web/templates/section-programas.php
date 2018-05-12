@@ -32,7 +32,7 @@ $dispositivo = dispositivo();
         <div class="main-section container">
             <div class="main-section-wrapper programas-wrapper">
                 <div class="hot-beach">
-                    <h2>
+                    <h2 class="movil-element slide-down-x2">
                         <span class="sr-only">Baxtter Hot Beach</span>
                         <?php 
                         if ( $dispositivo != 'movil' ) {
@@ -43,33 +43,33 @@ $dispositivo = dispositivo();
                         ?>
                     </h2>
                     <ul class="programas-links">
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.3s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.4s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.5s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.6s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.7s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
                         <li>
-                        <button class="btn-hover-underline">
+                        <button class="btn-hover-underline movil-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <li>imagen1.jpg</li>
@@ -82,7 +82,7 @@ $dispositivo = dispositivo();
                 </div> <!-- // .hot-beach --> 
 
                 <div class="cold-mountain">
-                    <h2>
+                    <h2 class="movil-element slide-down-x2">
                         <span class="sr-only">Baxtter Cold Mountain</span>
                         <?php 
                         if ( $dispositivo != 'movil' ) {
@@ -93,33 +93,33 @@ $dispositivo = dispositivo();
                         ?>
                     </h2>
                     <ul class="programas-links">
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.3s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.4s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.5s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.3s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
-                        <li>
+                        <li class="movil-element slide-up-list" style="animation-delay: 0.6s;">
                             <a href="#" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
                         <li>
-                            <button class="button-red btn-hover-underline">
+                            <button class="button-red btn-hover-underline movil-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <li>imagen1.jpg</li>
@@ -146,33 +146,33 @@ $dispositivo = dispositivo();
                     Bariloche
                 </h2>
                 <ul class="bariloche-links">
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.3s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Cómo comprar
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.4s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Dónde pagar
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.5s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Cruz Roja
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.6s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Uai
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.7s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Certificaciones N8
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank" class="btn-hover-gray">
+                    <li class="movil-element slide-up-list" style="animation-delay: 0.8s;">
+                        <a href="#" target="_blank" class="btn-hover-red">
                             Ver galería de imágenes
 
                             <ul class="data-carga galeria-data">
@@ -184,7 +184,7 @@ $dispositivo = dispositivo();
                     </li>
                 </ul>
 
-                <p>
+                <p class="movil-element slide-up" style="animation-delay: 1s;">
                     <em>Dale Clic y descargá a tu dispositivo el resumen de la información</em>
                 </p>
             </div><!-- // .bariloche-wrapper -->
@@ -193,12 +193,12 @@ $dispositivo = dispositivo();
 
         <div class="front-section">
             
-            <div class="left">
+            <div class="left movil-element slide-left">
                 <span class="text vertical w80px align-right">Bariloche</span>
                 <span class="line vertical"></span>
             </div>
             
-            <div class="right">
+            <div class="right movil-element slide-right">
                 <span class="text vertical w80px align-right">Hot / Cold</span>
                 <span class="line vertical"></span>
             </div>    

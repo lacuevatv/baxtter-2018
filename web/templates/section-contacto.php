@@ -15,7 +15,7 @@ global $dispositivo;
                 <h1>
                     <span class="sr-only">Contacto</span>
                 </h1>
-                <h2 class="titulo-seccion">
+                <h2 class="titulo-seccion movil-element slide-up">
                     Querés que charlemos?
                 </h2>
             </hgroup>
@@ -94,12 +94,12 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-            <div class="left bigger">
+            <div class="left bigger movil-element slide-left">
             <span class="text vertical color-negro w80px align-right">Contacto</span>
             <span class="line vertical fondo-negro w80px"></span>
         </div>
         
-        <div class="right bigger">
+        <div class="right bigger movil-element slide-right">
             <span class="text vertical color-negro w80px align-right">Baxtter</span>
             <span class="line vertical fondo-negro w80px"></span>
         </div>    

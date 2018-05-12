@@ -273,7 +273,7 @@ $( window ).on('load', function(){
         }//Imagen 2: girl
 
         //titulo: unicos
-       if (  $(tituloPagina).hasClass('in-view') ) {
+       /*if (  $(tituloPagina).hasClass('in-view') ) {
       
         var modificador = 0; 
         
@@ -293,7 +293,7 @@ $( window ).on('load', function(){
                 $(tituloPagina).css('transform', 'translateY(-' + porcentaje + '%)'); 
             }
         }     
-        }//titulo: unicos
+        }//titulo: unicos*/
        
     });
 
@@ -331,7 +331,7 @@ $( window ).on('load', function(){
         * partnersBackground
         */
         if ( partnersBackground.hasClass('in-view') ) {
-            var modificador = 60; 
+            var modificador = 80; 
             
             //vemos si es movil
             if ( partnersBackground.hasClass('dispositivo-movil') ) {
@@ -343,8 +343,8 @@ $( window ).on('load', function(){
 
             } else {
                 //version pc
-                if ( window.innerWidth < 1366 ) {
-                    modificador = 80;
+                if ( window.innerWidth < 1440 ) {
+                    modificador = 70;
                 }
                 if ( window.innerWidth < 992 ) {
                     modificador = 264;
@@ -370,10 +370,10 @@ $( window ).on('load', function(){
         * BackgroundTwitter
         */
         if ( twitterBackground.hasClass('in-view') ) {
-            var modificador = 0; 
+            var modificador = -20; 
             
             if ( window.innerWidth < 1440 ) {
-                modificador = 40;
+                modificador = 30;
             }
             if ( window.innerWidth < 1200 ) {
                 modificador = 80;

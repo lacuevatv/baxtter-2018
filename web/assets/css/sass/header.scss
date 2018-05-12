@@ -10,13 +10,13 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    @include transition(all 1s ease-out);
+    @include transition(all $transitionSpeed ease-out);
     .title-header {
         width: 100%;
         left: 0;
         position: absolute;
         padding-top: 150px;
-        @include transition(all 1s ease);
+        @include transition(all 1$transitionSpeed ease);
 
         h1 {
             text-align: center;
@@ -24,12 +24,12 @@
             text-transform: uppercase;
             font-size: 8em;
             line-height: 100%;
-            @include transition(all 1s ease);
+            @include transition(all $transitionSpeed ease);
         }
 
         .title-arrow {
             position: relative;
-            @include transition(all 1s ease);
+            @include transition(all $transitionSpeed ease);
             opacity: 0;
             cursor: pointer;
             img {
@@ -47,7 +47,7 @@
         position: absolute;
         bottom: 110px;
         opacity: 1;
-        @include transition(all 1s ease);
+        @include transition(all $transitionSpeed ease);
         @media (min-width: $xs) {
             bottom: 70px;
         }
@@ -58,7 +58,7 @@
             bottom: 80px;
         }
         h1 {
-            @include transition(all 1s ease);
+            @include transition(all $transitionSpeed ease);
             color: $color-blanco;
         }
     }
@@ -164,7 +164,7 @@
 }//.header-wrapper
 .header-wrapper-open {
     visibility: visible;
-    @include transition(all 1s ease-out);
+    @include transition(all $transitionSpeed ease-out);
     height: 100vh;
     @media (min-width: $sm) {
         height: 80vh;

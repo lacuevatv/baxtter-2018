@@ -79,13 +79,12 @@ require_once 'inc/config.php';
                 </div>
 
                 <div class="right">
-                   
-                   <div class="btn-wrapper">
-                       <button  id="travelone">Yo viajo</button>
+                    <div class="btn-wrapper">
+                        <a id="travelone" class="typeform-share button" href="https://viajes.typeform.com/to/nFZfbD" data-mode="popup" data-hide-headers=true data-hide-footer=true data-submit-close-delay="0" target="_blank">Yo Viajo</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
                    </div>
 
                    <div class="btn-wrapper">
-                       <button id="payone">Adulto responsable</button>
+                        <a id="payone"  class="typeform-share button" href="https://viajes.typeform.com/to/jzmiS5" data-mode="popup" data-hide-headers=true data-hide-footer=true data-submit-close-delay="0" target="_blank">Adulto Responsable</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
                    </div>
 
                     
@@ -116,25 +115,6 @@ require_once 'inc/config.php';
         </div><!-- //front -->
     
     </section><!-- //SECTION NOSOTROS -->
-
-    <aside class="contenedor-travelone">
-        <button class="close-btn">
-            <span class="tog1"></span>
-            <span class="tog3"></span>
-        </button>
-        <div class="wrapper">
-            <div class="typeform-widget" data-url="https://viajes.typeform.com/to/nFZfbD" style="width: 100%; height: 90%;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-        </div>
-    </aside>
-    <aside class="contenedor-payone">
-        <button class="close-btn">
-            <span class="tog1"></span>
-            <span class="tog3"></span>
-        </button>
-        <div class="wrapper">
-             <div class="typeform-widget" data-url="https://viajes.typeform.com/to/jzmiS5" style="width: 100%; height: 90%;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-        </div>
-    </aside>
     
 <!--- footer -->
     <footer class="main-footer">

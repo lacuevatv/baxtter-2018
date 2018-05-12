@@ -17,7 +17,7 @@ global $dispositivo;
         </div>
 
         <div class="container">
-            <h1>
+            <h1 class="movil-element slide-up">
                 <?php 
                 if ( $dispositivo != 'movil' ) {
                     echo '<img src="'.MAINSURL.'/assets/images/mole-logo.png" alt="Mole - Logo" class="logo-escritorio">';    
@@ -78,7 +78,7 @@ global $dispositivo;
                 </li>
             </ul>
 
-            <button class="btn-hover-underline">
+            <button class="btn-hover-underline movil-element slide-up">
                 Ver galería de imágenes
             </button>
         </div><!-- //.mole-wrapper -->
@@ -87,7 +87,7 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left biggerxxl">
+        <div class="left biggerxxl movil-element slide-left">
             <span class="text vertical color-negro w160px align-right">Complejo Mole</span>
             <span class="line vertical fondo-negro w160px"></span>
         </div>
@@ -99,7 +99,7 @@ global $dispositivo;
             <img data-src="<?php echo MAINSURL; ?>/assets/images/triangulo-blanco.svg">
         </div>
         
-        <div class="right biggerxxl">
+        <div class="right biggerxxl movil-element slide-right">
             <span class="line vertical fondo-negro w160px vertical-more-bottom"></span>
             <span class="text vertical color-negro w160px vertical-more-bottom">Viví la experiencia Baxtter</span>
         </div>    

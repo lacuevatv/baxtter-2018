@@ -25,7 +25,7 @@ global $dispositivo;
             <div class="main-section container">
                 <div class="partners-wrapper">
 
-                    <h3 class="titulo-seccion titulo-seccion-claro">
+                    <h3 class="titulo-seccion titulo-seccion-claro movil-element slide-up">
                         Gracias por acompañarnos
                     </h3>
                     <ul id='owl-partners' class="partners-logos owl-carousel">
@@ -55,7 +55,7 @@ global $dispositivo;
             <div class="main-section container">
                 <div class="partners-wrapper">
 
-                    <h3 class="titulo-seccion titulo-seccion-claro">
+                    <h3 class="titulo-seccion titulo-seccion-claro movil-element slide-up">
                         Gracias por acompañarnos
                     </h3>
                     <ul id='owl-partners' class="partners-logos owl-carousel">
@@ -75,12 +75,12 @@ global $dispositivo;
             <!-- front -->
             <div class="front-section">
             
-                <div class="left partners">
+                <div class="left partners movil-element slide-left">
                     <span class="text vertical ">Gracias</span>
                     <span class="line vertical "></span>
                 </div>
                 
-                <div class="right partners">
+                <div class="right partners movil-element slide-right">
                     <span class="text vertical ">#somosbaxtter</span>
                     <span class="line vertical "></span>
                 </div>    

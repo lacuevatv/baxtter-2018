@@ -39,7 +39,7 @@
     height: 50px;
     width: 50px;
     background-color: transparent;
-    @include transition(all 1s);
+    @include transition(all $transitionSpeed);
     @media (min-width: $md) {
         display: none;
     }
@@ -57,7 +57,7 @@
         position: absolute;
         left: 5px;
         top: 10px;
-        @include transition(all 0.3s);
+        @include transition(all $transitionSpeedx2);
     }
     
     .tog2 {
@@ -68,7 +68,7 @@
         position: absolute;
         left: 10px;
         top: 20px;
-        @include transition(all 0.3s);
+        @include transition(all $transitionSpeedx2);
     }
       
     .tog3 {
@@ -79,7 +79,7 @@
         position: absolute;
         left: 5px;
         top: 30px;
-        @include transition(all 0.3s);
+        @include transition(all $transitionSpeedx2);
     }
 }//.toggle
 
@@ -111,7 +111,7 @@
     background: url('../images/logo-nav.png');
     background-size: cover;
     background-repeat: no-repeat;
-    @include transition(all .5s ease);
+    @include transition(all $transitionSpeedx2 ease);
 
     &:hover {
         background: url('../images/logo-nav-hover.png');
@@ -122,7 +122,7 @@
     background: url('../images/movil/logo-nav-blanco.png');
     background-size: cover;
     background-repeat: no-repeat;
-    @include transition(all .5s ease);
+    @include transition(all $transitionSpeedx2 ease);
 }//.brand-name-open
 
 .menus-wrapper {

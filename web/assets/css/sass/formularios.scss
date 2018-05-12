@@ -99,7 +99,7 @@ form {
         text-transform: uppercase;
         font-weight: 500;
         color: $color-gris-texto;
-        @include transition(all 0.3s);
+        @include transition(all $transitionSpeedx2);
         @media (min-width: $md) {
             top: 8px;
         }
@@ -126,7 +126,7 @@ form {
         font-size: 60%;
         top: -2px;
         z-index:0;
-        @include transition(all 0.5s);
+        @include transition(all $transitionSpeedx2);
     }
     input {
         z-index:1;
@@ -236,7 +236,7 @@ form {
     text-align: left;
     cursor: pointer;
     position: relative;
-    @include transition(all 1s ease);
+    @include transition(all $transitionSpeed ease);
     
     @media (min-width: $xs) {
         height: 50px;
@@ -258,7 +258,7 @@ form {
         height: 30px;
         background: url(../images/sprite.png) no-repeat;
         background-position:-125px -182px;
-        @include transition(all 1s ease);
+        @include transition(all $transitionSpeed ease);
         @media (min-width: $xs) {
             height: 30px;
             width: 37px;
@@ -282,7 +282,7 @@ form {
     &:hover {
         background-color: $color-celeste;
         color: $color-negro;
-        @include transition(all 1s ease-out);
+        @include transition(all $transitionSpeed ease-out);
         zoom: 1;
         filter: alpha(opacity=90);
         opacity: 0.9;

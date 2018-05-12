@@ -16,27 +16,27 @@ global $dispositivo;
                 Yo viajo con Baxtter
             </h1>
             <ul class="pdfs-links">
-                <li>
+                <li class="movil-element slide-up-list style="animation-delay: 0.3s;">
                     <a href="#" target="_blank" class="btn-hover-red">
                         Ficha médica
                     </a>
                 </li>
-                <li>
+                <li class="movil-element slide-up-list" style="animation-delay: 0.4s;">
                     <a href="#" target="_blank" class="btn-hover-red">
                         Ficha de adhesión
                     </a>
                 </li>
-                <li>
+                <li class="movil-element slide-up-list" style="animation-delay: 0.5s;">
                     <a href="#" target="_blank" class="btn-hover-red">
                         Tips de viaje
                     </a>
                 </li>
-                <li>
+                <li class="movil-element slide-up-list" style="animation-delay: 0.6s;">
                     <a href="#" target="_blank" class="btn-hover-red">
                         Protocolos de seguridad
                     </a>
                 </li>
-                <li>
+                <li class="movil-element slide-up-list" style="animation-delay: 0.7s;">
                     <a href="#" target="_blank" class="btn-hover-red">
                         Bases y condiciones
                     </a>
@@ -48,12 +48,12 @@ global $dispositivo;
     <!-- front -->
     <div class="front-section">
             
-        <div class="left">
+        <div class="left movil-element slide-left">
             <span class="text vertical color-negro">Viaje</span>
             <span class="line vertical fondo-negro"></span>
         </div>
         
-        <div class="right">
+        <div class="right movil-element slide-right">
             <span class="text vertical color-negro">Ficha</span>
             <span class="line vertical fondo-negro"></span>
         </div>    
