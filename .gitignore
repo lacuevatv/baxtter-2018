@@ -1,5 +1,4 @@
 web/contenido/*
-web/administrador-sitios/*
 web/phpmyadmin/*
 bd/*
 web/assets/css/.sass-cache/*
