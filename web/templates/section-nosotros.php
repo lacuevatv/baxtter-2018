@@ -107,7 +107,7 @@ global $dispositivo;
                 </h3>
 
                 <!-- TEMP IMAGE -->
-                <img src="<?php echo UPLOADSURL; ?>/temp/ref-video.jpg" style="width:100%;display: block; margin: 0 auto;">
+                <img src="<?php echo UPLOADSURL; ?>/ref-video.jpg" style="width:100%;display: block; margin: 0 auto;">
             
             </div>
         </div>
