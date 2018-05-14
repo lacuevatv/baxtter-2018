@@ -334,11 +334,11 @@ img {
       .legales-turismo h5 {
         font-size: 70%; } }
   .legales-turismo .btn-up {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
-    position: absolute;
     cursor: pointer;
-    bottom: 3em;
-    right: 6px;
     width: 36px;
     height: 25px;
     zoom: 1;
@@ -349,18 +349,21 @@ img {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    margin-top: 3em; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
       .legales-turismo .btn-up {
         background: url(../images/sprite2x.png) no-repeat;
         background-size: 324px 305px;
         background-position: -113px -240px; } }
-    @media (min-width: 567px) {
+    @media (min-width: 767px) {
       .legales-turismo .btn-up {
-        right: 40px;
-        bottom: 2em; } }
+        margin-top: 2em; } }
     @media (min-width: 992px) {
       .legales-turismo .btn-up {
+        margin-top: 0;
+        position: absolute;
+        left: auto;
         right: 50px;
         bottom: 3em; } }
     @media (min-width: 1200px) {
@@ -1970,12 +1973,15 @@ form {
         .nosotros-section .nosotros-wrapper h3 {
           margin-bottom: 4em; } }
     .nosotros-section .nosotros-wrapper p {
-      margin: 1em 0; }
+      margin: 1em 0;
+      font-size: 120%;
+      line-height: 150%; }
       @media (min-width: 992px) {
         .nosotros-section .nosotros-wrapper p {
           margin: 0;
           margin-bottom: .8em;
-          font-size: 80%; } }
+          font-size: 80%;
+          line-height: 180%; } }
     .nosotros-section .nosotros-wrapper .logo-27 {
       display: none; }
       @media (min-width: 992px) {
