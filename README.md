@@ -4,10 +4,12 @@
 
 * Versión 3.0 online 14.5.18  
 - mobile-detect 2.8.31  
+- parallax: tuve que omitir el parallax del header cuando es iphone, ipad o ipod.
+- falta admin
 
 * Versión 2.2 online 5.5.17
 - Twitter se maneja con: https://github.com/sonnyt/tweetie
--Cambio en unos links de infobaxtter
+- Cambio en unos links de infobaxtter
 - ajuste de popup esperando a activarlo
 - y ajuste del video de vimeo en versión celular
 - Admin tiene el modulo galería de imagenes y upload archivos
@@ -58,19 +60,3 @@
 
 
 * Versión 1.1 online
-
-
-### secciones  
-* Links a subir programas (2: invierno y verano)
-* Links a subir grals (5)
-* Links a subir extras (4)
-* galería de fotos
-* popup
-* otros links (redes sociales y otros)
-
-## Completar antes de entregar  
-*telefono (es este?? 1157887278)
-*Legales abajo, EVT y dsposición
-*link redes
-*ver los fondos de decorados
-*cambiar link del video.

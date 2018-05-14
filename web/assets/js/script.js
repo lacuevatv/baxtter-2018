@@ -250,79 +250,86 @@ $( window ).on('load', function(){
 
     var imagenesHeader = $('.header-images-wrapper');
     var tituloPagina = $('.title-header');
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     $(window).scroll(function(){
        //valor de barra que necesitan todos
        var barra = ($(window).scrollTop());
-  
-       //imagenesHeader muevo una por vez:
-       //Imagen 1: sol
-        if (  $(imagenesHeader[1]).hasClass('in-view') ) {
-      
-           var modificador = -25; 
-           
-           //vemos si es movil
-           if ( $(imagenesHeader[1]).hasClass('sol-movil') ) {
-               modificador = -30;
-
-               var porcentaje = barra * 0.1 - modificador;
-               
-               $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
-
-           } else {
-               
-               var porcentaje = barra * 0.08 - modificador;
-               $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
-               
-           }
-           
-       }//Imagen 1: sol
-
-       //Imagen 2: girl
-       if (  $(imagenesHeader[2]).hasClass('in-view') ) {
-      
-        var modificador = 0; 
+       //se ejeucta si no es ipad, iphone o ipod
+       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+        } else {
+            
+        //imagenesHeader muevo una por vez:
         
+        //Imagen 1: sol
+            if (  $(imagenesHeader[1]).hasClass('in-view') ) {
+        
+            var modificador = -25; 
+            
             //vemos si es movil
-            if ( $(imagenesHeader[2]).hasClass('sol-movil') ) {
-                modificador = 0;
+            if ( $(imagenesHeader[1]).hasClass('sol-movil') ) {
+                modificador = -30;
 
-                var porcentaje = barra * 0.7 - modificador;
+                var porcentaje = barra * 0.1 - modificador;
                 
-                $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+                $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
 
             } else {
-                //version pc
                 
-                var porcentaje = barra * 0.05 - modificador;
-                $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+                var porcentaje = barra * 0.08 - modificador;
+                $(imagenesHeader[1]).css('top', porcentaje + 'vh'); 
                 
             }
             
-        }//Imagen 2: girl
+        }//Imagen 1: sol
 
-        //titulo: unicos
-       /*if (  $(tituloPagina).hasClass('in-view') ) {
-      
-        var modificador = 0; 
+        //Imagen 2: girl
+        if (  $(imagenesHeader[2]).hasClass('in-view') ) {
         
-            //vemos si es movil
-       if (  $(tituloPagina).hasClass('in-view') ) {
-            if ( $(tituloPagina).hasClass('titulo-movil') ) {
-                modificador = 0;
+            var modificador = 0; 
+            
+                //vemos si es movil
+                if ( $(imagenesHeader[2]).hasClass('sol-movil') ) {
+                    modificador = 0;
 
-                var porcentaje = barra * 0.4 - modificador;
+                    var porcentaje = barra * 0.7 - modificador;
+                    
+                    $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+
+                } else {
+                    //version pc
+                    
+                    var porcentaje = barra * 0.05 - modificador;
+                    $(imagenesHeader[2]).css('top', porcentaje + 'vh'); 
+                    
+                }
                 
-                $(tituloPagina).css('botom', porcentaje + 'px'); 
+            }//Imagen 2: girl
 
-            } else {
-                //version pc
-                var porcentaje = barra * 0.3 - modificador;
-                //debugger;
-                $(tituloPagina).css('transform', 'translateY(-' + porcentaje + '%)'); 
-            }
-        }     
-        }//titulo: unicos*/
+            //titulo: unicos
+        /*if (  $(tituloPagina).hasClass('in-view') ) {
+        
+            var modificador = 0; 
+            
+                //vemos si es movil
+        if (  $(tituloPagina).hasClass('in-view') ) {
+                if ( $(tituloPagina).hasClass('titulo-movil') ) {
+                    modificador = 0;
+
+                    var porcentaje = barra * 0.4 - modificador;
+                    
+                    $(tituloPagina).css('botom', porcentaje + 'px'); 
+
+                } else {
+                    //version pc
+                    var porcentaje = barra * 0.3 - modificador;
+                    //debugger;
+                    $(tituloPagina).css('transform', 'translateY(-' + porcentaje + '%)'); 
+                }
+            }     
+            }//titulo: unicos*/
+        }
        
     });
 
