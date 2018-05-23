@@ -56,7 +56,7 @@ $categoriasArchivos = array(
 		'hoteles', 'servicios', 'itinerario', 'contrato', 'tarifario'
 	)),
 	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche', 'lista' => array(
-		'comprar', 'pagar', 'cruz-roja', 'certificaciones'
+		'comprar', 'pagar', 'cruz-roja', 'uai', 'certificaciones'
 	)),
 	array( 'slug' => 'viajo-baxtter', 'nombre' => 'Yo Viajo con Baxtter', 'lista' => array(
 		'ficha-medica', 'ficha-adhesion', 'tips', 'protocolos', 'bases'

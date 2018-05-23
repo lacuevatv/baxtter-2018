@@ -80,6 +80,16 @@ global $dispositivo;
 
             <button class="btn-hover-underline animate-element slide-up">
                 Ver galería de imágenes
+                <ul class="data-carga galeria-data">
+                <?php 
+                $imagenes = getImages ('mole');
+                if ( $imagenes != null ) {
+                    for ($i=0; $i < count($imagenes); $i++) { 
+                        echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
+                    }
+                }
+                ?>
+                </ul>
             </button>
         </div><!-- //.mole-wrapper -->
     </div><!-- //. container -->

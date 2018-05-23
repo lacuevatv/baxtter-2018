@@ -627,3 +627,55 @@ function getUrlPromo() {
 
 	closeDataBase($connection);
 }
+
+//busca el archivo pdf para descargar
+function getFilesToDownload( $optionName ) {
+	$connection = connectDB();
+    $tabla      = 'options';
+    $query      = "SELECT * FROM " .$tabla. " WHERE options_name= '" .$optionName. "'";
+    $result     = mysqli_query($connection, $query);
+
+    if ( $result->num_rows == 0 ) {
+        
+        return null;
+    
+    } else {
+        
+        $data = mysqli_fetch_array($result);
+        
+        return $data;    
+    }
+    
+    closeDataBase($connection);
+}
+
+//muestra el archivo pdf u el default
+function urlPdf( $optionsName ) {
+    $dataFichaMedica = getFilesToDownload( $optionsName );
+    if ( $dataFichaMedica != null ) {
+        echo UPLOADSFILE . '/' . $dataFichaMedica['options_value'];
+    } else {
+        echo '#';
+    }
+}
+
+//recupera los nombres de las imágenes de la galeria
+function getImages( $post_type) {
+	$connection = connectDB();
+	$tabla      = 'medios';
+	$query      = "SELECT * FROM " .$tabla. " WHERE medio_tipo= 'imagen' AND medio_post_type='".$post_type."'";
+
+	$result     = mysqli_query($connection, $query);
+
+	if ( $result->num_rows == 0 ) {
+		return null;
+	} else {
+		while ($row = $result->fetch_array()) {
+			$imagenes[] = $row['medio_nombre'];
+		}
+
+		return $imagenes;
+	}
+
+	closeDataBase($connection);
+}

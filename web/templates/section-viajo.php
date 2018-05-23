@@ -6,7 +6,6 @@
  * FOOTER
  * 
 */
-global $dispositivo;
 ?>
 <section id="viajo-baxtter" class="section-capas viajo-baxtter-section">
     
@@ -17,27 +16,27 @@ global $dispositivo;
             </h1>
             <ul class="pdfs-links">
                 <li class="animate-element slide-up-list style="animation-delay: 0.3s;">
-                    <a href="#" target="_blank" class="btn-hover-red">
+                    <a href="<?php urlPdf( 'viajo-baxtter-ficha-medica' ); ?>" target="_blank" class="btn-hover-red">
                         Ficha médica
                     </a>
                 </li>
                 <li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
-                    <a href="#" target="_blank" class="btn-hover-red">
+                    <a href="<?php urlPdf( 'viajo-baxtter-ficha-adhesion' ); ?>" target="_blank" class="btn-hover-red">
                         Ficha de adhesión
                     </a>
                 </li>
                 <li class="animate-element slide-up-list" style="animation-delay: 0.5s;">
-                    <a href="#" target="_blank" class="btn-hover-red">
+                    <a href="<?php urlPdf( 'viajo-baxtter-tips' ); ?>" target="_blank" class="btn-hover-red">
                         Tips de viaje
                     </a>
                 </li>
                 <li class="animate-element slide-up-list" style="animation-delay: 0.6s;">
-                    <a href="#" target="_blank" class="btn-hover-red">
+                    <a href="<?php urlPdf( 'viajo-baxtter-protocolos' ); ?>" target="_blank" class="btn-hover-red">
                         Protocolos de seguridad
                     </a>
                 </li>
                 <li class="animate-element slide-up-list" style="animation-delay: 0.7s;">
-                    <a href="#" target="_blank" class="btn-hover-red">
+                    <a href="<?php urlPdf( 'viajo-baxtter-bases' ); ?>" target="_blank" class="btn-hover-red">
                         Bases y condiciones
                     </a>
                 </li>

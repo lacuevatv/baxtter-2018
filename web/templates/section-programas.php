@@ -44,27 +44,27 @@ $dispositivo = dispositivo();
                     </h2>
                     <ul class="programas-links">
                         <li class="animate-element slide-up-list" style="animation-delay: 0.3s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'hot-hoteles' ); ?>" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'hot-servicios' ); ?>" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.5s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'hot-itinerario' ); ?>" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.6s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'hot-contrato' ); ?>" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.7s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'hot-tarifario' ); ?>" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
@@ -72,9 +72,14 @@ $dispositivo = dispositivo();
                         <button class="btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
-                                    <li>imagen1.jpg</li>
-                                    <li>imagen2.jpg</li>
-                                    <li>imagen3.jpg</li>
+                                    <?php 
+                                    $imagenes = getImages ('hot');
+                                    if ( $imagenes != null ) {
+                                        for ($i=0; $i < count($imagenes); $i++) { 
+                                            echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </button>
                         </li>
@@ -94,27 +99,27 @@ $dispositivo = dispositivo();
                     </h2>
                     <ul class="programas-links">
                         <li class="animate-element slide-up-list" style="animation-delay: 0.3s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'cold-hoteles' ); ?>" target="_blank" class="btn-hover-programas">
                                 Hoteles
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'cold-servicios' ); ?>" target="_blank" class="btn-hover-programas">
                                 Servicios incluidos
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.5s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'cold-itinerario' ); ?>" target="_blank" class="btn-hover-programas">
                                 Itinerario de viaje
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.3s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'cold-contrato' ); ?>" target="_blank" class="btn-hover-programas">
                                 Contrato tipo
                             </a>
                         </li>
                         <li class="animate-element slide-up-list" style="animation-delay: 0.6s;">
-                            <a href="#" target="_blank" class="btn-hover-programas">
+                            <a href="<?php urlPdf( 'cold-tarifario' ); ?>" target="_blank" class="btn-hover-programas">
                                 Tarifario
                             </a>
                         </li>
@@ -122,9 +127,14 @@ $dispositivo = dispositivo();
                             <button class="button-red btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
-                                    <li>imagen1.jpg</li>
-                                    <li>imagen2.jpg</li>
-                                    <li>imagen3.jpg</li>
+                                    <?php 
+                                    $imagenes = getImages ('cold');
+                                    if ( $imagenes != null ) {
+                                        for ($i=0; $i < count($imagenes); $i++) { 
+                                            echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </button>
                         </li>
@@ -147,27 +157,27 @@ $dispositivo = dispositivo();
                 </h2>
                 <ul class="bariloche-links">
                     <li class="animate-element slide-up-list" style="animation-delay: 0.3s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
+                        <a href="<?php urlPdf( 'bariloche-comprar' ); ?>" target="_blank" class="btn-hover-red">
                             Cómo comprar
                         </a>
                     </li>
                     <li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
+                        <a href="<?php urlPdf( 'bariloche-pagar' ); ?>" target="_blank" class="btn-hover-red">
                             Dónde pagar
                         </a>
                     </li>
                     <li class="animate-element slide-up-list" style="animation-delay: 0.5s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
+                        <a href="<?php urlPdf( 'bariloche-cruz-roja' ); ?>" target="_blank" class="btn-hover-red">
                             Cruz Roja
                         </a>
                     </li>
                     <li class="animate-element slide-up-list" style="animation-delay: 0.6s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
+                        <a href="<?php urlPdf( 'bariloche-uai' ); ?>" target="_blank" class="btn-hover-red">
                             Uai
                         </a>
                     </li>
                     <li class="animate-element slide-up-list" style="animation-delay: 0.7s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
+                        <a href="<?php urlPdf( 'bariloche-certificaciones' ); ?>" target="_blank" class="btn-hover-red">
                             Certificaciones N8
                         </a>
                     </li>
@@ -176,9 +186,14 @@ $dispositivo = dispositivo();
                             Ver galería de imágenes
 
                             <ul class="data-carga galeria-data">
-                                <li>imagen1.jpg</li>
-                                <li>imagen2.jpg</li>
-                                <li>imagen3.jpg</li>
+                                <?php 
+                                $imagenes = getImages ('bariloche');
+                                if ( $imagenes != null ) {
+                                    for ($i=0; $i < count($imagenes); $i++) { 
+                                        echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
+                                    }
+                                }
+                                ?>
                             </ul>
                         </a>
                     </li>
