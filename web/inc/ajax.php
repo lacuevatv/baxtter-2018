@@ -22,32 +22,35 @@ if( isAjax() ) {
 			
 			// Valores enviados desde el formulario
 			$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
-			$alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
+			$cant_alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
 			$cargo     = isset( $_POST['charge'] ) ? $_POST['charge'] : '';
 			$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
-			$yearTrip  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
-			$name      = isset( $_POST['name'] ) ? $_POST['name'] : '';
-			$tel       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+			$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
+			$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
+			$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
 			
-			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$alumnos. '<br> Año de viaje: ' .$yearTrip. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $name . '<br> Teléfono: '. $tel . '<br> Email: '. $email . '<br>';
+			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br>';
 
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			//enviarFormulario( EMAILFORMULARIO , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
-
+			enviarFormulario( EMAILFORMULARIO , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
+			//guardar en base de datos
+			saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, 'reunion' );
 		break;
 
 		case 'formulario-default':
 			
 			// Valores enviados desde el formulario
 			$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
-			$yearTrip  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
-			$name      = isset( $_POST['name'] ) ? $_POST['name'] : '';
-			$tel       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+			$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
+			$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
+			$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
 
-			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telephone . '<br> Email: '. $email . '<br> Año de Viaje: ' . $yearTrip .'<br>';
+			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br> Año de Viaje: ' . $fecha_viaje .'<br>';
 
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			//enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
+			enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
+			//guardar en base de datos
+			saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
 
 		break;
 
@@ -102,4 +105,18 @@ function enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email) {
 			} else {
 			    echo "Ocurrió un error inesperado.";
 			}
+}
+
+
+function saveNewContact ( $nombre = '', $telefono = '', $email = '', $mensaje = '', $escuela = '', $cargo = '', $fecha_viaje = '', $cant_alumnos = '', $form_type = 'contacto') {
+	$connection = connectDB();
+	$tabla      = 'contacto';
+		
+	$queryCreate  = "INSERT INTO " .$tabla. " (nombre,telefono,email,mensaje,escuela,cargo,fecha_viaje,cant_alumnos,form_type) VALUES ('".$nombre."','".$telefono."','".$email."','".$mensaje."','".$escuela."','".$cargo."','".$fecha_viaje."','".$cant_alumnos."','".$form_type."')";
+	$result = mysqli_query($connection, $queryCreate);
+	
+	echo mysqli_insert_id($connection);
+
+	//cierre base de datos
+	mysqli_close($connection);
 }
