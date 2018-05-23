@@ -1,13 +1,13 @@
 <!---------- ACCESOS DIRECTOS A LOS MODULOS ---------------->
 <div class="container wrapper-modulos">
   <div class="row">
-    <div class="col-30">
+    <div class="col-80">
       <!-- modulo -->
       <section>
         <div class="modulo-wrapper">
           <h2>Contactos</h2>
           <p>Ver mensajes recibidos via web.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=noticias" role="button">Ver lista de noticias</a></p>
+          <p><a class="btn btn-primary" href="index.php?admin=contacts" role="button">Ver lista</a></p>
         </div>
       </section><!-- //modulo -->
     </div><!-- //columna -->

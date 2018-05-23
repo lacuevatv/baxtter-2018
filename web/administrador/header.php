@@ -58,7 +58,7 @@ if(!defined("SECUREACCESS"))
               </ul>
             </li>-->
             <li>
-              <a href="index.php?admin=promociones" role="button">Contactos</a>
+              <a href="index.php?admin=contacts" role="button">Contactos</a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Página<span class="caret"></span></a>

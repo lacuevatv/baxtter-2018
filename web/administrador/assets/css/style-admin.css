@@ -870,6 +870,34 @@ ul.dropdown-menu {
     cursor: pointer;
     color: #d9534f; }
 
+.contacts-container {
+  margin: 50px auto; }
+
+.tabla-suscriptores td {
+  padding: 10px;
+  vertical-align: middle; }
+.tabla-suscriptores thead {
+  font-size: 110%;
+  font-weight: bold; }
+  .tabla-suscriptores thead tr {
+    border: 1px solid #666;
+    background-color: #ccc; }
+.tabla-suscriptores tbody tr {
+  border: 1px solid #666; }
+.tabla-suscriptores tbody .font-reduce {
+  font-size: 80%; }
+
+.del-user {
+  cursor: pointer;
+  width: 30px;
+  height: 30px; }
+  .del-user:hover {
+    opacity: 0.7; }
+  .del-user img {
+    display: block;
+    width: 80%;
+    margin: 0 auto; }
+
 /* ---- 7 seccion noticias ---- */
 .loop-noticias-backend {
   list-style: none;

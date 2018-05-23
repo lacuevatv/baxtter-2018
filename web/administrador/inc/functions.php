@@ -62,6 +62,10 @@ function get_footer_scripts ($modulo) { ?>
 			
 			<?php break;
 		
+		case 'contacts': ?>
+			<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-contacts.js"></script>
+			<?php break;
+
 		case 'galeria-imagenes': ?>
 			<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-medios.js"></script>
 			<?php break;
