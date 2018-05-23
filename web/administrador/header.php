@@ -46,7 +46,7 @@ if(!defined("SECUREACCESS"))
         <div id="menu-top" class="menus-top-wrapper">
   <!--menu modulo asinado-->
           <ul class="menu-top menu-left">
-            <li class="dropdown">
+            <!--<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Noticias<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
@@ -56,18 +56,30 @@ if(!defined("SECUREACCESS"))
                   <a href="index.php?admin=noticias" role="button">Ver todas</a>
                 </li>
               </ul>
+            </li>-->
+            <li>
+              <a href="index.php?admin=promociones" role="button">Contactos</a>
             </li>
-
-  <!--MENU EDITOR: administrar pagina-->
-          <?php if ( $userStatus == '0' || $userStatus == '1' ) : ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Página<span class="caret"></span></a>
               <ul class="dropdown-menu">
+            <li>
+              <a href="index.php?admin=archivos-descargas" role="button">Archivos</a>
+            </li>
+            <li>
+              <a href="index.php?admin=galeria-imagenes" role="button">Galerías</a>
+            </li>
+            <li>
+              <a href="index.php?admin=promociones" role="button">Promos</a>
+            </li>
+            </ul>
+  <!--MENU EDITOR: administrar pagina-->
+          <?php if ( $userStatus == '0' || $userStatus == '1' ) : ?>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Otras opciones<span class="caret"></span></a>
+              <ul class="dropdown-menu">
                 <li>
                   <a href="index.php?admin=archivos-descargas" role="button">Archivos para descargar</a>
-                </li>
-                <li>
-                  <a href="index.php?admin=info-adicional" role="button">Info Adicional</a>
                 </li>
                 <li>
                   <a href="index.php?admin=galeria-imagenes" role="button">Galerías de imágenes</a>

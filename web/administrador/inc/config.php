@@ -19,7 +19,7 @@ define ('UPLOADSURLIMAGES', UPLOADSURL . '');//carpeta  de imagenes (por si tien
 define ('UPLOADSURLFILES', UPLOADSURL . '');//carpeta de archivos (por si tiene distintas carpetas de contenido)
 
 //DEFINICIONES HEAD Y SCRIPTS
-define ( 'SITENAME', 'titulo' );
+define ( 'SITENAME', 'Baxtter' );
 define ( 'DATEPUBLISHED', '2018');
 define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logosite.png');
 define ( 'SITETITLE', 'Nombre - Panel de control' );
@@ -62,33 +62,3 @@ $categoriasArchivos = array(
 		'ficha-medica', 'ficha-adhesion', 'tips', 'protocolos', 'bases'
 	)),
 );
-
-//variable de info adicional, por ejemplo, redes sociales, teléfonos y emails
-global $infoAdicional;
-$infoAdicional = array(
-	array(
-		'name' => 'Redes Sociales', 'id' => 'redes-sociales', 'data' =>	array(
-			array( 'type' => 'text', 'id' => 'instragram', 'name' => 'Instagram', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'pinterest', 'name' => 'Pinterest', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'linkedin', 'name' => 'Linkedin', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'twitter', 'name' => 'Twitter', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'snapchat', 'name' => 'Snapchat', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'vimeo', 'name' => 'Vimeo', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'youtube', 'name' => 'Youtube', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'spotify', 'name' => 'Spotify', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'facebook', 'name' => 'Facebook', 'data' => '#', 'extra'=> '' ),
-		),
-	),
-	array(
-			'name' => 'Teléfonos', 'id' => 'telefonos', 'data' =>	array(
-			'telefono1' => array( 'type' => 'text', 'id' => 'telefono-1', 'name' => 'telefono', 'data' => '#', 'extra'=> '' ),
-			'telefono2' => array( 'type' => 'text', 'id' => 'telefono-2', 'name' => 'telefono auxiliar', 'data' => '#', 'extra'=> '' ),
-		),
-	),
-	array(
-		'name' => 'Email', 'id' => 'emails', 'data' =>	array(
-			'email1' => array( 'type' => 'text', 'text', 'id' => 'email-1', 'name' => 'email', 'data' => '#', 'extra'=> '' ),
-			'email2' => array( 'type' => 'text', 'text', 'id' => 'email-2', 'name' => 'email', 'data' => '#', 'extra'=> '' ),
-		),
-	),	
-);//$infoAdicional
