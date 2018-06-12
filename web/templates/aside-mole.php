@@ -78,18 +78,8 @@ global $dispositivo;
                 </li>
             </ul>
 
-            <button class="btn-hover-underline animate-element slide-up">
-                Ver galería de imágenes
-                <ul class="data-carga galeria-data">
-                <?php 
-                $imagenes = getImages ('mole');
-                if ( $imagenes != null ) {
-                    for ($i=0; $i < count($imagenes); $i++) { 
-                        echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
-                    }
-                }
-                ?>
-                </ul>
+            <button id="trailer-mole" class="btn-hover-underline animate-element slide-up">
+                Ver trailer
             </button>
         </div><!-- //.mole-wrapper -->
     </div><!-- //. container -->
@@ -115,5 +105,8 @@ global $dispositivo;
         </div>    
         
     </div><!-- //front -->
-    
+    <div class="wrapper-video">
+        <!-- VIDEO -->
+        
+    </div>
 </aside><!-- //ASIDE MOLE -->

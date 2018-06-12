@@ -83,6 +83,18 @@ $(document).ready(function(){
        scrollToID( '#formularioprincipal' )
    });
 
+   /*
+   * CLICK EN TRAILER DE MOLE
+   */
+   $(document).on('click', '#trailer-mole', function(){
+
+       html = '<div style="padding:42.19% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/269132689?autoplay=0&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+            $('.wrapper-video').append( $(html) );
+            var iframe = document.querySelector('iframe');
+            var player = new Vimeo.Player(iframe,options);
+            player.play();
+    });
+   
 
 });//.ready()
 
