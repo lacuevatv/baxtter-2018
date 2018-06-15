@@ -467,6 +467,7 @@ $( window ).on('load', function(){
     var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
     var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
     playernosotros.play();
+    
     $(window).scroll(function(){
         var position = ($(window).scrollTop());
         if ( position > vidNosotros_top && position < vidNosotros_bottom  ) {
