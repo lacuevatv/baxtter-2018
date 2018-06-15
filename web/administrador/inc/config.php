@@ -42,8 +42,8 @@ global $categoriasGalerias;//define las categorias para cargar galerias
 $categoriasGalerias = array(
 	array( 'slug' => 'hot', 'nombre' => 'Hot Beach'),
 	array( 'slug' => 'cold', 'nombre' => 'Cold Mountain'),
-	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche'),
-	array( 'slug' => 'mole', 'nombre' => 'Mole'),
+	//array( 'slug' => 'bariloche', 'nombre' => 'Bariloche'),
+	//array( 'slug' => 'mole', 'nombre' => 'Mole'),
 );
 
 //variables de categorias de galeria de archivos //normalmente pdf para descargar
@@ -56,7 +56,7 @@ $categoriasArchivos = array(
 		'hoteles', 'servicios', 'itinerario', 'contrato', 'tarifario'
 	)),
 	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche', 'lista' => array(
-		'comprar', 'pagar', 'cruz-roja', 'uai', 'certificaciones'
+		'comprar', 'cruz-roja', 'uai', 'certificaciones'
 	)),
 	array( 'slug' => 'viajo-baxtter', 'nombre' => 'Yo Viajo con Baxtter', 'lista' => array(
 		'ficha-medica', 'ficha-adhesion', 'tips', 'protocolos', 'bases'

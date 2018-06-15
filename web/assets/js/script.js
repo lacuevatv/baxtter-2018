@@ -86,15 +86,18 @@ $(document).ready(function(){
    /*
    * CLICK EN TRAILER DE MOLE
    */
-   $(document).on('click', '#trailer-mole', function(){
+   $(document).on('click', '#trailer-mole', function(){     
+        $('.wrapper-video').fadeIn();
+        
+        player = new Vimeo.Player('video-mole')
+        player.play();
 
-       html = '<div style="padding:42.19% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/269132689?autoplay=0&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
-            $('.wrapper-video').append( $(html) );
-            var iframe = document.querySelector('iframe');
-            var player = new Vimeo.Player(iframe,options);
-            player.play();
     });
-   
+    $(document).on('click', '.close-video', function(){
+        $('.wrapper-video').fadeOut();
+        player.pause();
+    });
+    
 
 });//.ready()
 
@@ -203,6 +206,7 @@ $( window ).on('load', function(){
     var $window = $(window);
 
     function check_if_in_view() {
+        
       var window_height = $window.height();
       var window_top_position = $window.scrollTop();
       var window_bottom_position = (window_top_position + window_height);
@@ -228,15 +232,15 @@ $( window ).on('load', function(){
     /*
      * IN VIEW ANIMATION
     */
-    var $animation_elements = $('.animate-element');
+    var $animation_elements2 = $('.animate-element');
     var $window = $(window);
 
-    function check_if_in_view() {
+    function check_if_in_view2() {
         var window_height = $window.height();
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
 
-        $.each($animation_elements, function() {
+        $.each($animation_elements2, function() {
         var $element = $(this);
         var element_height = $element.outerHeight();
         var element_top_position = $element.offset().top;
@@ -252,7 +256,7 @@ $( window ).on('load', function(){
         });
     }
 
-    $window.on('scroll resize', check_if_in_view);
+    $window.on('scroll resize', check_if_in_view2);
     $window.trigger('scroll');
     
 
@@ -451,14 +455,37 @@ $( window ).on('load', function(){
         }//partnersTwitter
 
 
-
-
-
-
     });//WINDOWS SCROLL
 
-});//ON LOAD
+    /*
+     * VIDEO BAXTTER DE FONDO
+    */
+    var NumeroModificadorTop = 500;
+    var NumeroModificadorBottom = 1000;
+    
+    var vidNosotros = $('#videonosotros');
+    var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
+    var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
+    playernosotros.play();
+    $(window).scroll(function(){
+        var position = ($(window).scrollTop());
+        if ( position > vidNosotros_top && position < vidNosotros_bottom  ) {
+            console.log('play')
+            playernosotros.play();
+        } else {
+            console.log('pause')
+            playernosotros.pause();
+        }
+        //playernosotros.play();
+        
+    });
 
+    
+    
+
+});//ON LOAD
+var playernosotros = new Vimeo.Player('videonosotros');
+    
 /*--------------------------------------------------------------
 2.0 FORMULARIOS
 --------------------------------------------------------------*/

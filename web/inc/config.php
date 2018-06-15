@@ -45,7 +45,6 @@ global $categorias;
 $categorias = array(
 	array( 'slug' => 'cold-mountain', 'nombre' => 'Cold Mountain'),
 	array( 'slug' => 'hot-beach', 'nombre' => 'Hot Beach'),
-	array( 'slug' => 'mole', 'nombre' => 'Mole'),
 );
 
 define('POSTPERPAG', '5');//indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos

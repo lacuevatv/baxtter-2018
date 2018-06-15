@@ -13,7 +13,7 @@ global $dispositivo;
     <div id="background_mole" class="background-section">
 
         <div class="video-wrapper load-images">
-            <img data-src="<?php echo MAINSURL; ?>/contenido/temp/foto-mole.jpg" alt="Mole Youth City">
+            <img data-src="<?php echo MAINSURL; ?>/contenido/foto-mole.jpg" alt="Mole Youth City">
         </div>
 
         <div class="container">
@@ -106,7 +106,8 @@ global $dispositivo;
         
     </div><!-- //front -->
     <div class="wrapper-video">
+        <span class="close-video"></span>
         <!-- VIDEO -->
-        
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="video-mole" src="https://player.vimeo.com/video/269132689?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </div>
 </aside><!-- //ASIDE MOLE -->

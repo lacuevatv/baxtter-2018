@@ -161,9 +161,14 @@ $dispositivo = dispositivo();
                             Cómo comprar
                         </a>
                     </li>
-                    <li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
+                    <!--<li class="animate-element slide-up-list" style="animation-delay: 0.4s;">
                         <a href="<?php urlPdf( 'bariloche-pagar' ); ?>" target="_blank" class="btn-hover-red">
                             Dónde pagar
+                        </a>
+                    </li>-->
+                    <li class="animate-element slide-up-list" style="animation-delay: 0.7s;">
+                        <a href="<?php urlPdf( 'bariloche-certificaciones' ); ?>" target="_blank" class="btn-hover-red">
+                            Certificaciones N8
                         </a>
                     </li>
                     <li class="animate-element slide-up-list" style="animation-delay: 0.5s;">
@@ -174,27 +179,6 @@ $dispositivo = dispositivo();
                     <li class="animate-element slide-up-list" style="animation-delay: 0.6s;">
                         <a href="<?php urlPdf( 'bariloche-uai' ); ?>" target="_blank" class="btn-hover-red">
                             Uai
-                        </a>
-                    </li>
-                    <li class="animate-element slide-up-list" style="animation-delay: 0.7s;">
-                        <a href="<?php urlPdf( 'bariloche-certificaciones' ); ?>" target="_blank" class="btn-hover-red">
-                            Certificaciones N8
-                        </a>
-                    </li>
-                    <li class="animate-element slide-up-list" style="animation-delay: 0.8s;">
-                        <a href="#" target="_blank" class="btn-hover-red">
-                            Ver galería de imágenes
-
-                            <ul class="data-carga galeria-data">
-                                <?php 
-                                $imagenes = getImages ('bariloche');
-                                if ( $imagenes != null ) {
-                                    for ($i=0; $i < count($imagenes); $i++) { 
-                                        echo '<li><img data-src="' . UPLOADSURL . '/' .$imagenes[$i] . '"></li>';
-                                    }
-                                }
-                                ?>
-                            </ul>
                         </a>
                     </li>
                 </ul>

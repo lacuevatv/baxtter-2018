@@ -94,7 +94,9 @@ global $dispositivo;
         <!-- SECTION LEGALES BAXTTER -->
     	<section class="legales-turismo">
             <div class="container">
-
+                <a href="<?php urlPdf( 'viajo-baxtter-bases' ); ?>" target="_blank" id="btn-bases" class="btn-hover-red animate-element slide-up-list">
+                        Bases y condiciones
+                </a>
             <?php 
                 if( $dispositivo == 'movil' ) {
                     echo '<img src="' . MAINSURL . '/assets/images/movil/legales-turismo-movil.png" alt="Legales Turismo Nación">';
@@ -134,5 +136,8 @@ global $dispositivo;
 
     <!------- OWN SCRIPT ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
+    <script>
+                    
+                    </script>
 </body>
 </html>

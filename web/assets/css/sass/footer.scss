@@ -107,16 +107,25 @@
             bottom: 3em;
         }
         @media (min-width: $lg) {
-            right: 15%;
+            right: 1.5%;
         }
         @media (min-width: $xlg) {
-            right: 24%;
+            right: 4%;
         }
         &:hover {
             @include transition(all $transitionSpeed ease);
             background-position: -113px -269px;
         }
     }
+}
+
+#btn-bases {
+    margin: 0 0 50px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid $color-gris-claro;
+    padding: 7px 20px;
+    color: $color-gris-medio;
 }
 
 //hit legales
