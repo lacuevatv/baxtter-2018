@@ -99,6 +99,31 @@ $(document).ready(function(){
     });
     
 
+    var playernosotros = new Vimeo.Player('videonosotros');
+/*
+     * VIDEO BAXTTER DE FONDO
+    */
+    var NumeroModificadorTop = 500;
+    var NumeroModificadorBottom = 1000;
+    
+    var vidNosotros = $('#videonosotros');
+    var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
+    var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
+    playernosotros.play();
+    
+    $(window).scroll(function(){
+        var position = ($(window).scrollTop());
+        if ( position > vidNosotros_top && position < vidNosotros_bottom  ) {
+            console.log('play')
+            playernosotros.play();
+        } else {
+            console.log('pause')
+            playernosotros.pause();
+        }
+        //playernosotros.play();
+        
+    });
+
 });//.ready()
 
 /*
@@ -428,15 +453,15 @@ $( window ).on('load', function(){
                 modificador = 30;
             }
             if ( window.innerWidth < 1200 ) {
-                modificador = 80;
+                modificador = 120;
             }
 
             if ( window.innerWidth < 992 ) {
                 modificador = 170;
-            }
+            }/*
             if ( window.innerWidth < 768 ) {
                 modificador = 60;
-            }
+            }*/
             
             
             var porcentaje = barra * 0.02 - modificador;
@@ -457,36 +482,9 @@ $( window ).on('load', function(){
 
     });//WINDOWS SCROLL
 
-    /*
-     * VIDEO BAXTTER DE FONDO
-    */
-    var NumeroModificadorTop = 500;
-    var NumeroModificadorBottom = 1000;
-    
-    var vidNosotros = $('#videonosotros');
-    var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
-    var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
-    playernosotros.play();
-    
-    $(window).scroll(function(){
-        var position = ($(window).scrollTop());
-        if ( position > vidNosotros_top && position < vidNosotros_bottom  ) {
-            console.log('play')
-            playernosotros.play();
-        } else {
-            console.log('pause')
-            playernosotros.pause();
-        }
-        //playernosotros.play();
-        
-    });
-
-    
-    
 
 });//ON LOAD
-var playernosotros = new Vimeo.Player('videonosotros');
-    
+
 /*--------------------------------------------------------------
 2.0 FORMULARIOS
 --------------------------------------------------------------*/
