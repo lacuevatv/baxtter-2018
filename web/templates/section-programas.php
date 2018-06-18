@@ -17,7 +17,7 @@ $dispositivo = dispositivo();
             <?php 
             if ( $dispositivo == 'pc' ) {
                 echo '<img src="'.MAINSURL.'/assets/images/fondo-hot.png" alt="Baxtter Hot Beach Logo" class="background-hot">';
-                echo '<img src="'.MAINSURL.'/assets/images/fondo-cold.png" alt="Baxtter Hot Beach Logo" class="background-cold">';
+                echo '<img src="'.MAINSURL.'/assets/images/fondo-cold2.png" alt="Baxtter Hot Beach Logo" class="background-cold">';
             } elseif($dispositivo == 'tablet' ) {
                 echo '<img src="'.MAINSURL.'/assets/images/movil/hot-fondo-movil.png" alt="Baxtter Hot Beach Logo" class="background-hot background-hot-tablet">';
                 echo '<img src="'.MAINSURL.'/assets/images/movil/fondo-cold-movil.png" alt="Baxtter Hot Beach Logo" class="background-cold background-cold-tablet">';

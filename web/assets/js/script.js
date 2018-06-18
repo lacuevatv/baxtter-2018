@@ -156,6 +156,17 @@ $( window ).on('load', function(){
         loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia');
     }
 
+    //cambia la imagen del backdoungr cold si la pantalla es gigante
+    changeBackgroundCold();
+    function changeBackgroundCold() {
+        if ( window.innerWidth > 1500 ) {
+            $('.background-cold').attr('src', baseUrl + '/assets/images/fondo-cold.png');
+        } else {
+            $('.background-cold').attr('src', baseUrl + '/assets/images/fondo-cold2.png');
+        }
+    }
+    $(window).on('resize', changeBackgroundCold);
+
     /*
     * CARGA EL HEADER
     */

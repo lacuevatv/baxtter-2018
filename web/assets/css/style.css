@@ -2186,11 +2186,7 @@ form {
         position: absolute;
         width: auto;
         height: 100%;
-        top: 0;
-        right: -35%; } }
-    @media (min-width: 1200px) {
-      .programas-section .background-section .hot-cold-images .background-cold {
-        right: -25%; } }
+        top: 0; } }
     @media (min-width: 1500px) {
       .programas-section .background-section .hot-cold-images .background-cold {
         right: -13%; } }
