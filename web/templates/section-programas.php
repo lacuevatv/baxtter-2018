@@ -69,7 +69,7 @@ $dispositivo = dispositivo();
                             </a>
                         </li>
                         <li>
-                        <button class="btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
+                        <button class="open-galery btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <?php 
@@ -124,7 +124,7 @@ $dispositivo = dispositivo();
                             </a>
                         </li>
                         <li>
-                            <button class="button-red btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
+                            <button class="button-red open-galery btn-hover-underline animate-element slide-up" style="animation-delay: 1s;">
                                 Ver galería de imágenes
                                 <ul class="data-carga galeria-data">
                                     <?php 
@@ -143,7 +143,7 @@ $dispositivo = dispositivo();
             </div><!-- // .programas-wrapper -->
 
         </div><!-- // .main-section container -->
-
+                                    
     </div><!-- // .section-capas .programas-section -->
 
     <div class="section-capas bariloche-section">
@@ -204,5 +204,9 @@ $dispositivo = dispositivo();
             
         </div><!-- //front -->
     </div><!-- // .section-capas .bariloche-section -->
-    
+    <div class="wrapper-galeria">
+        <span class="close-galery"></span>
+        <div class="galeria-imagenes"></div>
+        <span class="loader-galery"></span>
+    </div>
 </section><!-- // SECTION PROGRAMAS -->

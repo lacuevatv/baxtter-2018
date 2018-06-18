@@ -34,6 +34,16 @@ function setHeightContentVideo() {
 
 $(document).ready(function(){
 
+    //presionar teclas
+    $(document).keyup(function(event){
+        //tecla escape
+        if(event.which==27) {
+            $('.wrapper-galeria').fadeOut();
+            closeVideoMole ();
+            
+        }
+    });
+
     /*
      * SCROLL TOP
     */
@@ -78,7 +88,7 @@ $(document).ready(function(){
 
    /*
     * ARROW DOWN
-    * */
+    */
    $(document).on('click', '.title-arrow', function(){
        scrollToID( '#formularioprincipal' )
    });
@@ -94,13 +104,16 @@ $(document).ready(function(){
 
     });
     $(document).on('click', '.close-video', function(){
-        $('.wrapper-video').fadeOut();
-        player.pause();
+        closeVideoMole ();
     });
     
+    function closeVideoMole () {
+        $('.wrapper-video').fadeOut();
+        player.pause();
+    }
 
     var playernosotros = new Vimeo.Player('videonosotros');
-/*
+    /*
      * VIDEO BAXTTER DE FONDO
     */
     var NumeroModificadorTop = 500;
@@ -120,9 +133,92 @@ $(document).ready(function(){
             console.log('pause')
             playernosotros.pause();
         }
-        //playernosotros.play();
-        
+        //playernosotros.play(); 
     });
+
+    /*
+    * OPEN GALERIA IMAGENES
+    */
+    $(document).on('click', '.open-galery', function(){
+        var wrapper = $('.wrapper-galeria')
+        var listaImages = $(this).find('.galeria-data li');
+        var contenedor = $('.galeria-imagenes' );
+        var loader = $('.loader-galery');
+        
+        //vacio la galería anterior
+        contenedor.empty();
+        contenedor.height('0');
+        //se abre el contenedor
+        $(wrapper).fadeIn();
+
+        if ( listaImages.length == 0 ) {
+            console.log('no hay imagenes');
+            $(contenedor).append( $( '<div class="msj-no-images">No hay imágenes cargadas</div>' ) );
+
+            var h = $('.msj-no-images').prop('scrollHeight');
+            $(contenedor).animate({
+                'height': h +'px',
+            }, 500);
+
+        } else {
+            //abrimos el loader
+            $(loader).fadeIn;
+            //copio las imágenes al contenedor
+            var galeria = $(this).find('.galeria-data').clone();
+            $(contenedor).append( $( galeria ) );
+            //le agrego la clase de owlcarousel
+            var galeriaNueva = $('.galeria-imagenes .galeria-data' );
+            $(galeriaNueva).addClass('owl-carousel');
+            //cargo las imagenes una a una
+            var imagenes = $('.galeria-imagenes .galeria-data li img' );
+            cantImagenes = imagenes.length;
+            cuenta = 1;
+            imagenes.each(function(){
+                if ( ! $(this).attr('src') ) {
+                    $(this).attr('src', $(this).attr('data-src') );
+
+                    //cuando esta cargada esta imagen continua con la funcion
+                    this.onload = function () {
+                        cuenta++;
+                        
+                        //va sumando cada vuelta y cuando llega al final activa el carousel
+                        if ( cuenta == cantImagenes ) {
+                            $(galeriaNueva).attr('id', 'carousel-galeria');
+                            $('#carousel-galeria').owlCarousel({
+                                loop:true,
+                                margin:10,
+                                slideSpeed : 2000,
+                                nav:true,
+                                doots: true,
+                                autoplay: true,
+                                navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+                                responsive:{
+                                    0:{
+                                        items:1
+                                    },
+                                }
+                            });//owl*/
+                            //y finalmente se muestran las imagenes haciendo crecer al contenedor
+                            var h = $(galeriaNueva).prop('scrollHeight');
+                            console.log(h)
+                            $(contenedor).animate({
+                                'height': h +'px',
+                            }, 500);
+                            //cerramos el loader
+                            $(loader).fadeOut;
+                        }  
+                    }
+
+                }
+            })//each
+        }     
+    });//clic para abrir/cargar galeria
+
+    $(document).on('click', '.close-galery', function(){
+        $(this).closest('div').fadeOut();
+    });
+   
+
 
 });//.ready()
 
@@ -161,7 +257,7 @@ $( window ).on('load', function(){
     function changeBackgroundCold() {
         if ( window.innerWidth > 1500 ) {
             $('.background-cold').attr('src', baseUrl + '/assets/images/fondo-cold.png');
-        } else {
+        } else if ( window.innerWidth < 1500 && window.innerWidth > 992 ) {
             $('.background-cold').attr('src', baseUrl + '/assets/images/fondo-cold2.png');
         }
     }
