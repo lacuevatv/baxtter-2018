@@ -122,18 +122,22 @@ $(document).ready(function(){
     var vidNosotros = $('#videonosotros');
     var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
     var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
-    playernosotros.play();
+
+    //si no es movil, arranca
+    if ( window.innerWidth > 992 ) {
+        playernosotros.play();
+    }
     
     $(window).scroll(function(){
         var position = ($(window).scrollTop());
         if ( position > vidNosotros_top && position < vidNosotros_bottom  ) {
-            console.log('play')
-            playernosotros.play();
+            if ( window.innerWidth > 992 ) {
+                playernosotros.play();
+            }
         } else {
-            console.log('pause')
+            //console.log('pause')
             playernosotros.pause();
         }
-        //playernosotros.play(); 
     });
 
     /*
