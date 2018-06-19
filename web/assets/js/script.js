@@ -162,7 +162,7 @@ $(document).ready(function(){
 
         } else {
             //abrimos el loader
-            $(loader).fadeIn;
+            $(loader).fadeIn();
             //copio las imágenes al contenedor
             var galeria = $(this).find('.galeria-data').clone();
             $(contenedor).append( $( galeria ) );
@@ -205,7 +205,7 @@ $(document).ready(function(){
                                 'height': h +'px',
                             }, 500);
                             //cerramos el loader
-                            $(loader).fadeOut;
+                            $(loader).fadeOut();
                         }  
                     }
 
