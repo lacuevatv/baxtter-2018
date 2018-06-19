@@ -2435,9 +2435,9 @@ form {
       top: 0;
       left: 0;
       background: url(../images/sobreimpresion-mole-youth.png);
-      background-size: contain;
-      background-attachment: fixed;
-      background-repeat: no-repeat; } }
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: 0 0; } }
   .mole-section .background-section h1 {
     position: absolute;
     padding-top: 8em; }

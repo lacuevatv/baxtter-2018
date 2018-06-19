@@ -55,21 +55,21 @@ $(document).ready(function(){
     /*
      * SCROLL TO (links)
     */
-   $('.scroll-to').click(function( e ){
+    $('.scroll-to').click(function( e ){
         e.preventDefault();
         var href = '#'+$(this).attr('href');
         scrollToID(href);
         if ( window.innerWidth < 992 ) {
             MovilMenuToggle();
         }
-   });
+    });
    
     /*
      * TOGGLE
     */
-   $('.toggle').click(MovilMenuToggle);
+    $('.toggle').click(MovilMenuToggle);
 
-   function MovilMenuToggle (){
+    function MovilMenuToggle (){
        $('.toggle').toggleClass('toggle-open');
          $('.brand-name').toggleClass('brand-name-open');
        
@@ -84,7 +84,7 @@ $(document).ready(function(){
                 'height': '0px',
             }, 500);
         }
-   }
+    }
 
    /*
     * ARROW DOWN
@@ -96,7 +96,7 @@ $(document).ready(function(){
    /*
    * CLICK EN TRAILER DE MOLE
    */
-   $(document).on('click', '#trailer-mole', function(){     
+    $(document).on('click', '#trailer-mole', function(){     
         $('.wrapper-video').fadeIn();
         
         player = new Vimeo.Player('video-mole')
@@ -249,7 +249,7 @@ $( window ).on('load', function(){
     }
     if (window.innerWidth > 992 ) {
         loadImagesBackgroundCSS ( $('#background_nosotros'), 'experiencia movil-element'); 
-        loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia');
+        loadImagesBackgroundCSS ( $('#background_mole'), 'mole-experiencia movil-element');
     }
 
     //cambia la imagen del backdoungr cold si la pantalla es gigante
@@ -488,16 +488,27 @@ $( window ).on('load', function(){
     var partnersBackground = $('.background-partners');
     var twitterBackground = $('.background-twitter');
     var experienciaBackground = $('.experiencia');
-
+    var moleBackground = $('.mole-experiencia');
     $(window).scroll(function(){
         //valor de barra que necesitan todos
         var barra = ($(window).scrollTop());
-        
-        
+         
+        /*
+        * moleBackground
+        */
+        if (window.innerWidth > 992) {
+            if ( moleBackground.hasClass('in-view') ) {
+                //var mover = barra * 0.1 - 400;
+                var mover = barra * 1.1 / 100 -40;
+                $(moleBackground).css('background-position-x', mover + '%');
+                
+            }
+        }
+
         /*
         * experienciaBackground
         */
-       if (window.innerWidth > 992) {
+        if (window.innerWidth > 992) {
             if ( experienciaBackground.hasClass('in-view') ) {
                 var modificador = 30; 
                 

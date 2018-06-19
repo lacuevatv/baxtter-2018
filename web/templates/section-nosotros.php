@@ -106,8 +106,7 @@ global $dispositivo;
                     <span class="sr-only">Video Baxtter</span>
                 </h3>
                 <!-- VIDEO -->
-                <!--<div style="padding:42.19% 0 0 0;position:relative;"><iframe id="videonosotros" src="https://player.vimeo.com/video/272949856?autoplay=0&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>-->
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="videonosotros" src="https://player.vimeo.com/video/272949856?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                <div style="padding:42.19% 0 0 0;position:relative;"><iframe id="videonosotros" src="https://player.vimeo.com/video/272949856?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
             </div>
         </div>
     </div>
