@@ -116,8 +116,11 @@ $(document).ready(function(){
     /*
      * VIDEO BAXTTER DE FONDO
     */
-    var NumeroModificadorTop = 500;
-    var NumeroModificadorBottom = 1000;
+    var NumeroModificadorTop = 1000;
+    var NumeroModificadorBottom = 1500;
+    if ( window.innerWidth > 1500 ) {
+        NumeroModificadorBottom = 2000;
+    }
     
     var vidNosotros = $('#videonosotros');
     var vidNosotros_top = vidNosotros.offset().top - NumeroModificadorTop;
