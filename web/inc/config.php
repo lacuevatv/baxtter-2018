@@ -9,7 +9,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USER', 'dbuser');
 define('DB_PASS', '123');
-define('DB_NAME', 'db_baxtter');
+define('DB_NAME', 'dbname');
 //DEFINICIONES HEAD Y SCRIPTS
 define ( 'VERSION', '3.0' );
 //CARPETAS
