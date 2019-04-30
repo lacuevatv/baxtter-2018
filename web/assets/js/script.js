@@ -536,14 +536,8 @@ $( window ).on('load', function(){
             var modificador = 80; 
             
             //vemos si es movil
-            if ( partnersBackground.hasClass('dispositivo-movil') ) {
-                modificador = 70;
-
-                var porcentaje = barra * 0.02 - modificador;
+            if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
                 
-                $(partnersBackground).css('top', '-'+porcentaje + '%'); 
-
-            } else {
                 //version pc
                 if ( window.innerWidth < 1440 ) {
                     modificador = 70;

@@ -40,11 +40,15 @@
 
 .partners-section-movil {
     .background-partners {
-        top: -76%;
+        //top: -76%;
+        top: 0;
     }
 
     .partners-wrapper {
-        padding: 5em 0;
+        padding: 4em 0;
+        @media (min-width: $sm) {
+            padding: 4em 0;
+        } 
 
         .partners-logos {
             width: 100%;

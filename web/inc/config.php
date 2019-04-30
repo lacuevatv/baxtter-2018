@@ -40,6 +40,8 @@ define('LINK_YOUTUBE', 'https://www.youtube.com/somosbaxtter');
 define('LINK_SPOTIFY', 'https://www.spotify.com/somosbaxtter');
 define('LINK_PINTEREST', 'https://www.pinterest.com/somosbaxtter');
 define('APIKEYGOOGLE', '' );
+define('LINK_TIPTOK', 'https://www.tiktok.com/somosbaxtter');
+
 
 global $categorias;
 $categorias = array(

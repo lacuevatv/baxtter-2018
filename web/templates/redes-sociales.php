@@ -11,14 +11,17 @@ $redes = array(
     array (
         'name' => "Youtube", 'link' => LINK_YOUTUBE,
     ),
-    array (
+    /*array (
         'name' => "Vimeo", 'link' => LINK_VIMEO,
     ),
     array (
         'name' => "Twitter", 'link' => LINK_TWITTER,
-    ),
+    ),*/
     array (
         'name' => "Facebook", 'link' => LINK_FACEBOOK,
+    ),
+    array (
+        'name' => "TipTok", 'link' => LINK_TIPTOK,
     ),
 );
 

@@ -34,12 +34,12 @@ global $dispositivo;
                     </h2>
                     
                     <h3 class="subtitulo-seccion">
-                        Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 27 años.
+                        Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 28 años.
                     </h3>
                 </hgroup>
 
                 <?php if ( $dispositivo != 'movil' ) : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27 btn-hover-grayscale">
+                    <img srset="<?php echo MAINSURL; ?>/assets/images/badge-30.png 1x, <?php echo MAINSURL; ?>/assets/images/badge-30@2x.png 2x" src="<?php echo MAINSURL; ?>/assets/images/badge-30.png" alt="Logo Baxtter, 30 años" class="logo-27 btn-hover-grayscale">
                 <?php endif; ?>
             </div>
 
@@ -67,9 +67,9 @@ global $dispositivo;
                 </p>
 
                 <?php if ( $dispositivo != 'movil' ) : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27-movil animate-element slide-up">
+                    <img srset="<?php echo MAINSURL; ?>/assets/images/badge-30.png 1x, <?php echo MAINSURL; ?>/assets/images/badge-30@2x.png 2x" src="<?php echo MAINSURL; ?>/assets/images/badge-30.png" alt="Logo Baxtter, 30 años" class="logo-27-movil animate-element slide-up">
                 <?php else : ?>
-                    <img src="<?php echo MAINSURL; ?>/assets/images/movil/logo-27-movil.png" alt="Logo Baxtter, 27 años" class="logo-27-movil animate-element slide-up">
+                    <img srset="<?php echo MAINSURL; ?>/assets/images/badge-30.png 1x, <?php echo MAINSURL; ?>/assets/images/badge-30@2x.png 2x" src="<?php echo MAINSURL; ?>/assets/images/badge-30.png" alt="Logo Baxtter, 30 años" class="logo-27-movil animate-element slide-up">
                 <?php endif; ?>
             </div>
         </div>
@@ -122,7 +122,7 @@ global $dispositivo;
                     Somos hiper sociales
                 </h3>
                 <h4 class="subtitulo-seccion">
-                    Conocé los detalles de nuestros programas exclusivamente en nuestras redes.
+                    Conocé el lifestyle Baxtter en nuestra redes.
                 </h4>
                 
                 <ul class="redes-sociales animate-element slide-up">

@@ -185,6 +185,23 @@
     }
 }
 
+.icon-redes-tiptok {
+    background: url(../images/sprite-nuevo.png) no-repeat;
+    background-size: 82px 66px;
+    background-position: 0px 0px;
+    @include transition(all $transitionSpeed ease);
+        &:hover {
+            @include transition(all $transitionSpeed ease);
+            background-position: 0px -34px;
+        }
+   
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background: url(../images/sprite-nuevo2x.png) no-repeat;
+        background-size: 82px 66px;
+        background-position: 0px 0px;
+    }
+}
+
 .icon-xs {
     width: 22px;
     height: 16px;
@@ -242,8 +259,7 @@
             @include transition(all $transitionSpeed ease);
             background-position: -50px -165px;
         }
-    
-    
+
 }
 
 .icon-redes-vimeo-xs {
@@ -275,4 +291,21 @@
             background-position: -111px -165px;
         }
     
+}
+
+.icon-redes-tiptok-xs {
+    background: url(../images/sprite-nuevo.png) no-repeat;
+    background-size: 82px 66px;
+    background-position: -32px -2px;
+    @include transition(all $transitionSpeed ease);
+        &:hover {
+            @include transition(all $transitionSpeed ease);
+            background-position: -32px -23px;
+        }
+   
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background: url(../images/sprite-nuevo2x.png) no-repeat;
+        background-size: 82px 66px;
+        background-position: -32px -2px;
+    }
 }

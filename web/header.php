@@ -96,7 +96,7 @@ global $dispositivo;
 
             <div class="main-section container">
                 <div class="title-header movil-element">
-                    <h1>Únicos</h1>
+                    <h1>Centennials</h1>
                     <div role="button" class="title-arrow movil-element">
                         <img data-src="<?php echo MAINSURL; ?>/assets/images/arrow-down.png" class="btn-hover-grayscale">
                     </div>

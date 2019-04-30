@@ -38,8 +38,11 @@ include 'header.php'; ?>
     <!-- SECTION YO VIAJO CON BAXTTER -->
         <?php getTemplate( 'section-viajo' ); ?>
 
+        <!-- SECTION YO VIAJO CON BAXTTER -->
+        <?php getTemplate( 'section-instagram' ); ?>
+
         <!-- ASIDE TWITTER -->
-        <?php getTemplate( 'aside-twitter' ); ?>
+        <?php //getTemplate( 'aside-twitter' ); ?>
 
         <!-- SECTION CONTACTO -->
         <?php getTemplate( 'section-contacto' ); ?>
