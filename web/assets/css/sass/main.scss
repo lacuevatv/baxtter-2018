@@ -1222,8 +1222,13 @@
         position: relative;
         font-size: 110%;
         line-height: 150%;
+        @include transition(all $transitionSpeed ease);
         @media (min-width: $md) {
             font-size: 80%;
+        }
+
+        &:hover {
+            color: $color-blanco;
         }
 
         &:before {
@@ -1323,5 +1328,40 @@
 
 .instagram-section {
     background-color: #f7f5f6;
+    
+    .main-section {
+        padding-top: 12em;
+        padding-bottom: 6em;
+
+        .titulo-section-instagram {
+            &:before {
+                content: '';
+                position: absolute;
+                top: -50px;
+                left: 0;
+                display: block;
+                width: 43px;
+                height: 43px;
+                background: url(../images/sprite.png) no-repeat;
+                background-position: 0px -3px;
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                    background: url(../images/sprite2x.png) no-repeat;
+                    background-size: 324px 305px;
+                }
+                
+                @media (min-width: $md) {
+                    background-position: -2px -56px;
+                    top: -30px;
+                    width: 32px;
+                    height: 32px;
+                    &:hover {
+                        @include transition(all $transitionSpeed ease);
+                        background-position: -2px -96px;
+                        //@include transform(translateY(-5px));
+                    }
+                }
+            }
+        }
+    }
 
 }//.instagram-section

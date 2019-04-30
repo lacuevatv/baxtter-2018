@@ -3673,11 +3673,18 @@ form .msj-form {
   position: relative;
   font-size: 110%;
   line-height: 150%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media (min-width: 992px) {
   .presentaciones-section a {
     font-size: 80%;
   }
+}
+.presentaciones-section a:hover {
+  color: #fff;
 }
 .presentaciones-section a:before {
   content: ">> ";
@@ -3771,6 +3778,42 @@ form .msj-form {
 
 .instagram-section {
   background-color: #f7f5f6;
+}
+.instagram-section .main-section {
+  padding-top: 12em;
+  padding-bottom: 6em;
+}
+.instagram-section .main-section .titulo-section-instagram:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: block;
+  width: 43px;
+  height: 43px;
+  background: url(../images/sprite.png) no-repeat;
+  background-position: 0px -3px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .instagram-section .main-section .titulo-section-instagram:before {
+    background: url(../images/sprite2x.png) no-repeat;
+    background-size: 324px 305px;
+  }
+}
+@media (min-width: 992px) {
+  .instagram-section .main-section .titulo-section-instagram:before {
+    background-position: -2px -56px;
+    top: -30px;
+    width: 32px;
+    height: 32px;
+  }
+  .instagram-section .main-section .titulo-section-instagram:before:hover {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-position: -2px -96px;
+  }
 }
 
 .titulo-seccion {
