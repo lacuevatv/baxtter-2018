@@ -36,7 +36,7 @@ global $dispositivo;
                     <h3 class="subtitulo-seccion">
                         Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 27 años.
                     </h3>
-                </hgrounp>
+                </hgroup>
 
                 <?php if ( $dispositivo != 'movil' ) : ?>
                     <img src="<?php echo MAINSURL; ?>/assets/images/logo27-escitorio.png" alt="Logo Baxtter, 27 años" class="logo-27 btn-hover-grayscale">

@@ -22,6 +22,12 @@ include 'header.php'; ?>
             <!-- SECTION NOSOTROS -->
             <?php getTemplate( 'section-nosotros' ); ?>
 
+            <?php getTemplate( 'section-presentaciones-online' ); ?>
+
+            <?php getTemplate( 'section-bariloche' ); ?>
+
+            <?php getTemplate( 'section-experiencia-baxtter' ); ?>
+
         </div> <!--- //.inner-wrapper -->
     </main><!--- //.main-wrapper -->
 
