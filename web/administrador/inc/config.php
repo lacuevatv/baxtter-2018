@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USER', 'dbuser');
 define('DB_PASS', '123');
-define('DB_NAME', 'db_baxtter');
+define('DB_NAME', 'dbname');
 //CARPETAS
 define ( 'TEMPLATEDIR', dirname( __FILE__ ) . '/../templates' );
 define ( 'MODULOSDIR', dirname( __FILE__ ) . '/modulos' );
@@ -49,14 +49,14 @@ $categoriasGalerias = array(
 //variables de categorias de galeria de archivos //normalmente pdf para descargar
 global $categoriasArchivos;//define las categorias para cargar galerias
 $categoriasArchivos = array(
-	array( 'slug' => 'hot', 'nombre' => 'Hot', 'lista' => array(
+	/*array( 'slug' => 'hot', 'nombre' => 'Hot', 'lista' => array(
 		'hoteles', 'servicios', 'itinerario', 'contrato', 'tarifario'
 	) ),
 	array( 'slug' => 'cold', 'nombre' => 'Cold', 'lista' => array(
 		'hoteles', 'servicios', 'itinerario', 'contrato', 'tarifario'
-	)),
+	)),*/
 	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche', 'lista' => array(
-		'comprar', 'cruz-roja', 'uai', 'certificaciones'
+		'comprar', 'cruz-roja', 'uai', 'certificaciones', 'pagar'
 	)),
 	array( 'slug' => 'viajo-baxtter', 'nombre' => 'Yo Viajo con Baxtter', 'lista' => array(
 		'ficha-medica', 'ficha-adhesion', 'tips', 'protocolos', 'bases'
