@@ -18,12 +18,12 @@ presentaciones online
     <div class="front-section">
             
         <div class="left animate-element slide-left">
-            <span class="text vertical color-negro">Webigns</span>
+            <span class="text vertical color-negro">Videos</span>
             <span class="line vertical fondo-negro"></span>
         </div>
         
         <div class="right animate-element slide-right">
-            <span class="text vertical color-negro">Info</span>
+            <span class="text vertical color-negro">#SomosBaxtter</span>
             <span class="line vertical fondo-negro"></span>
         </div>    
         
