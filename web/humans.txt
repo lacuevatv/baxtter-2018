@@ -11,7 +11,7 @@
 		
 
 /* SITE */
-	Last update:2018/05/14
+	Last update:2019/04/30
 	Language: Español
 	Doctype:HTML5
-	IDE: Sublime Text, FileZilla, Photoshop
+	IDE: VSCode, FileZilla, Photoshop

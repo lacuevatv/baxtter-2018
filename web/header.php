@@ -20,9 +20,9 @@ global $dispositivo;
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo MAINSURL; ?>/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo MAINSURL; ?>/favicon-16x16.png">
 <link rel="manifest" href="<?php echo MAINSURL; ?>/site.webmanifest">
-<link rel="mask-icon" href="<?php echo MAINSURL; ?>/safari-pinned-tab.svg" color="#7a7a7a">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#c4c4c4">
+<link rel="mask-icon" href="<?php echo MAINSURL; ?>/safari-pinned-tab.svg" color="#ee1d23">
+<meta name="msapplication-TileColor" content="#ee1d23">
+<meta name="theme-color" content="#ee1d23">
 <meta name="format-detection" content="telephone=no">
 <link type="text/plain" rel="author" href="<?php echo MAINSURL; ?>/humans.txt" />
 <!-- SEO SECCTION -->

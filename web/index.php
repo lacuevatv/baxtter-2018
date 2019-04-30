@@ -21,9 +21,6 @@ include 'header.php'; ?>
         <div class="inner-wrapper">
             <!-- SECTION NOSOTROS -->
             <?php getTemplate( 'section-nosotros' ); ?>
-            
-            <!-- SECTION PROGRAMAS -->
-            <?php getTemplate( 'section-programas' ); ?>
 
         </div> <!--- //.inner-wrapper -->
     </main><!--- //.main-wrapper -->
