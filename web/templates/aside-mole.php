@@ -13,8 +13,9 @@ global $dispositivo;
     <div id="background_mole" class="background-section">
 
         <div class="video-wrapper load-images">
-            <img data-src="<?php echo MAINSURL; ?>/contenido/foto-mole.jpg" alt="Mole Youth City">
-        </div>
+            <!--<img data-src="<?php echo MAINSURL; ?>/contenido/foto-mole.jpg" alt="Mole Youth City">-->
+            <img data-src="<?php echo MAINSURL; ?>/assets/images/background-mole.jpg" alt="Mole Youth City">
+         </div>
 
         <div class="container">
             <h1 class="animate-element slide-up">

@@ -532,34 +532,38 @@ $( window ).on('load', function(){
         /*
         * partnersBackground
         */
-        if ( partnersBackground.hasClass('in-view') ) {
-            var modificador = 80; 
-            
-            //vemos si es movil
-            if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
+        if (window.innerWidth > 900) {
+            if ( partnersBackground.hasClass('in-view') ) {
+                var modificador = 10; 
                 
-                //version pc
-                if ( window.innerWidth < 1440 ) {
-                    modificador = 70;
-                }
-                if ( window.innerWidth < 992 ) {
-                    modificador = 264;
-                }
-                
-                var porcentaje = barra * 0.02 - modificador;
-                
-                //cuando es menor a 992 la imagen se rompe y por lo tanto se la protege para que no quede vacio el espacio
-                if ( window.innerWidth < 992 ) {
-                    if ( porcentaje < -1 || porcentaje > -6 ) {
-                        $(partnersBackground).css('top', '-' +porcentaje + '%');  
+                //vemos si es movil
+                if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
+                    if ( window.innerWidth < 1660 ) {
+                        modificador = 40;
                     }
-                } else {
-                    //luego, si es mayor a 992 no pasa nada
-                    $(partnersBackground).css('top', '-'+porcentaje + '%'); 
-    
+                    //version pc
+                    if ( window.innerWidth < 1440 ) {
+                        modificador = 70;
+                    }
+                    if ( window.innerWidth < 1200 ) {
+                        modificador = 100;
+                    }
+                    
+                    var porcentaje = barra * 0.025 - modificador;
+                    
+                    //cuando es menor a 992 la imagen se rompe y por lo tanto se la protege para que no quede vacio el espacio
+                    if ( window.innerWidth < 992 ) {
+                        if ( porcentaje < -1 || porcentaje > -6 ) {
+                            $(partnersBackground).css('top', '-' +porcentaje + '%');  
+                        }
+                    } else {
+                        //luego, si es mayor a 992 no pasa nada
+                        $(partnersBackground).css('top', '-'+porcentaje + '%'); 
+        
+                    }
                 }
-            }
-        }//partnersBackground
+            }//partnersBackground
+        }
 
 
         /*

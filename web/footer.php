@@ -49,7 +49,7 @@ global $dispositivo;
             <div id="background-partners" class="background-section load-images background-partners movil-element">
             
                 <!--<img data-src="<?php echo MAINSURL; ?>/assets/images/fondo-partners-escritorio.jpg" alt="Partners Baxtter - Background">-->
-                <img data-src="<?php echo MAINSURL; ?>/assets/images/background-partners@2x.jpg" alt="Partners Baxtter - Background">
+                <img data-src="<?php echo MAINSURL; ?>/assets/images/background-partners.jpg" alt="Partners Baxtter - Background">
                 
             </div><!-- //background -->
 
