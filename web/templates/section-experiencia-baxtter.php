@@ -1,5 +1,4 @@
-presentaciones online
-<section id="presentaciones-online" class="section-capas">
+<section id="presentaciones-online" class="section-capas experiencias-section">
     
     <div class="main-section container">
 

@@ -1205,3 +1205,123 @@
         text-align: right;
     }
 }//.front-section
+
+
+.presentaciones-section {
+    background-color: #ff2253;
+    color: $color-blanco;
+
+    .subtitulo-section {
+        margin: 1.5em 0;
+    }
+
+    a {
+        color: $color-celeste;
+        text-transform: uppercase;
+        padding-left: 1.5em;
+        position: relative;
+        font-size: 110%;
+        line-height: 150%;
+        @media (min-width: $md) {
+            font-size: 80%;
+        }
+
+        &:before {
+            content: '>> ';
+            font-size: 120%;
+            vertical-align: top;
+            position: absolute;
+            top: -2px;
+            left: 0;
+        }
+    }
+}
+
+.bariloche-section {
+    background-color: #535456;
+    color: $color-blanco;
+    
+    .subtitulo-section {
+        margin: 1.5em 0;
+    }
+
+    .pdfs-links {
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 2em 0;
+        font-size: 130%;
+        @media (min-width: $md) {
+            line-height: 100%;
+            font-size: 80%;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+        }
+
+        li {
+            margin: 1em 0;
+            @media (min-width: $md) {
+                margin: 0;
+                padding: 0 1em;
+                border-right: .05em solid $color-blanco;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                }
+            }
+        }
+    }//.pdfs-links
+
+    .text-aclaratorio {
+        color: $color-celeste;
+        text-transform: uppercase;
+        padding-left: 1.5em;
+        position: relative;
+        font-size: 110%;
+        line-height: 150%;
+        @media (min-width: $md) {
+            font-size: 80%;
+        }
+
+        &:before {
+            content: '>> ';
+            font-size: 120%;
+            vertical-align: top;
+            position: absolute;
+            top: -2px;
+            left: 0;
+        }
+    }
+}//.bariloche-section
+
+
+.experiencias-section {
+    background-color: rgba(52,255,247,1);
+    color: $color-blanco;
+    
+    .subtitulo-section {
+        margin: 1.5em 0;
+    }
+}
+
+.instagram-section {
+    background-color: #f7f5f6;
+
+}//.instagram-section
