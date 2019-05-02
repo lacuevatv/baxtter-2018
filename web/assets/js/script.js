@@ -534,7 +534,7 @@ $( window ).on('load', function(){
         */
         if (window.innerWidth > 900) {
             if ( partnersBackground.hasClass('in-view') ) {
-                var modificador = 10; 
+                var modificador = 20; 
                 
                 //vemos si es movil
                 if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
