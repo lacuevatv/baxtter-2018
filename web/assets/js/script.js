@@ -543,7 +543,7 @@ $( window ).on('load', function(){
                     }
                     //version pc
                     if ( window.innerWidth < 1440 ) {
-                        modificador = 80;
+                        modificador = 100;
                     }
                     if ( window.innerWidth < 1200 ) {
                         modificador = 130;

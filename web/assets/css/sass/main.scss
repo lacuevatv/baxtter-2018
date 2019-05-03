@@ -1402,12 +1402,12 @@
                 left: 0;
                 display: block;
                 background-image: url(../images/sprite-nuevo.png);
-                background-size: 82px 66px;
+                background-size: 83px 150px;
                 background-position: -60px 0px;
 
                 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
                     background-image: url(../images/sprite-nuevo2x.png) no-repeat;
-                    background-size: 82px 66px;
+                    background-size: 83px 150px;
                 }
             }
 

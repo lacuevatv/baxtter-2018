@@ -1884,25 +1884,44 @@ img {
 
 .icon-redes-tiptok {
   background: url(../images/sprite-nuevo.png) no-repeat;
-  background-size: 82px 66px;
-  background-position: 0px 0px;
+  background-size: 83px 150px;
+  background-position: 0px -68px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .icon-redes-tiptok {
+    background: url(../images/sprite-nuevo2x.png) no-repeat;
+    background-size: 83px 150px;
+    background-position: 0px -68px;
+  }
+}
+@media (min-width: 992px) {
+  .icon-redes-tiptok {
+    background: url(../images/sprite-nuevo.png) no-repeat;
+    background-size: 83px 150px;
+    background-position: 0px 0px;
+  }
+}
+@media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and (min-resolution: 240dpi) {
+  .icon-redes-tiptok {
+    background: url(../images/sprite-nuevo2x.png) no-repeat;
+    background-size: 83px 150px;
+    background-position: 0px 0px;
+  }
 }
 .icon-redes-tiptok:hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background-position: 0px -34px;
+  background-position: 0px -109px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
-  .icon-redes-tiptok {
-    background: url(../images/sprite-nuevo2x.png) no-repeat;
-    background-size: 82px 66px;
-    background-position: 0px 0px;
+@media (min-width: 992px) {
+  .icon-redes-tiptok:hover {
+    background-position: 0px -34px;
   }
 }
 
@@ -2047,7 +2066,7 @@ img {
 
 .icon-redes-tiptok-xs {
   background: url(../images/sprite-nuevo.png) no-repeat;
-  background-size: 82px 66px;
+  background-size: 83px 150px;
   background-position: -32px -2px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -2064,7 +2083,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .icon-redes-tiptok-xs {
     background: url(../images/sprite-nuevo2x.png) no-repeat;
-    background-size: 82px 66px;
+    background-size: 83px 150px;
     background-position: -32px -2px;
   }
 }
@@ -3880,13 +3899,13 @@ form .msj-form {
   left: 0;
   display: block;
   background-image: url(../images/sprite-nuevo.png);
-  background-size: 82px 66px;
+  background-size: 83px 150px;
   background-position: -60px 0px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .experiencias-section .lista-experiencias li:before {
     background-image: url(../images/sprite-nuevo2x.png) no-repeat;
-    background-size: 82px 66px;
+    background-size: 83px 150px;
   }
 }
 .experiencias-section .lista-experiencias li > video {
