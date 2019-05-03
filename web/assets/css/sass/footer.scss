@@ -8,16 +8,25 @@
     background-color: $color-rojo-opaco;
 
     .partners-wrapper {
-        padding: 2em 0;
+        padding: 1em 0;
         @media (min-width: $md) {
             padding: 5em 0;
         }
 
         .partners-logos {
-            width: 100%;
-            padding: 2em 2em 3em;
+            width: 70%;
+            padding: 2em 0 3em;
             @media (min-width: $md) {
+                width: 50%;
                 padding: 3em 2em 5em;
+            }
+
+            .imagen-logo {
+                width: 100px!important;
+                height: auto;
+                @media (min-width: $sm) {
+                    width: 166px!important;
+                }
             }
             
         }
@@ -52,7 +61,16 @@
 
         .partners-logos {
             width: 100%;
-            padding: 5em 2em 4em;
+            padding: 5em 0 4em;
+
+            .imagen-logo {
+                width: 100px!important;
+                height: auto;
+                @media (min-width: $sm) {
+                    width: 166px!important;
+                }
+            }
+            
         }
     }
 }

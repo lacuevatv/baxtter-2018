@@ -539,14 +539,14 @@ $( window ).on('load', function(){
                 //vemos si es movil
                 if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
                     if ( window.innerWidth < 1660 ) {
-                        modificador = 40;
+                        modificador = 70;
                     }
                     //version pc
                     if ( window.innerWidth < 1440 ) {
-                        modificador = 70;
+                        modificador = 80;
                     }
                     if ( window.innerWidth < 1200 ) {
-                        modificador = 100;
+                        modificador = 130;
                     }
                     
                     var porcentaje = barra * 0.025 - modificador;
@@ -932,6 +932,9 @@ $(window).on('load', function(){
 	    responsive:{
 	        0:{
 	            items:1
+            },
+            768:{
+	            items:2
 	        },
 	    }
     });//owl

@@ -339,7 +339,7 @@ img {
   background-color: #ff545a;
 }
 .partners-section .partners-wrapper {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 @media (min-width: 992px) {
   .partners-section .partners-wrapper {
@@ -347,12 +347,22 @@ img {
   }
 }
 .partners-section .partners-wrapper .partners-logos {
-  width: 100%;
-  padding: 2em 2em 3em;
+  width: 70%;
+  padding: 2em 0 3em;
 }
 @media (min-width: 992px) {
   .partners-section .partners-wrapper .partners-logos {
+    width: 50%;
     padding: 3em 2em 5em;
+  }
+}
+.partners-section .partners-wrapper .partners-logos .imagen-logo {
+  width: 100px !important;
+  height: auto;
+}
+@media (min-width: 767px) {
+  .partners-section .partners-wrapper .partners-logos .imagen-logo {
+    width: 166px !important;
   }
 }
 .partners-section .background-partners {
@@ -387,7 +397,16 @@ img {
 }
 .partners-section-movil .partners-wrapper .partners-logos {
   width: 100%;
-  padding: 5em 2em 4em;
+  padding: 5em 0 4em;
+}
+.partners-section-movil .partners-wrapper .partners-logos .imagen-logo {
+  width: 100px !important;
+  height: auto;
+}
+@media (min-width: 767px) {
+  .partners-section-movil .partners-wrapper .partners-logos .imagen-logo {
+    width: 166px !important;
+  }
 }
 
 .legales-turismo {

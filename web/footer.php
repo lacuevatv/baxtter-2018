@@ -7,6 +7,15 @@
  * 
 */
 global $dispositivo;
+$partnersLogos = array(
+    array('imagen' => 'partner01.png', 'titulo' => 'Partner - DC Shoes'),
+    array('imagen' => 'partner02.png', 'titulo' => 'Partner - Quick Silver'),
+    array('imagen' => 'partner03.png', 'titulo' => 'Partner - Roxy'),
+    array('imagen' => 'partner04.png', 'titulo' => 'Partner - Latam'),
+    array('imagen' => 'partner05.png', 'titulo' => 'Partner - Aerolineas Argentinas'),
+    array('imagen' => 'partner06.png', 'titulo' => 'Partner - Arcor'),
+    array('imagen' => 'partner07.png', 'titulo' => 'Partner - Samsung'),
+);
 ?>      
 
 <!--- footer -->
@@ -29,15 +38,11 @@ global $dispositivo;
                         Gracias por acompañarnos
                     </h3>
                     <ul id='owl-partners' class="partners-logos owl-carousel">
-                        <li>
-                            <img src="/assets/images/movil/logo-partners-movil.png" alt="Partners - Baxtter">
-                        </li>
-                        <li>
-                            <img src="/assets/images/movil/logo-partners-movil.png" alt="Partners - Baxtter">
-                        </li>
-                        <li>
-                            <img src="/assets/images/movil/logo-partners-movil.png" alt="Partners - Baxtter">
-                        </li>
+                        <?php foreach ( $partnersLogos as $partner ) { ?>
+                            <li>
+                                <img class="imagen-logo" src="<?php echo MAINSURL . '/contenido/'. $partner['imagen']; ?>" alt="<?php echo $partner['titulo']; ?>">
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -60,15 +65,11 @@ global $dispositivo;
                         Gracias por acompañarnos
                     </h3>
                     <ul id='owl-partners' class="partners-logos owl-carousel">
-                        <li>
-                            <img src="/assets/images/logos-partners.png" alt="Partners - Baxtter">
-                        </li>
-                        <li>
-                            <img src="/assets/images/logos-partners.png" alt="Partners - Baxtter">
-                        </li>
-                        <li>
-                            <img src="/assets/images/logos-partners.png" alt="Partners - Baxtter">
-                        </li>
+                        <?php foreach ( $partnersLogos as $partner ) { ?>
+                            <li>
+                                <img class="imagen-logo" src="<?php echo MAINSURL . '/contenido/'. $partner['imagen']; ?>" alt="<?php echo $partner['titulo']; ?>">
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
