@@ -15,12 +15,12 @@
     <!-- front -->
     <div class="front-section">
             
-        <div class="left animate-element slide-left">
+        <div class="left animate-element bigger slide-left">
             <span class="text vertical color-negro">Instagram</span>
             <span class="line vertical fondo-negro"></span>
         </div>
         
-        <div class="right animate-element slide-right">
+        <div class="right animate-element bigger slide-right">
             <span class="text vertical color-negro">#somosBaxtter</span>
             <span class="line vertical fondo-negro"></span>
         </div>    

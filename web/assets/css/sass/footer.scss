@@ -14,11 +14,11 @@
         }
 
         .partners-logos {
-            width: 70%;
+            width: 60%;
             padding: 2em 0 3em;
             @media (min-width: $md) {
                 width: 50%;
-                padding: 3em 2em 5em;
+                padding: 3em 0 5em;
             }
 
             .imagen-logo {
@@ -54,14 +54,18 @@
     }
 
     .partners-wrapper {
-        padding: 4em 0;
+        padding: 2em 0;
         @media (min-width: $sm) {
             padding: 4em 0;
         } 
 
         .partners-logos {
-            width: 100%;
-            padding: 5em 0 4em;
+            width: 60%;
+            padding: 2em 0 3em;
+            @media (min-width: $md) {
+                width: 50%;
+                padding: 3em 0 5em;
+            }
 
             .imagen-logo {
                 width: 100px!important;

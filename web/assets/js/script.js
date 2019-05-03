@@ -127,9 +127,9 @@ $(document).ready(function(){
     var vidNosotros_bottom = ( vidNosotros_top + vidNosotros.height() ) + NumeroModificadorBottom;
 
     //si no es movil, arranca
-    if ( window.innerWidth > 992 ) {
+    /*if ( window.innerWidth > 992 ) {
         playernosotros.play();
-    }
+    }*/
     
     $(window).scroll(function(){
         var position = ($(window).scrollTop());
@@ -534,7 +534,7 @@ $( window ).on('load', function(){
         */
         if (window.innerWidth > 900) {
             if ( partnersBackground.hasClass('in-view') ) {
-                var modificador = 20; 
+                var modificador = 50; 
                 
                 //vemos si es movil
                 if ( ! partnersBackground.hasClass('dispositivo-movil') ) {
@@ -933,7 +933,7 @@ $(window).on('load', function(){
 	        0:{
 	            items:1
             },
-            768:{
+            720:{
 	            items:2
 	        },
 	    }
