@@ -1,18 +1,18 @@
 <?php 
 $videos = array(
-    array('titulo' => 'Fiesta zero', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Nieve Baxtter', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Parador de montaña', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Clases de sky y snowboard', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Fiestas itinerantes', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Excursiones de aventura', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Bariloche en bici', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Pool party', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Pillow fest', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Sunset relax', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Previas en los hoteles', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Boliches powered by Baxtter', 'url'=> '#', 'id' => '123' ),
-    array('titulo' => 'Silent Fest', 'url'=> '#', 'id' => '123' ),
+    array('titulo' => 'Fiesta Zero', 'slug' => 'fiesta-zero', 'url'=> 'https://vimeo.com/315272748', 'id' => '315272748' ),
+    array('titulo' => 'Nieve Baxtter', 'slug' => 'nieve-baxtter', 'url'=> 'https://vimeo.com/315272902', 'id' => '315272902' ),
+    array('titulo' => 'Parador de Montaña', 'slug' => 'parador-montana', 'url'=> 'https://vimeo.com/333849918', 'id' => '333849918' ),
+    array('titulo' => 'Clases de Ski & Snowboard', 'slug' => 'clases-sky-snowboard', 'url'=> 'https://vimeo.com/315273034', 'id' => '315273034' ),
+    array('titulo' => 'Fiestas itinerantes', 'slug' => 'fiestas-itinerantes', 'url'=> 'https://vimeo.com/315272117', 'id' => '315272117' ),
+    array('titulo' => 'Excursiones de aventura', 'slug' => 'excursiones-aventura', 'url'=> 'https://vimeo.com/315273216', 'id' => '315273216' ),
+    array('titulo' => 'Bariloche en Bici', 'slug' => 'bariloche-bici', 'url'=> 'https://vimeo.com/315272117', 'id' => '315272117' ),
+    array('titulo' => 'Pool Party', 'slug' => 'pool-party', 'url'=> 'https://vimeo.com/315273703', 'id' => '315273703' ),
+    array('titulo' => 'Pilow Fest', 'slug' => 'pillow-fest', 'url'=> 'https://vimeo.com/315272212', 'id' => '315272212' ),
+    array('titulo' => 'Sunset Relax', 'slug' => 'sunset-relax', 'url'=> 'https://vimeo.com/315273837', 'id' => '315273837' ),
+    array('titulo' => 'Previas en los hoteles', 'slug' => 'previas-hoteles', 'url'=> 'https://vimeo.com/315274756', 'id' => '315274756' ),
+    array('titulo' => 'Boliches Powered by baxtte', 'slug' => 'boliches-powered-baxtter', 'url'=> 'https://vimeo.com/315274063', 'id' => '315274063' ),
+    array('titulo' => 'Silent Fest', 'slug' => 'silent-fest', 'url'=> 'https://vimeo.com/333850741', 'id' => '333850741' ),
 );
 ?>
 <section id="experiencias-baxtter" class="section-capas experiencias-section">
@@ -20,17 +20,17 @@ $videos = array(
     if ($dispositivo != 'movil') : ?>
     <div class="background-section">
         <div class="video-wrapper">
-            <video class="video" autoplay loop>
+            <video width="960" height="410" id="background-experiencias-video" class="video" autoplay muted loop>
                 <source src="<?php echo MAINSURL; ?>/contenido/parador_web.mov" type="video/mov">
-                <!--<source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">-->
+                <source src="<?php echo MAINSURL; ?>/contenido/parador_web.mp4" type="video/mp4">
+                <!--<source src="movie.ogg" type="video/ogg">-->
                 Your browser does not support the video tag.
             </video>
             <span class="shutter"></span>
         </div>
     </div>
 
-    <?php endif; ?>
+<?php endif; ?>
 
     <div class="main-section container">
 
@@ -43,7 +43,10 @@ $videos = array(
             <ul class="lista-experiencias">
                 <?php foreach ( $videos as $video ) { ?>
                     <li>
-                        <?php echo $video['titulo']; ?>
+                        <a class="afterglow" href="#<?php echo $video['slug']; ?>">
+                            <?php echo $video['titulo']; ?>
+                        </a>
+                        <video data-overscale="false" id="<?php echo $video['slug']; ?>" data-vimeo-id="<?php echo $video['id']; ?>" width="960" height="540"></video>                        
                     </li>
                 <?php } ?>
             </ul>

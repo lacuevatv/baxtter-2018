@@ -3773,19 +3773,25 @@ form .msj-form {
   color: #fff;
 }
 .experiencias-section .video-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  display: none;
+}
+@media (min-width: 992px) {
+  .experiencias-section .video-wrapper {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 }
 .experiencias-section .video-wrapper .video {
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  left: -10%;
+  top: -10%;
+  width: 120%;
+  height: 120%;
   z-index: 1;
 }
 .experiencias-section .video-wrapper .shutter {
@@ -3796,6 +3802,18 @@ form .msj-form {
   height: 100%;
   z-index: 11;
   background-color: rgba(52, 255, 247, 0.7);
+}
+@media (min-width: 992px) {
+  .experiencias-section .main-section-wrapper {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .experiencias-section .main-section-wrapper {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
 }
 .experiencias-section .lista-experiencias {
   margin: 1em 0;
@@ -3845,6 +3863,9 @@ form .msj-form {
     background-image: url(../images/sprite-nuevo2x.png) no-repeat;
     background-size: 82px 66px;
   }
+}
+.experiencias-section .lista-experiencias li > video {
+  display: none;
 }
 .experiencias-section .text-aclaratorio {
   color: #fe477a;

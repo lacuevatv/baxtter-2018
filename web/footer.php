@@ -128,6 +128,9 @@ global $dispositivo;
 <!--- scripts -->    
 <!------- jquery 3.1.1 ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
+    <!------- afterglow player ------>
+    <!--<script src="<?php echo MAINSURL; ?>/assets/js/afterglowplayer@1x.js"></script>-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
     <!------- owl ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/owl.carousel.min.js"></script>
     <!------- vimeo ------>
