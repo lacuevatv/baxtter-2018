@@ -29,6 +29,7 @@ define( 'HABILITACIONES', 'Baxtter viajes E.V. y T 7476 Disp. 109 - Todos los de
 define('INSTAGRAM', 'somosbaxtter');//nombre usuario
 //LINKS:
 define( 'EMAILFORMULARIO', 'info@baxtter.com.ar' );
+define( 'EMAILREUNION', 'egresados@baxtter.com.ar' );
 define( 'LINK_EMAIL', 'info@baxtter.com.ar' );
 define( 'WHATSAPPTEXT', '+54.911.7287.8008');
 define( 'WHATSAPP', '541172878008');

@@ -32,7 +32,7 @@ if( isAjax() ) {
 			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br>';
 
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			enviarFormulario( EMAILFORMULARIO , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
+			enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
 			//guardar en base de datos
 			saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, 'reunion' );
 		break;
