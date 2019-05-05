@@ -16,17 +16,6 @@
       <!-- modulo -->
       <section>
         <div class="modulo-wrapper">
-          <h2>Galería de Imágenes</h2>
-          <p>Manipular las distintas galerias de imagenes.</p>
-          <p><a class="btn btn-primary" href="index.php?admin=galeria-imagenes" role="button">Ir a la galeria</a></p>
-        </div>
-      </section><!-- //modulo -->
-    </div><!-- //columna -->
-
-    <div class="col-30">
-      <!-- modulo -->
-      <section>
-        <div class="modulo-wrapper">
           <h2>Archivos descargas</h2>
           <p>Administrar los archivos de descargas (pdfs).</p>
           <p><a class="btn btn-primary" href="index.php?admin=archivos-descargas" role="button">Administrar Archivos</a></p>
