@@ -34,7 +34,7 @@ global $dispositivo;
                     </h2>
                     
                     <h3 class="subtitulo-seccion">
-                        Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace 28 años.
+                        Somos líderes natos en innovación y con eso en nuestro gen, nos dedicamos a organizar tremendos viajes de egresados desde hace casi 30 años.
                     </h3>
                 </hgroup>
 

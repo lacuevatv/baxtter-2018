@@ -51,8 +51,16 @@ global $dispositivo;
     <script src="<?php echo MAINSURL; ?>/assets/js/modernizr-custom.js"></script>
 
 </head>
-<body>
+<body> 
 <div class="wrapper-site" data-page-actual="<?php echo $pageActual; ?>">
+    <div class="wrapper-whatsapp-movil">
+		<a class="btn-icon-left" href="<?php echo WHATSAPPLINK; ?>" target="_blank">
+			<picture>
+				<source srcset="<?php echo MAINSURL; ?>/assets/images/icon-wa.png 1x, <?php echo MAINSURL; ?>/assets/images/icon-wa@2x.png 2x" media="(min-width: 315px)">
+				<img src="<?php echo MAINSURL; ?>/assets/images/whatsapp-mob-fix.png" alt="Icon Whatsapp">
+			</picture>
+		</a>
+	</div>
 <!--- header ---------------------->
     <?php
         openPopUp($pageActual);

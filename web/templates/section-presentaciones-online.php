@@ -5,10 +5,10 @@
         <div class="main-section-wrapper">
             
             <h2 class="titulo-seccion titulo-seccion-claro">
-                Presentaciones online
+                Streaming baxtter
             </h2>
             <h4 class="subtitulo-seccion subtitulo-seccion-claro">
-                Disfrutá de tu reunión informativa desde la comodidad de nuestros webings interactivos.
+                Participá de tu reunión informativa desde la comodidad de tu casa.
             </h4>
 
             <a href="#" target="_blank">Inscribite acá</a>

@@ -30,8 +30,9 @@ define('INSTAGRAM', 'somosbaxtter');//nombre usuario
 //LINKS:
 define( 'EMAILFORMULARIO', 'info@baxtter.com.ar' );
 define( 'LINK_EMAIL', 'info@baxtter.com.ar' );
-define( 'WHATSAPPTEXT', '+54.11.3962.7656');
-define( 'WHATSAPP', '541139627656');
+define( 'WHATSAPPTEXT', '+54.911.7287.8008');
+define( 'WHATSAPP', '541172878008');
+define('WHATSAPPLINK', 'https://wa.me/'. WHATSAPP);
 define('LINK_FACEBOOK', 'https://www.facebook.com/somosbaxtter/');
 define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/somosbaxtter/');

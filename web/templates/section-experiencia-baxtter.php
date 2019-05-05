@@ -52,7 +52,7 @@ $videos = array(
             </ul>
 
             <p class="text-aclaratorio animate-element slide-up" style="animation-delay: 1s;">
-                <em>Selecciona el video para vivir la experiencia</em>
+                <em>Hace clic sobre el video que te gustaría ver.</em>
             </p>
                 
             

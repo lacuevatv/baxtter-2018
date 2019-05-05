@@ -246,6 +246,21 @@ html, body {
   z-index: 1;
 }
 
+.wrapper-whatsapp-movil {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1111111;
+}
+@media (min-width: 767px) {
+  .wrapper-whatsapp-movil {
+    display: none;
+  }
+}
+.wrapper-whatsapp-movil img {
+  width: 22px;
+}
+
 .container {
   padding: 0 40px;
 }

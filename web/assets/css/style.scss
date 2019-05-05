@@ -63,6 +63,21 @@ html, body {
     z-index: 1;
 }
 
+.wrapper-whatsapp-movil {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1111111;
+
+    @media (min-width: $sm) {
+        display: none;
+    }
+
+    img {
+        width: 22px;
+    }
+}
+
 .container {//container generico para que todo tenga el mismo ancho
     padding: 0 40px;
     @media (min-width: $xs) {
