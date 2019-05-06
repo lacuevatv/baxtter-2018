@@ -82,6 +82,15 @@ switch ($data) {
 					</span>
 				</div>
 
+				<div class="form-group">
+					<input type="text" name="localidad">
+					<label for="localidad">Localidad</label>
+					<span class="icon-input"></span>
+					<span class="msj-error-input">
+						La localidad es indispensable
+					</span>
+				</div>
+
 				<button type="submit" class="btn-submit">Enviar</button>
 
 			</div><!-- //.inner-wrapper-form -->

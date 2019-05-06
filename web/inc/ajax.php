@@ -28,13 +28,14 @@ if( isAjax() ) {
 			$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
 			$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
 			$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+			$localidad       = isset( $_POST['localidad'] ) ? $_POST['localidad'] : '';
 			
-			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br>';
+			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Localidad: '. $localidad . '<br> Email: '. $email . '<br>';
 
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
 			enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
 			//guardar en base de datos
-			saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, 'reunion' );
+			saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, $localidad, 'reunion' );
 		break;
 
 		case 'formulario-default':
@@ -108,14 +109,14 @@ function enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email) {
 }
 
 
-function saveNewContact ( $nombre = '', $telefono = '', $email = '', $mensaje = '', $escuela = '', $cargo = '', $fecha_viaje = '', $cant_alumnos = '', $form_type = 'contacto') {
+function saveNewContact ( $nombre = '', $telefono = '', $email = '', $mensaje = '', $escuela = '', $cargo = '', $fecha_viaje = '', $cant_alumnos = '', $localidad= '', $form_type = 'contacto') {
 	$connection = connectDB();
 	$tabla      = 'contacto';
 		
-	$queryCreate  = "INSERT INTO " .$tabla. " (nombre,telefono,email,mensaje,escuela,cargo,fecha_viaje,cant_alumnos,form_type) VALUES ('".$nombre."','".$telefono."','".$email."','".$mensaje."','".$escuela."','".$cargo."','".$fecha_viaje."','".$cant_alumnos."','".$form_type."')";
+	$queryCreate  = "INSERT INTO " .$tabla. " (nombre,telefono,email,mensaje,escuela,cargo,fecha_viaje,cant_alumnos,localidad,form_type) VALUES ('".$nombre."','".$telefono."','".$email."','".$mensaje."','".$escuela."','".$cargo."','".$fecha_viaje."','".$cant_alumnos."','".$localidad."','".$form_type."')";
 	$result = mysqli_query($connection, $queryCreate);
 	
-	echo mysqli_insert_id($connection);
+	//echo mysqli_insert_id($connection);
 
 	//cierre base de datos
 	mysqli_close($connection);

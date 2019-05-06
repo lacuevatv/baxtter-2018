@@ -73,13 +73,13 @@ load_module( 'contactos' );
 							<?php echo $suscriptores[$i]['email']; ?>
 						</td>
 						<td>
-							<?php echo utf8_decode($suscriptores[$i]['nombre']); ?>
+							<?php echo $suscriptores[$i]['nombre']; ?>
 						</td>
 						<td>
                             <?php echo $suscriptores[$i]['telefono']; ?>
 						</td>
 						<td class="font-reduce">
-                            <?php echo utf8_decode($suscriptores[$i]['mensaje']); ?>
+                            <?php echo $suscriptores[$i]['mensaje']; ?>
 						</td>
                         <td>
                             <?php echo $suscriptores[$i]['cargo']; ?>
