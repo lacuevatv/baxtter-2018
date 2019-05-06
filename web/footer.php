@@ -127,22 +127,19 @@ $partnersLogos = array(
 
 </div><!--- //.wrapper-site -->
 <!--- scripts -->    
-<!------- jquery 3.1.1 ------>
+    <!------- jquery 3.1.1 ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
     <!------- afterglow player ------>
-    <!--<script src="<?php echo MAINSURL; ?>/assets/js/afterglowplayer@1x.js"></script>-->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
     <!------- owl ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/owl.carousel.min.js"></script>
     <!------- vimeo ------>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <!------- twitter ------>
-    <script src="<?php echo MAINSURL; ?>/assets/js/tweetie.min.js"></script>
-
+    <!--<script src="<?php echo MAINSURL; ?>/assets/js/tweetie.min.js"></script>-->
     <!------- OWN SCRIPT ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
-    <script>
-                    
-                    </script>
+    <!------- recaptcha ------>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onLoad&render=explicit" async defer></script>
 </body>
 </html>

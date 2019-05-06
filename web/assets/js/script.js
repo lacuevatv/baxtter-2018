@@ -612,6 +612,26 @@ $( window ).on('load', function(){
 2.0 FORMULARIOS
 --------------------------------------------------------------*/
 
+/*
+ * RECAPTCHA
+ */
+//funcion que carga las recaptcha
+var onLoad = function() {
+    widgetId1 = grecaptcha.render('captcha-reunion', {
+    'sitekey' : '6LeJD6IUAAAAAEvZoJm53pqf4pPi2IsGc0ItKncf',
+    //'callback' : onSubmit, 
+    'badge' : 'bottomleft',
+    'size' : 'invisible'
+    });
+
+    widgetId2 = grecaptcha.render('captcha-default', {
+    'sitekey' : '6LeJD6IUAAAAAEvZoJm53pqf4pPi2IsGc0ItKncf',
+    //'callback' : onSubmit, 
+    'badge' : 'bottomleft',
+    'size' : 'invisible'
+    });
+};
+
 var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
 var numeros = '0123456789';
 var letras = 'abcdefghijklmnñopqrstuvwxyz';
@@ -823,27 +843,33 @@ $(document).ready(function() {
         var msj = $(this).find('.msj-form');
     	formData = new FormData( this );
         formData.append('function','formulario-reunion');
-
-    	$.ajax( {
-            type: 'POST',
-            url: ajaxFileUrl,
-            data: formData,
-            processData: false,
-            contentType: false,
-            cache: false,
-            //funcion antes de enviar
-            beforeSend: function() {
-                $(loader).fadeIn();
-            },
-            success: function ( response ) {
-                //console.log(response);
-                $(loader).fadeOut(); 
-                msj.html(response);    
-            },
-            error: function ( ) {
-                console.log('error');
-            },
-    	});//cierre ajax
+        
+        grecaptcha.execute(widgetId1).then(function(token) {
+    
+            formData.append('capcha',token);
+            
+            $.ajax( {
+                type: 'POST',
+                url: ajaxFileUrl,
+                data: formData,
+                processData: false,
+                contentType: false,
+                cache: false,
+                //funcion antes de enviar
+                beforeSend: function() {
+                    $(loader).fadeIn();
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    $(loader).fadeOut(); 
+                    msj.html(response); 
+                    grecaptcha.reset(widgetId1);
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+        });
 
     });//submit formulario 1
 
@@ -856,29 +882,37 @@ $(document).ready(function() {
     	formData = new FormData( this );
         formData.append('function','formulario-default');
 
-    	$.ajax( {
-            type: 'POST',
-            url: ajaxFileUrl,
-            data: formData,
-            processData: false,
-            contentType: false,
-            cache: false,
-            //funcion antes de enviar
-            beforeSend: function() {
-                $(loader).fadeIn();
-            },
-            success: function ( response ) {
-                //console.log(response);
-                $(loader).fadeOut(); 
-                msj.html(response);    
-            },
-            error: function ( ) {
-                console.log('error');
-            },
-    	});//cierre ajax
+        grecaptcha.execute(widgetId2).then(function(token) {
+    
+            formData.append('capcha',token);
+
+            $.ajax( {
+                type: 'POST',
+                url: ajaxFileUrl,
+                data: formData,
+                processData: false,
+                contentType: false,
+                cache: false,
+                //funcion antes de enviar
+                beforeSend: function() {
+                    $(loader).fadeIn();
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    $(loader).fadeOut(); 
+                    msj.html(response); 
+                    grecaptcha.reset(widgetId2);   
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+        });
 
     });//submit formulario default
+    
 
+    
 });//on ready
 
 /*--------------------------------------------------------------
@@ -970,7 +1004,7 @@ $(window).on('load', function(){
 /*--------------------------------------------------------------
 3.0 OWL TWITTER
 --------------------------------------------------------------*/
-$(document).ready(function(){
+/*$(document).ready(function(){
     //espera cinco segundos para que carguen los twitters
     setTimeout (slider_twiters_on, 5000)
     
@@ -1076,4 +1110,4 @@ $(document).ready(function(){
         }, function() {
         console.log('twitter');
     });
-});
+});*/

@@ -4,6 +4,7 @@ switch ($data) {
 	case 'reunion': ?>
 		<!-- reunion-form -->
 		<form method="POST" name="reunion-form" id="reunion-form">
+			<div id="captcha-reunion"></div>
 			<div class="loader"></div>
 			
 			<div class="title-form">
@@ -23,7 +24,7 @@ switch ($data) {
 					<input type="text" name="name-school">
 					<label for="name-school">Nombre del colegio</label>
 					<span class="msj-error-input">
-						ste campo nos ayuda a comunicarnos
+						Este campo nos ayuda a comunicarnos
 					</span>
 				</div>
 
@@ -90,7 +91,7 @@ switch ($data) {
 						La localidad es indispensable
 					</span>
 				</div>
-
+				
 				<button type="submit" class="btn-submit">Enviar</button>
 
 			</div><!-- //.inner-wrapper-form -->
@@ -101,6 +102,7 @@ switch ($data) {
 	case 'default': ?>
 		<!-- default-form -->
 		<form method="POST" name="default-form" id="default-form">
+			<div id="captcha-default"></div>
 			<div class="loader"></div>
 			<div class="inner-wrapper-form">
 

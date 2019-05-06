@@ -10,16 +10,32 @@
 require_once 'config.php';
 require_once 'functions.php';
 require_once 'lib/mobile-detect/Mobile_Detect.php';
+require_once 'lib/recaptcha-master/src/autoload.php';
 require("lib/class.phpmailer.php");
 require("lib/class.smtp.php");
+define('RECAPTCHA_SECRET', '6LeJD6IUAAAAADAD2vb5w1ezTEHndQBfdeqaXt4d');
 
 //chequea si es peticion de ajax y ejecuta la funcion
 if( isAjax() ) {
 	$function = isset($_POST['function']) ? $_POST['function'] : '';
-
+	
 	switch ( $function ) {
 		case 'formulario-reunion':
 			
+			/*$recaptcha = new \ReCaptcha\ReCaptcha(RECAPTCHA_SECRET);
+			$resp = null;
+			$resp = $recaptcha->verifyResponse(
+				$_SERVER["REMOTE_ADDR"],
+				$_POST["capcha"]
+			 );
+			 if ($response->success && $resp != NULL) {
+				echo 'Error de captcha, intente nuevamente';
+				var_dump($response);
+				var_dump($resp);
+				return;
+			} else {*/
+				
+				
 			// Valores enviados desde el formulario
 			$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
 			$cant_alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
@@ -31,11 +47,13 @@ if( isAjax() ) {
 			$localidad       = isset( $_POST['localidad'] ) ? $_POST['localidad'] : '';
 			
 			$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Localidad: '. $localidad . '<br> Email: '. $email . '<br>';
-
+			
 			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
 			enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
 			//guardar en base de datos
 			saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, $localidad, 'reunion' );
+			
+			
 		break;
 
 		case 'formulario-default':
