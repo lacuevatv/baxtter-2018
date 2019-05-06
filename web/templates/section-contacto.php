@@ -56,7 +56,7 @@ global $dispositivo;
                     <address>
                         Calle 50 Nro. 740 1/2 - CP 1900<br>
                         Pcia. de Buenos Aires<br>
-                        +54 221.482.1045<br>
+                        +54 11.3962.7656<br>
                         laplata@baxtter.com.ar<br>
                         Lun/Vie: 10 a 18hrs
                     </address>
@@ -69,7 +69,7 @@ global $dispositivo;
                     <address>
                         Av Corrientes 617 Piso 2<br>
                         CP 1043 - C.A.B.A.<br>
-                        +54 11.4326.4494<br>
+                        +54 11.3962.7656<br>
                         bsas@baxtter.com.ar<br>
                         Lun/Vie: 10 a 18hrs
                     </address>
@@ -82,7 +82,7 @@ global $dispositivo;
                     <address>
                         Av. Colón 567 Piso 8<br>
                         CP 5000-Pcia. de Córdoba<br>
-                        +54 351.423.2351<br>
+                        +54 3962.7656<br>
                         cordoba@baxtter.com.ar<br>
                         Lun/Vie: 10 a 18hrs
                     </address>

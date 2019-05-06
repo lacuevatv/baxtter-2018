@@ -45,8 +45,8 @@ $disp = dispositivo();
         <ul class="secondary-menu secondary-menu-movil">
             <div class="destacado">
                 <li>
-                    <a href="https://api.whatsapp.com/send?phone=<?php echo WHATSAPP; ?>" target="_blank" class="movil-icon-after">
-                        <?php echo WHATSAPPTEXT; ?>
+                    <a href="tel:541139627656" target="_blank" class="movil-icon-after">
+                        +5411.3962.7656
                     </a>
                 </li>
 
@@ -68,8 +68,8 @@ $disp = dispositivo();
                 </a>
             </li>
             <li>
-                <a href="https://api.whatsapp.com/send?phone=<?php echo WHATSAPP; ?>" target="_blank" class="icon-email-tel icon-redes-telefono-xs">
-                    <?php echo WHATSAPPTEXT; ?>
+                <a href="tel:541139627656" target="_blank" class="icon-email-tel icon-redes-telefono-xs">
+                    +5411.3962.7656
                 </a>
             </li>
             
