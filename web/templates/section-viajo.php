@@ -17,7 +17,7 @@
             <ul class="pdfs-links">
                 <li class="animate-element slide-up-list" style="animation-delay: 0.3s;">
                     <!--<a href="<?php //urlPdf( 'viajo-baxtter-ficha-medica' ); ?>" target="_blank" class="btn-hover-red">-->
-                    <a href="https://www.paxmanager.com.ar/baxtter/Login.aspx" target="_blank" class="btn-hover-red">
+                    <a href="https://fichamedica.paxid.net/ficha/?code=bax" target="_blank" class="btn-hover-red">
                         Ficha médica
                     </a>
                 </li>
