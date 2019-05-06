@@ -30,8 +30,8 @@ if( isAjax() ) {
 				
 				var_dump( $resp->getErrorCodes() );
 				return;
-			} else {*/
-					
+			} else {
+			}*/	
 				// Valores enviados desde el formulario
 				$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
 				$cant_alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
@@ -49,7 +49,7 @@ if( isAjax() ) {
 				//guardar en base de datos
 				saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, $localidad, 'reunion' );
 		
-			//}
+			
 			
 		break;
 
