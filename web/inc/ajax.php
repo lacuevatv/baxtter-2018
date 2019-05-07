@@ -29,11 +29,13 @@ if( isAjax() ) {
 			$resp = $recaptcha->verify($responseCaptcha, $remoteIp);
 			if ( !$resp->isSuccess() ) {
 				echo 'Error de captcha, intente nuevamente';
-				
+				var_dump( $responseCaptcha );
 				var_dump( $resp->getErrorCodes() );
 				return;
 			} else {
-				
+			
+				echo 'genial, habilitar la funcion de envio';
+
 				// Valores enviados desde el formulario
 				$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
 				$cant_alumnos   = isset( $_POST['alumnos'] ) ? $_POST['alumnos'] : '';
@@ -45,7 +47,7 @@ if( isAjax() ) {
 				$localidad       = isset( $_POST['localidad'] ) ? $_POST['localidad'] : '';
 				
 				$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Localidad: '. $localidad . '<br> Email: '. $email . '<br>';
-				echo 'yeah';
+				
 				//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
 				//enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
 				//guardar en base de datos
