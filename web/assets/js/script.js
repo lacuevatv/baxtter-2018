@@ -619,14 +619,14 @@ $( window ).on('load', function(){
 
 var onLoad = function() {
     widgetId1 = grecaptcha.render('captcha-reunion', {
-    'sitekey' : '6LeJD6IUAAAAAEvZoJm53pqf4pPi2IsGc0ItKncf',
+    'sitekey' : '',
     //'callback' : onSubmit, 
     'badge' : 'bottomleft',
     'size' : 'invisible'
     });
 
     widgetId2 = grecaptcha.render('captcha-default', {
-    'sitekey' : '6LeJD6IUAAAAAEvZoJm53pqf4pPi2IsGc0ItKncf',
+    'sitekey' : '',
     //'callback' : onSubmit, 
     'badge' : 'bottomleft',
     'size' : 'invisible'
@@ -866,7 +866,7 @@ $(document).ready(function() {
                     $(loader).fadeIn();
                 },
                 success: function ( response ) {
-                    console.log(response);
+                    //console.log(response);
                     $(loader).fadeOut(); 
                     msj.html(response); 
                     grecaptcha.reset(widgetId1);
@@ -904,7 +904,7 @@ $(document).ready(function() {
                     $(loader).fadeIn();
                 },
                 success: function ( response ) {
-                    console.log(response);
+                    //console.log(response);
                     $(loader).fadeOut(); 
                     msj.html(response); 
                     grecaptcha.reset(widgetId2);   

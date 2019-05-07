@@ -28,7 +28,7 @@ global $dispositivo;
                         <address>
                             Gral. Urquiza 64 - C.P. 1641
                             Acassuso | BS. AS. - Argentina<br>
-                            11.5788.7278 | 11.4798.7279<br>
+                            +54 11.3962.7656<br>
                             Lun/Vie: 10 a 18hrs
                         </address>
                         

@@ -43,7 +43,8 @@ define('LINK_SPOTIFY', 'https://www.spotify.com/somosbaxtter');
 define('LINK_PINTEREST', 'https://www.pinterest.com/somosbaxtter');
 define('APIKEYGOOGLE', '' );
 define('LINK_TIPTOK', 'https://www.tiktok.com/somosbaxtter');
-
+define('RECAPTCHA', '');
+define('RECAPTCHA_SECRET', '');
 
 global $categorias;
 $categorias = array(

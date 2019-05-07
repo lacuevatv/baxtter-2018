@@ -13,7 +13,6 @@ require_once 'lib/mobile-detect/Mobile_Detect.php';
 require_once 'lib/recaptcha-master/src/autoload.php';
 require("lib/class.phpmailer.php");
 require("lib/class.smtp.php");
-define('RECAPTCHA_SECRET', '6LeJD6IUAAAAADAD2vb5w1ezTEHndQBfdeqaXt4d');
 
 //chequea si es peticion de ajax y ejecuta la funcion
 if( isAjax() ) {
