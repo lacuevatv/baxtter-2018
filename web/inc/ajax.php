@@ -22,19 +22,14 @@ if( isAjax() ) {
 	switch ( $function ) {
 		case 'formulario-reunion':
 			
-			$recaptcha = new \ReCaptcha\ReCaptcha(RECAPTCHA_SECRET);
+			$recaptcha = new \ReCaptcha\ReCaptcha(RECAPTCHA_SECRET, new \ReCaptcha\RequestMethod\CurlPost());
 			$responseCaptcha = $_POST["capcha"];
 			$remoteIp = $_SERVER['REMOTE_ADDR'];
 
 			$resp = $recaptcha->verify($responseCaptcha, $remoteIp);
 			if ( !$resp->isSuccess() ) {
-				echo 'Error de captcha, intente nuevamente';
-				var_dump( $responseCaptcha );
-				var_dump( $resp->getErrorCodes() );
-				return;
+				echo 'Error de captcha, intente de nuevo';
 			} else {
-			
-				echo 'genial, habilitar la funcion de envio';
 
 				// Valores enviados desde el formulario
 				$escuela   = isset( $_POST['name-school'] ) ? $_POST['name-school'] : '';
@@ -49,9 +44,9 @@ if( isAjax() ) {
 				$mensaje = 'Escuela: ' .$escuela. '<br> Cantidad de Alumnos: ' .$cant_alumnos. '<br> Año de viaje: ' .$fecha_viaje. '<br> Alumno/padre/otro: ' .$cargo. '<br> Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Localidad: '. $localidad . '<br> Email: '. $email . '<br>';
 				
 				//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-				//enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
+				enviarFormulario( EMAILREUNION , 'Pedido de Reunión Nuevo', $mensaje, $nombre, $email);
 				//guardar en base de datos
-				//saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, $localidad, 'reunion' );
+				saveNewContact ( $nombre, $telefono, $email, $mensaje, $escuela, $cargo, $fecha_viaje, $cant_alumnos, $localidad, 'reunion' );
 		
 			}
 			
@@ -59,19 +54,27 @@ if( isAjax() ) {
 
 		case 'formulario-default':
 			
-			// Valores enviados desde el formulario
-			$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
-			$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
-			$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
-			$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+			$recaptcha = new \ReCaptcha\ReCaptcha(RECAPTCHA_SECRET, new \ReCaptcha\RequestMethod\CurlPost());
+			$responseCaptcha = $_POST["capcha"];
+			$remoteIp = $_SERVER['REMOTE_ADDR'];
 
-			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br> Año de Viaje: ' . $fecha_viaje .'<br>';
+			$resp = $recaptcha->verify($responseCaptcha, $remoteIp);
+			if ( !$resp->isSuccess() ) {
+				echo 'Error de captcha, intente de nuevo';
+			} else {
+				// Valores enviados desde el formulario
+				$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
+				$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
+				$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
+				$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
 
-			//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
-			enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
-			//guardar en base de datos
-			saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
+				$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br> Año de Viaje: ' . $fecha_viaje .'<br>';
 
+				//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
+				enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
+				//guardar en base de datos
+				saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
+			}
 		break;
 
 
