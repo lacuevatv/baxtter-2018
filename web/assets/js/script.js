@@ -13,7 +13,7 @@ B ) ON LOAD (requieren que todo este cargado)
 4.0 TWITTER
 --------------------------------------------------------------*/
 
-var baseUrl = 'http://' + window.location.host;
+var baseUrl = 'https://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 
 //se pasa con numeral #page
@@ -616,6 +616,7 @@ $( window ).on('load', function(){
  * RECAPTCHA
  */
 //funcion que carga las recaptcha
+
 var onLoad = function() {
     widgetId1 = grecaptcha.render('captcha-reunion', {
     'sitekey' : '6LeJD6IUAAAAAEvZoJm53pqf4pPi2IsGc0ItKncf',
@@ -831,7 +832,7 @@ $(document).ready(function() {
         }
     });
 
-
+    
     /*
      * SUBMIT FORMULARIO
     */    
@@ -845,9 +846,14 @@ $(document).ready(function() {
         formData.append('function','formulario-reunion');
         
         grecaptcha.execute(widgetId1).then(function(token) {
-    
-            formData.append('capcha',token);
             
+            if (token == null) {
+                token = grecaptcha.getResponse(widgetId1);
+            } 
+
+            token = grecaptcha.getResponse(widgetId1);
+            formData.append('capcha',token);
+
             $.ajax( {
                 type: 'POST',
                 url: ajaxFileUrl,

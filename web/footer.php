@@ -141,5 +141,6 @@ $partnersLogos = array(
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
     <!------- recaptcha ------>
     <script src="https://www.google.com/recaptcha/api.js?onload=onLoad&render=explicit" async defer></script>
+    
 </body>
 </html>

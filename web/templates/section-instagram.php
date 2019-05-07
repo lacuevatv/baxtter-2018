@@ -7,7 +7,7 @@
         </h2>
 
         <div class="instagram-feed-wrapper">
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/d6729a3a3bb65a269021b72e89e32d6c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+            <!--<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d6729a3a3bb65a269021b72e89e32d6c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>-->
         </div>
         
     </div><!-- //. container -->
