@@ -1,5 +1,5 @@
-web/contenido/*
-web/phpmyadmin/*
+public/contenido/*
+public/phpmyadmin/*
 bd/*
-web/assets/css/.sass-cache/*
+public/assets/css/.sass-cache/*
 .DS_Store
