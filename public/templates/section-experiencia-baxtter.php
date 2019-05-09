@@ -3,15 +3,15 @@ $videos = array(
     array('titulo' => 'Fiesta Zero', 'slug' => 'fiesta-zero', 'url'=> 'https://vimeo.com/315272748', 'id' => '315272748' ),
     array('titulo' => 'Nieve Baxtter', 'slug' => 'nieve-baxtter', 'url'=> 'https://vimeo.com/315272902', 'id' => '315272902' ),
     array('titulo' => 'Parador de Montaña', 'slug' => 'parador-montana', 'url'=> 'https://vimeo.com/333849918', 'id' => '333849918' ),
-    array('titulo' => 'Clases de Ski & Snowboard', 'slug' => 'clases-sky-snowboard', 'url'=> 'https://vimeo.com/315273034', 'id' => '315273034' ),
-    array('titulo' => 'Fiestas itinerantes', 'slug' => 'fiestas-itinerantes', 'url'=> 'https://vimeo.com/315272117', 'id' => '315272117' ),
+    array('titulo' => 'Clases de Ski & Snowboard', 'slug' => 'clases-sky-snowboard', 'url'=> 'https://vimeo.com/315273402', 'id' => '315273402' ),
+    array('titulo' => 'Fiestas itinerantes', 'slug' => 'fiestas-itinerantes', 'url'=> 'https://vimeo.com/315273034', 'id' => '315273034' ),
     array('titulo' => 'Excursiones de aventura', 'slug' => 'excursiones-aventura', 'url'=> 'https://vimeo.com/315273216', 'id' => '315273216' ),
     array('titulo' => 'Bariloche en Bici', 'slug' => 'bariloche-bici', 'url'=> 'https://vimeo.com/315272117', 'id' => '315272117' ),
     array('titulo' => 'Pool Party', 'slug' => 'pool-party', 'url'=> 'https://vimeo.com/315273703', 'id' => '315273703' ),
     array('titulo' => 'Pilow Fest', 'slug' => 'pillow-fest', 'url'=> 'https://vimeo.com/315272212', 'id' => '315272212' ),
     array('titulo' => 'Sunset Relax', 'slug' => 'sunset-relax', 'url'=> 'https://vimeo.com/315273837', 'id' => '315273837' ),
     array('titulo' => 'Previas en los hoteles', 'slug' => 'previas-hoteles', 'url'=> 'https://vimeo.com/315274756', 'id' => '315274756' ),
-    array('titulo' => 'Boliches Powered by baxtte', 'slug' => 'boliches-powered-baxtter', 'url'=> 'https://vimeo.com/315274063', 'id' => '315274063' ),
+    array('titulo' => 'Boliches Powered by baxtter', 'slug' => 'boliches-powered-baxtter', 'url'=> 'https://vimeo.com/315274063', 'id' => '315274063' ),
     array('titulo' => 'Silent Fest', 'slug' => 'silent-fest', 'url'=> 'https://vimeo.com/333850741', 'id' => '333850741' ),
 );
 ?>
