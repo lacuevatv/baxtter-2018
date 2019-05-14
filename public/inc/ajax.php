@@ -63,16 +63,15 @@ if( isAjax() ) {
 			} else {
 				// Valores enviados desde el formulario
 				$email     = isset( $_POST['email'] ) ? $_POST['email'] : '';
-				$fecha_viaje  = isset( $_POST['yearTrip'] ) ? $_POST['yearTrip'] : '';
 				$nombre      = isset( $_POST['name'] ) ? $_POST['name'] : '';
-				$telefono       = isset( $_POST['tel'] ) ? $_POST['tel'] : '';
+				$motivo     = isset( $_POST['mensaje'] ) ? $_POST['mensaje'] : '';
 
-				$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telefono . '<br> Email: '. $email . '<br> Año de Viaje: ' . $fecha_viaje .'<br>';
+				$mensaje = 'Nombre: '. $nombre . '<br> Email: '. $email . '<br> Motivo de consulta: ' . $motivo .'<br>';
 
 				//FUNCION QUE ENVIA FORMULARIO CON PHPMAILER			
 				enviarFormulario( EMAILFORMULARIO , 'Mensaje desde la página', $mensaje, $nombre, $email);
 				//guardar en base de datos
-				saveNewContact ( $nombre, $telefono, $email, $mensaje, $fecha_viaje, 'contacto' );
+				saveNewContact ( $nombre, '', $email, $mensaje );
 			}
 		break;
 

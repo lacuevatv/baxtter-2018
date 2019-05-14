@@ -149,7 +149,7 @@ form {
         z-index:0;
         @include transition(all $transitionSpeedx2);
     }
-    input {
+    input, textarea {
         z-index:1;
         height: 25px;
         position: absolute;
@@ -239,7 +239,38 @@ form {
 
 }//.form-group 
 
+.form-group-textarea {
+    height: 80px;
+    @media (min-width: $xs) {
+        height: 100px;
+    }
+    @media (min-width: $sm) {
+        height: 140px;
+    }
+    @media (min-width: $md) {
+        height: 80px;
+    }
+    @media (min-width: $xlg) {
+        height: 80px;
+    }
 
+    textarea {
+        width: 98%;
+        height: 65px;
+        @media (min-width: $xs) {
+            height: 70px;
+        }
+        @media (min-width: $sm) {
+            height: 100px;
+        }
+        @media (min-width: $md) {
+            height: 65px;
+        }
+        @media (min-width: $xlg) {
+            height: 65px;
+        }
+    }
+}
 
 .btn-submit {
     -webkit-appearance: none;

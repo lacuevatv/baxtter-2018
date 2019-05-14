@@ -2270,7 +2270,7 @@ form .msj-form {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
-.form-group input {
+.form-group input, .form-group textarea {
   z-index: 1;
   height: 25px;
   position: absolute;
@@ -2282,23 +2282,23 @@ form .msj-form {
   font-size: 100%;
 }
 @media (min-width: 567px) {
-  .form-group input {
+  .form-group input, .form-group textarea {
     height: 30px;
   }
 }
 @media (min-width: 767px) {
-  .form-group input {
+  .form-group input, .form-group textarea {
     height: 30px;
     bottom: 2px;
   }
 }
 @media (min-width: 992px) {
-  .form-group input {
+  .form-group input, .form-group textarea {
     height: 30px;
     bottom: 0px;
   }
 }
-.form-group input:focus {
+.form-group input:focus, .form-group textarea:focus {
   outline: none;
 }
 .form-group .input-on {
@@ -2351,6 +2351,54 @@ form .msj-form {
 }
 .form-group .msj-error-input-col {
   right: 45px;
+}
+
+.form-group-textarea {
+  height: 80px;
+}
+@media (min-width: 567px) {
+  .form-group-textarea {
+    height: 100px;
+  }
+}
+@media (min-width: 767px) {
+  .form-group-textarea {
+    height: 140px;
+  }
+}
+@media (min-width: 992px) {
+  .form-group-textarea {
+    height: 80px;
+  }
+}
+@media (min-width: 1500px) {
+  .form-group-textarea {
+    height: 80px;
+  }
+}
+.form-group-textarea textarea {
+  width: 98%;
+  height: 65px;
+}
+@media (min-width: 567px) {
+  .form-group-textarea textarea {
+    height: 70px;
+  }
+}
+@media (min-width: 767px) {
+  .form-group-textarea textarea {
+    height: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .form-group-textarea textarea {
+    height: 65px;
+  }
+}
+@media (min-width: 1500px) {
+  .form-group-textarea textarea {
+    height: 65px;
+  }
 }
 
 .btn-submit {

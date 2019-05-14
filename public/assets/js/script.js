@@ -731,7 +731,10 @@ $(document).ready(function() {
     //funcion al hacer click en label
     function focusInput( label ) {
         var contenedor = $(label).closest('.form-group')
-        var input = $(contenedor).find('input')
+        var input = $(contenedor).find('input');
+        if ( input.length == 0 ) {
+            input = $(contenedor).find('textarea');
+        }
         $(input).focus();
     }
 
@@ -741,7 +744,7 @@ $(document).ready(function() {
     });
 
     //on focus, etiqueta se achica
-    $(document).on('focus', 'input', function(){
+    $(document).on('focus', 'input, textarea', function(){
         zoomOutLabel( this );
         $(this).addClass('input-on');
     });
