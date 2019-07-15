@@ -381,3 +381,11 @@
         display: none;
     }
 }
+a.btn-especial {
+    @media (min-width: $md) {
+    border: $color-rojo-opaco 1px solid;
+    padding: 4px 10px;
+    border-radius: 15px;
+    color: $color-rojo-opaco;
+    }
+}    

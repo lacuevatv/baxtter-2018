@@ -20,6 +20,11 @@ $disp = dispositivo();
     
         <ul class="main-menu<?php if ( $disp != 'pc' ) { echo ' main-menu-movil'; }?>" role="menu">
             <li>
+                <a href="https://www.paxmanager.com.ar/baxtter/Login.aspx" target="_blank" class="btn-especial">
+                    Autogestion
+                </a>
+            </li>
+            <li>
                 <a href="nosotros" class="scroll-to btn-hover-menu">
                     Sobre nosotros
                 </a>

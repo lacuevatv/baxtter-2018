@@ -1059,6 +1059,15 @@ img {
   }
 }
 
+@media (min-width: 992px) {
+  a.btn-especial {
+    border: #ff545a 1px solid;
+    padding: 4px 10px;
+    border-radius: 15px;
+    color: #ff545a;
+  }
+}
+
 .header-wrapper {
   height: 350px;
   position: relative;
